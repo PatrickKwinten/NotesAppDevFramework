@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.lotus.com/dxl" name="(GLOBAL: Header)" alias="$f-global-header" hide="web mobile" nocompose="true" noquery="true" publicaccess="true" comment="opened in the header section at DB launch - application identifier">
+  <actionbar bgcolor="#d4d0c8" bordercolor="black">
+    <actionbuttonstyle bgcolor="#d4d0c8"/>
+    <font color="system"/>
+    <border style="solid" width="0px 0px 1px"/>
+  </actionbar>
+  <background allowoverride="false"/>
+  <body>
+    <richtext>
+      <pardef id="1">
+        <code event="hidewhen">
+          <formula>1</formula>
+        </code>
+      </pardef>
+      <par def="1">
+        <run>
+          <font size="9pt"/>
+        </run>
+        <run>
+          <font size="9pt" color="red"/>
+          <field type="text" kind="computed" name="Tx_ComputedHotspot">
+            <code event="defaultvalue">
+              <formula>logotype := @GetProfileField ( "$f-dbprofile" ; "Tx_Logotypes") ;
+
+@If( logotype = "";
+        "logo_OpenNTF";
+        "logo_" + logotype)</formula>
+            </code>
+          </field>
+        </run>
+        <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="8" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+        <run>
+          <font size="9pt"/>
+        </run>
+        <run>
+          <font size="9pt" color="red"/>
+          <field type="text" kind="computedfordisplay" name="SaveOptions">
+            <code event="defaultvalue">
+              <formula>"0"</formula>
+            </code>
+          </field>
+        </run>
+        <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="14" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+      </par>
+      <table widthtype="fitwindow" cellbordercolor="silver" leftmargin="0.7396in" refwidth="11.7194in">
+        <tablecolumn width="3.2118%"/>
+        <tablecolumn width="39.1875%"/>
+        <tablecolumn width="3.2118%"/>
+        <tablecolumn width="3.2118%"/>
+        <tablecolumn width="3.2118%"/>
+        <tablecolumn width="3.2118%"/>
+        <tablecolumn width="3.2118%"/>
+        <tablecolumn width="41.5451%"/>
+        <tablerow>
+          <tablecell borderwidth="0px">
+            <pardef id="3" keepwithnext="true" keeptogether="true"/>
+            <par def="3">
+              <run>
+                <font size="2pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px">
+            <pardef id="4" keepwithnext="true" keeptogether="true"/>
+            <par def="4">
+              <run>
+                <font size="2pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px">
+            <pardef id="5" keepwithnext="true" keeptogether="true"/>
+            <par def="5">
+              <run>
+                <font size="2pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px">
+            <pardef id="6" keepwithnext="true" keeptogether="true"/>
+            <par def="6">
+              <run>
+                <font size="2pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px">
+            <pardef id="7" keepwithnext="true" keeptogether="true"/>
+            <par def="7">
+              <run>
+                <font size="2pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px">
+            <pardef id="8" keepwithnext="true" keeptogether="true"/>
+            <par def="8">
+              <run>
+                <font size="2pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px">
+            <pardef id="9" keepwithnext="true" keeptogether="true"/>
+            <par def="9">
+              <run>
+                <font size="2pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px">
+            <pardef id="10" keepwithnext="true" keeptogether="true"/>
+            <par def="10">
+              <run>
+                <font size="2pt"/>
+              </run>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell rowspan="2" columnspan="2" borderwidth="0px">
+            <pardef id="19" leftmargin="0.1000in" keepwithnext="true" keeptogether="true"/>
+            <par def="19">
+              <run>
+                <font size="4pt"/>
+              </run>
+              <namedelementlink showborder="false" type="page" name="$p-global-start" targetframe="NotesView">
+                <run>
+                  <font color="system"/>
+                </run>
+                <picture width="235px" height="50px">
+                  <imageref>
+                    <code event="value">
+                      <formula>Tx_ComputedHotspot</formula>
+                    </code>
+                  </imageref>
+                </picture>
+                <run>
+                  <font size="4pt" color="system"/>
+                </run>
+              </namedelementlink>
+              <run>
+                <font size="4pt"/>
+              </run>
+            </par>
+            <pardef id="20" keepwithnext="true" keeptogether="true"/>
+            <par def="20">
+              <run>
+                <font size="2pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px">
+            <pardef id="13" hide="notes web" keepwithnext="true" keeptogether="true"/>
+            <par def="13">
+              <run>
+                <font size="9pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px">
+            <pardef id="14" hide="notes web" keepwithnext="true" keeptogether="true"/>
+            <par def="14">
+              <run>
+                <font size="9pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px">
+            <pardef id="15" hide="notes web" keepwithnext="true" keeptogether="true"/>
+            <par def="15">
+              <run>
+                <font size="9pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px">
+            <pardef id="16" hide="notes web" keepwithnext="true" keeptogether="true"/>
+            <par def="16">
+              <run>
+                <font size="9pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px">
+            <pardef id="17" hide="notes web" keepwithnext="true" keeptogether="true"/>
+            <par def="17">
+              <run>
+                <font size="9pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px">
+            <pardef id="18" hide="notes web" keepwithnext="true" keeptogether="true"/>
+            <par def="18">
+              <run>
+                <font size="9pt"/>
+              </run>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell columnspan="6" valign="center" borderwidth="0px">
+            <pardef id="23" align="right" rightmargin="99%" keepwithnext="true" keeptogether="true"/>
+            <par def="23">
+              <run>
+                <font size="12pt" style="bold" color="#009cff"/>
+                <computedtext>
+                  <code event="value">
+                    <formula>@DbTitle</formula>
+                  </code>
+                </computedtext>
+              </run>
+            </par>
+            <par def="23">
+              <run>
+                <font size="8pt"/>
+                <computedtext>
+                  <code event="value">
+                    <formula>LocalTxt:="Server: Local";
+onTxt := "Server: ";
+server := @Subset(@DbName;1);
+serverString := onTxt + " " + @Name([Abbreviate]; server);
+Location:=@If(@ClientType="Web"; "Server: " + @Name([Abbreviate];@ServerName) ;@If(server=""; LocalTxt; serverString));
+Location</formula>
+                  </code>
+                </computedtext>
+              </run>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell borderwidth="0px" bgcolor="#009cff">
+            <par def="3">
+              <run>
+                <font size="2pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px" bgcolor="#009cff">
+            <par def="4">
+              <run>
+                <font size="2pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px" bgcolor="#009cff">
+            <par def="5">
+              <run>
+                <font size="2pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px" bgcolor="#009cff">
+            <par def="6">
+              <run>
+                <font size="2pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px" bgcolor="#009cff">
+            <par def="7">
+              <run>
+                <font size="2pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px" bgcolor="#009cff">
+            <par def="8">
+              <run>
+                <font size="2pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px" bgcolor="#009cff">
+            <par def="9">
+              <run>
+                <font size="2pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px" bgcolor="#009cff">
+            <par def="10">
+              <run>
+                <font size="2pt"/>
+              </run>
+            </par>
+          </tablecell>
+        </tablerow>
+      </table>
+      <pardef id="24" hide="notes web">
+        <code event="hidewhen">
+          <formula>1</formula>
+        </code>
+      </pardef>
+      <par def="24">
+        <run>
+          <font size="9pt"/>
+        </run>
+      </par>
+    </richtext>
+  </body>
+  <item name="$HFFlags">
+    <text>1</text>
+  </item>
+</form>

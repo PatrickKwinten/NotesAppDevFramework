@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.lotus.com/dxl" name="(GLOBAL: Help)" alias="$f-global-help" hide="web mobile" publicaccess="false" comment="support for providing help / instruction documents" renderpassthrough="true">
+  <code event="windowtitle">
+    <formula>@If ( @IsNewDoc ; "New application help"; "Application help - " + Tx_ApplicationHelpSubject)</formula>
+  </code>
+  <code event="queryopen">
+    <formula>@SetEnvironment("showHeaderInstructions"; "")</formula>
+  </code>
+  <actionbar useappletinbrowser="true" bgcolor="#9f9fe0" bordercolor="black">
+    <actionbarstyle height="4.7500ex" repeat="hrepeat">
+      <font size="9pt" name="multilingual"/>
+      <imageref name="actionbarbg.gif"/>
+    </actionbarstyle>
+    <actionbuttonstyle margintype="fixed" margin="5" bgcolor="none">
+      <imageref name="client\frmwrk-view-actionbarmouseover.jpg"/>
+    </actionbuttonstyle>
+    <font size="9pt" name="multilingual" color="#004080"/>
+    <border style="solid" width="0px 0px 1px" color="gray"/>
+    <action title="Close" icon="11" hide="preview read web mobile">
+      <code event="click">
+        <formula>@Command([FileCloseWindow])</formula>
+      </code>
+    </action>
+    <action title="Edit" icon="5" hide="preview edit previewedit">
+      <code event="click">
+        <formula>@Command([EditDocument])</formula>
+      </code>
+      <code event="hidewhen">
+        <formula>@IsNotMember("[DBAdmin]";@UserRoles)</formula>
+      </code>
+    </action>
+    <action title="Save" icon="10" hide="preview read web mobile">
+      <code event="click">
+        <formula>@Command([FileSave])</formula>
+      </code>
+    </action>
+  </actionbar>
+  <body>
+    <richtext>
+      <pardef id="1" leftmargin="1in" tabs="L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in">
+        <code event="hidewhen">
+          <formula>1</formula>
+        </code>
+      </pardef>
+      <par def="1">
+        <run>
+          <font size="8pt" style="bold" color="green"/>Purpose</run>
+      </par>
+      <par def="1">
+        <run>
+          <font size="8pt" color="green"/>This form is used to provide end-user help documents.</run>
+      </par>
+      <pardef id="2" align="right" leftmargin="1in" spacebefore="1.5" spaceafter="1.5" hide="read print preview embedded" tabs="L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in">
+        <code event="hidewhen">
+          <formula>getProf := @Environment("showHeaderInstructions");
+getProf = "1"</formula>
+        </code>
+      </pardef>
+      <par def="2">
+        <run>
+          <font size="9pt" color="white"/>
+        </run>
+        <actionhotspot hotspotstyle="none">
+          <run>
+            <font size="9pt" color="white"/>
+          </run>
+        </actionhotspot>
+        <run>
+          <font size="9pt" color="green"/>
+        </run>
+        <actionhotspot hotspotstyle="none">
+          <code event="click">
+            <formula>@If(@Version &lt; @Text(172); @Return(""); "");
+@SetEnvironment("showHeaderInstructions"; "1");
+@Command([RefreshHideFormulas])</formula>
+          </code>
+          <run>
+            <font size="9pt" style="underline" color="blue"/>Show Instructions</run>
+        </actionhotspot>
+        <run>
+          <font size="9pt"/>
+        </run>
+      </par>
+      <pardef id="3" align="right" spacebefore="1.5" spaceafter="1.5" hide="read print copy preview embedded">
+        <code event="hidewhen">
+          <formula>getProf := @Environment("showHeaderInstructions");
+getProf = "0" | getProf = ""</formula>
+        </code>
+      </pardef>
+      <par def="3">
+        <run>
+          <font size="9pt"/>
+        </run>
+        <actionhotspot hotspotstyle="none">
+          <run>
+            <font size="9pt"/>
+          </run>
+        </actionhotspot>
+        <run>
+          <font size="9pt"/>
+        </run>
+        <actionhotspot hotspotstyle="none">
+          <code event="click">
+            <formula>@If(@Version &lt; @Text(172); @Return(""); "");
+@SetEnvironment("showHeaderInstructions"; "");
+@Command([RefreshHideFormulas])</formula>
+          </code>
+          <run>
+            <font size="9pt" style="underline" color="blue"/>Hide Instructions</run>
+        </actionhotspot>
+        <run>
+          <font size="9pt" color="white"/>
+        </run>
+      </par>
+      <pardef id="4" align="right" spacebefore="1.5" spaceafter="1.5" hide="edit copy previewedit"/>
+      <par def="4">
+        <run>
+          <font size="9pt" color="white"/>
+        </run>
+        <actionhotspot hotspotstyle="none">
+          <run>
+            <font size="9pt" color="white"/>
+          </run>
+        </actionhotspot>
+        <run>
+          <font size="9pt" color="white"/>
+        </run>
+      </par>
+      <table cellbordercolor="silver" widthtype="fixedleft" refwidth="8.6611in">
+        <border style="image" width="1px">
+          <imageref name="table-roundborder-gray.gif"/>
+        </border>
+        <tablecolumn width="3.3236in"/>
+        <tablecolumn width="5.3375in"/>
+        <tablerow>
+          <tablecell borderwidth="0px 2px 0px 0px">
+            <pardef id="6" keepwithnext="true" keeptogether="true">
+              <code event="hidewhen">
+                <formula>1</formula>
+              </code>
+            </pardef>
+            <par def="6">
+              <run>
+                <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+            </par>
+            <table leftmargin="0" widthtype="fixedleft" refwidth="3.3236in">
+              <tablecolumn width="3.3236in"/>
+              <tablerow>
+                <tablecell borderwidth="0px" bgcolor="#e8edf2">
+                  <par def="6">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                  <table widthtype="fitmargins" cellbordercolor="#00a1e0" leftmargin="0" columnspacing="0.0785in" refwidth="3.3236in">
+                    <tablecolumn width="100%"/>
+                    <tablerow>
+                      <tablecell borderwidth="0px 0px 2px" bgcolor="white">
+                        <pardef id="9" keepwithnext="true" keeptogether="true"/>
+                        <par def="9">
+                          <run>
+                            <font size="4pt"/>
+                          </run>
+                        </par>
+                        <par def="9">
+                          <run>
+                            <font size="14pt"/>Subject</run>
+                        </par>
+                        <par def="9">
+                          <run>
+                            <font size="4pt"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                    </tablerow>
+                  </table>
+                  <par def="6">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                </tablecell>
+              </tablerow>
+              <tablerow>
+                <tablecell borderwidth="0px">
+                  <pardef id="10" keepwithnext="true" keeptogether="true"/>
+                  <par def="10">
+                    <run>
+                      <font size="9pt"/>
+                    </run>
+                    <embeddedview name="$v-global-help" transparentbackground="true" showactionbar="true" showheader="false" widthtype="fitwindow" height="5.9056in" scrollbars="true" useviewsselectionmarginprop="false">
+                      <border width="1px"/>
+                    </embeddedview>
+                    <run>
+                      <font size="9pt"/>
+                    </run>
+                  </par>
+                </tablecell>
+              </tablerow>
+            </table>
+            <par def="6">
+              <run>
+                <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px 0px 0px 2px">
+            <pardef id="11" keepwithnext="true" keeptogether="true">
+              <code event="hidewhen">
+                <formula>1</formula>
+              </code>
+            </pardef>
+            <par def="11">
+              <run>
+                <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+            </par>
+            <table widthtype="fitmargins" leftmargin="0.0208in" columnspacing="0.0785in" refwidth="5.3167in">
+              <tablecolumn width="100%"/>
+              <tablerow>
+                <tablecell borderwidth="0px">
+                  <pardef id="13" keepwithnext="true" keeptogether="true">
+                    <code event="hidewhen">
+                      <formula>1</formula>
+                    </code>
+                  </pardef>
+                  <par def="13">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                  <table widthtype="fitmargins" cellbordercolor="#d2dfef" leftmargin="0" rowspacing="0.0785in" columnspacing="0.0785in" refwidth="5.1597in">
+                    <tablecolumn width="100%"/>
+                    <tablerow>
+                      <tablecell borderwidth="0px 0px 2px">
+                        <pardef id="15" align="right" hide="read print preview embedded" keepwithnext="true" keeptogether="true"/>
+                        <par def="15">
+                          <run>
+                            <font style="bold" name="multilingual"/>
+                            <field type="keyword" kind="editable" name="Tx_ApplicationHelpCategory">
+                              <keywords ui="dialoglist" allownew="true">
+                                <formula>tmp := @DbColumn ("":"NoCache";"";"$v-global-help"; 1);
+@If (@IsError (tmp); "No categories available"; tmp)</formula>
+                              </keywords>
+                            </field>
+                          </run>
+                          <run>
+                            <font size="9pt" color="gray"/>
+                          </run>
+                        </par>
+                        <pardef id="16" align="right" hide="edit copy previewedit" keepwithnext="true" keeptogether="true"/>
+                        <par def="16">
+                          <run>
+                            <font size="9pt" color="gray"/>
+                          </run>
+                          <run>
+                            <font style="bold" name="multilingual"/>
+                            <computedtext>
+                              <code event="value">
+                                <formula>@UpperCase(Tx_ApplicationHelpCategory)</formula>
+                              </code>
+                            </computedtext>
+                          </run>
+                          <run>
+                            <font size="9pt" color="gray"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                    </tablerow>
+                    <tablerow>
+                      <tablecell borderwidth="2px 0px 0px">
+                        <pardef id="17" spacebefore="1.5" keepwithnext="true" keeptogether="true"/>
+                        <par def="17">
+                          <run>
+                            <font size="11pt" style="bold" name="multilingual"/>
+                            <field type="text" kind="editable" name="Tx_ApplicationHelpSubject"/>
+                          </run>
+                          <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="7" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+                        </par>
+                        <pardef id="18" spaceafter="1.5" hide="read print preview embedded" tabs="L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>getProf := @Environment("showHeaderInstructions");
+getProf = "0" | getProf = ""</formula>
+                          </code>
+                        </pardef>
+                        <par def="18">
+                          <run>
+                            <font size="9pt" style="bold" color="green"/>Enter a descriptive subject header.</run>
+                        </par>
+                      </tablecell>
+                    </tablerow>
+                    <tablerow>
+                      <tablecell borderwidth="0px">
+                        <pardef id="19" tabs="L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in" keepwithnext="true" keeptogether="true"/>
+                        <par def="19">
+                          <run>
+                            <font size="9pt"/>
+                          </run>
+                          <field type="richtext" kind="editable" name="Rt_ApplicationHelp"/>
+                          <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="7" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAEAAAA=
+</compositedata>
+                          <run>
+                            <font size="9pt"/>
+                          </run>
+                        </par>
+                        <pardef id="20" spacebefore="1.5" hide="read print copy preview previewedit" keepwithnext="true" keeptogether="true"/>
+                        <par def="20">
+                          <run>
+                            <font size="9pt"/>
+                          </run>
+                          <actionhotspot hotspotstyle="none" htmltitle="Add Attachments" name="Add Attachments">
+                            <code event="click">
+                              <formula>@Command([EditGotoField];"Rt_ApplicationHelp");
+@Command([EditInsertFileAttachment])</formula>
+                            </code>
+                            <run>
+                              <font size="9pt" style="underline" color="blue"/>
+                            </run>
+                            <picture width="81px" height="19px" scaledheight="0.1979in" scaledwidth="0.8438in" alttext="Add Attachments" htmltitle="Add Attachments" name="Add Attachments">
+                              <imageref name="buttonattachment.gif"/>
+                              <caption position="center">Attach...</caption>
+                            </picture>
+                            <run>
+                              <font size="9pt" style="underline" color="blue"/>
+                            </run>
+                          </actionhotspot>
+                          <run>
+                            <font size="9pt"/>
+                          </run>
+                        </par>
+                        <par def="18">
+                          <run>
+                            <font size="9pt" style="bold" color="green"/>Write here the help text.</run>
+                        </par>
+                      </tablecell>
+                    </tablerow>
+                  </table>
+                  <par def="13">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                </tablecell>
+              </tablerow>
+            </table>
+          </tablecell>
+        </tablerow>
+      </table>
+      <pardef id="21"/>
+      <par def="21"/>
+    </richtext>
+  </body>
+  <item name="$$Nb_NumberQuestionsPerPage" summary="false" sign="true">
+    <text>'++LotusScript Development Environment:2:5:(Options):0:66
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub Entering(Source As Field)
+Declare Sub Exiting(Source As Field)
+
+'++LotusScript Development Environment:2:5:(Declarations):0:2
+
+'++LotusScript Development Environment:2:2:BindEvents:1:129
+Private Sub BindEvents(Byval Objectname_ As String)
+	Static Source As FIELD
+	Set Source = Bind(Objectname_)
+	On Event Entering From Source Call Entering
+	On Event Exiting From Source Call Exiting
+End Sub
+
+'++LotusScript Development Environment:2:2:Entering:1:12
+Sub Entering(Source As Field)
+	Call SetHelpFocusField ("Nb_NumberQuestionsPerPage")
+End Sub
+'++LotusScript Development Environment:2:2:Exiting:1:12
+Sub Exiting(Source As Field)
+	Call SetHelpFocusField ("")
+End Sub<break/>
+    </text>
+  </item>
+  <item name="$$Tx_UseLogin" summary="false" sign="true">
+    <text>'++LotusScript Development Environment:2:5:(Options):0:66
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub Exiting(Source As Field)
+Declare Sub Entering(Source As Field)
+
+'++LotusScript Development Environment:2:5:(Declarations):0:2
+
+'++LotusScript Development Environment:2:2:BindEvents:1:129
+Private Sub BindEvents(Byval Objectname_ As String)
+	Static Source As FIELD
+	Set Source = Bind(Objectname_)
+	On Event Exiting From Source Call Exiting
+	On Event Entering From Source Call Entering
+End Sub
+
+'++LotusScript Development Environment:2:2:Exiting:1:12
+Sub Exiting(Source As Field)
+	Call SetHelpFocusField ("")
+End Sub
+'++LotusScript Development Environment:2:2:Entering:1:12
+Sub Entering(Source As Field)
+	Call SetHelpFocusField ("Tx_UseLogin")
+End Sub<break/>
+    </text>
+  </item>
+  <item name="Nb_NumberQuestionsPerPage" summary="false" sign="true">
+    <number>0</number>
+  </item>
+  <item name="Dt_DocDate" summary="false" sign="true">
+    <rawitemdata type="400">
+AAAAAAAAAAA=
+</rawitemdata>
+  </item>
+  <item name="Dt_DocTime" summary="false" sign="true">
+    <rawitemdata type="400">
+AAAAAAAAAAA=
+</rawitemdata>
+  </item>
+  <item name="Nb_DocNumber" summary="false" sign="true">
+    <number>0</number>
+  </item>
+  <item name="Dt_DocDate_1" summary="false" sign="true">
+    <rawitemdata type="400">
+AAAAAAAAAAA=
+</rawitemdata>
+  </item>
+  <item name="Dt_DocTime_1" summary="false" sign="true">
+    <rawitemdata type="400">
+AAAAAAAAAAA=
+</rawitemdata>
+  </item>
+  <item name="Nb_DocNumber_1" summary="false" sign="true">
+    <number>0</number>
+  </item>
+  <item name="Td_Created" summary="false" sign="true">
+    <rawitemdata type="400">
+AAAAAAAAAAA=
+</rawitemdata>
+  </item>
+  <item name="Td_LastModified" summary="false" sign="true">
+    <rawitemdata type="400">
+AAAAAAAAAAA=
+</rawitemdata>
+  </item>
+</form>

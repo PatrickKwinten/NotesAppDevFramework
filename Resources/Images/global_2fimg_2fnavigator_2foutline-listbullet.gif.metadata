@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imageresource xmlns="http://www.lotus.com/dxl" alias="listbullet.gif" comment="bullet - used in flat outlines to indicate an item" imagename="sandvik_blank.gif" name="global/img/navigator/outline-listbullet.gif" publicaccess="false" readonly="true">
+  <item name="$MimeType" sign="true">
+    <text>image/gif</text>
+  </item>
+</imageresource>

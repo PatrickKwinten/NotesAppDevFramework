@@ -1,0 +1,134 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+
+
+Use "CommonFunctions"
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub OpenDocumentByUNID(unid As String)
+Declare Sub StartPageInit(Source As NotesUIDocument)
+
+'++LotusScript Development Environment:2:5:(Declarations):0:2
+
+'++LotusScript Development Environment:2:2:OpenDocumentByUNID:1:8
+Sub OpenDocumentByUNID(unid As String)
+	Dim ws As New NotesUIWorkspace
+	Dim ses As New NotesSession
+	Dim db As NotesDatabase
+	Dim doc As NotesDocument
+	
+	If unid = "" Then
+		Exit Sub
+	End If
+	
+	Set db = ses.CurrentDatabase
+	Set doc = db.GetDocumentByUNID(unid)
+	
+	Call ws.EditDocument(False, doc, False, "", False, False)
+End Sub
+
+'++LotusScript Development Environment:2:2:StartPageInit:1:8
+Sub StartPageInit(Source As NotesUIDocument)
+	Dim ses As New NotesSession
+	Dim db As NotesDatabase
+	Dim view As NotesView
+	Dim luDoc As NotesDocument
+	Dim doc As NotesDocument
+	Dim i As Integer
+	Dim o As NotesEmbeddedObject
+	Dim fileType As String
+	Dim rtItem As NotesRichTextItem
+	Dim dateHelper As New DateHelper
+	Set db = ses.CurrentDatabase
+	Set view = db.GetView("$v-docs-flat")
+	
+	
+	Set doc = Source.Document
+	
+	Set luDoc = view.GetFirstDocument
+	
+	For i = 1 To 4
+		If luDoc Is Nothing Then
+			Exit For
+		End If
+		
+		If luDoc.Tx_DocText(0) <> "" Then
+			Call doc.ReplaceItemValue(("Tx_TitleSpotDoc" & i), luDoc.Tx_DocText(0))
+		Else
+			Call doc.ReplaceItemValue(("Tx_TitleSpotDoc" & i), "Untitled")
+		End If
+		If luDoc.Na_Author(0) <> "" Then
+			Call doc.ReplaceItemValue(("Na_AuthorSpotDoc" & i), luDoc.Na_Author(0))
+		Else
+			Call doc.ReplaceItemValue(("Na_AuthorSpotDoc" & i), luDoc.Na_DocNames(0))
+		End If
+		Call doc.ReplaceItemValue(("Td_ModifiedSpotDoc" & i), luDoc.Td_Created(0))
+			Call doc.ReplaceItemValue(("Tx_UNIDSpotDoc" & i), luDoc.UniversalID)
+			Call doc.ReplaceItemValue(("Tx_ReadableDateSpotDoc" & i), dateHelper.TimeSince(luDoc.Td_Created(0), True))
+		
+		If luDoc.HasEmbedded Then
+			
+			Set rtItem = luDoc.GetFirstItem("Rt_DocRichText")
+			Set o = rtItem.EmbeddedObjects(0)
+			fileType = Strrightback(o.Name, ".")
+			Call doc.ReplaceItemValue(("Tx_FileTypeSpotDoc" & i), fileType)
+		Else
+			Call doc.ReplaceItemValue(("Tx_FileTypeSpotDoc" & i), "LotusNotes")
+		End If
+		
+		Set luDoc = view.GetNextDocument(luDoc)
+	Next
+	
+	Dim vec As NotesViewEntryCollection
+	Dim ve As NotesViewEntry
+	Set view = db.GetView("$v-docs-byauthor")
+	Set vec = view.GetAllEntriesByKey(ses.CommonUserName)
+	
+	If vec.Count = 0 Then
+		Call source.Refresh
+		Exit Sub
+	End If
+	
+	Set ve = vec.GetFirstEntry
+	
+	For i = 1 To 4
+		If ve Is Nothing Then
+			Exit For
+		End If
+		
+		Set luDoc = ve.Document
+		
+		If luDoc.Tx_DocText(0) <> "" Then
+			Call doc.ReplaceItemValue(("Tx_TitleMySpotDoc" & i), luDoc.Tx_DocText(0))
+		Else
+			Call doc.ReplaceItemValue(("Tx_TitleMySpotDoc" & i), "Untitled")
+		End If
+		
+		If luDoc.Na_Author(0) <> "" Then
+			Call doc.ReplaceItemValue(("Na_AuthorMySpotDoc" & i), luDoc.Na_Author(0))
+		Else
+			Call doc.ReplaceItemValue(("Na_AuthorMySpotDoc" & i), luDoc.Na_DocNames(0))
+		End If
+		
+		Call doc.ReplaceItemValue(("Td_ModifiedMySpotDoc" & i), luDoc.Td_Created(0))
+		Call doc.ReplaceItemValue(("Tx_UNIDMySpotDoc" & i), luDoc.UniversalID)
+		Call doc.ReplaceItemValue(("Tx_ReadableDateMySpotDoc" & i), dateHelper.TimeSince(luDoc.Td_Created(0), True))
+		
+		If luDoc.HasEmbedded Then
+			
+			Set rtItem = luDoc.GetFirstItem("Rt_DocRichText")
+			Set o = rtItem.EmbeddedObjects(0)
+			fileType = Strrightback(o.Name, ".")
+			Call doc.ReplaceItemValue(("Tx_FileTypeMySpotDoc" & i), fileType)
+		Else
+			Call doc.ReplaceItemValue(("Tx_FileTypeMySpotDoc" & i), "LotusNotes")
+		End If
+		
+		Set ve = vec.GetNextEntry(ve)
+		
+	Next
+	
+	Call source.Refresh
+	
+End Sub

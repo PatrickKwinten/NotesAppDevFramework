@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<outline xmlns="http://www.lotus.com/dxl" name="Global Box Flat" alias="$ol-box-flat" hide="web v3 v4strict" publicaccess="false" comment="sample outline - no sublevels">
+  <outlineentry label="View 1" type="namedelementlink">
+    <imageref database="C12576E10068C1B2" name="listbullet.gif"/>
+    <namedelementlink type="view" name="$v-docs-flat"/>
+  </outlineentry>
+  <outlineentry label="View 2" type="namedelementlink">
+    <imageref database="C12576E10068C1B2" name="listbullet.gif"/>
+    <namedelementlink type="view" name="$v-docs-categorized"/>
+  </outlineentry>
+</outline>

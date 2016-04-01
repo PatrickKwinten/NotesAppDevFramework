@@ -1,0 +1,1632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.lotus.com/dxl" name="Document A \ 2 column" alias="$f-docb" hide="web mobile" publicaccess="false" comment="sample form to create document - 2 column table alignment" renderpassthrough="true">
+  <code event="windowtitle">
+    <formula>@If( @IsNewDoc; "New document" ; "Document")</formula>
+  </code>
+  <actionbar useappletinbrowser="true" bgcolor="#9f9fe0" bordercolor="black">
+    <actionbarstyle height="4.7500ex" repeat="hrepeat">
+      <font size="9pt" name="multilingual"/>
+      <imageref name="actionbarbg.gif"/>
+    </actionbarstyle>
+    <actionbuttonstyle margintype="fixed" margin="5" bgcolor="none">
+      <imageref name="client\frmwrk-view-actionbarmouseover.jpg"/>
+    </actionbuttonstyle>
+    <font size="9pt" name="multilingual" color="#004080"/>
+    <border style="solid" width="0px 0px 1px" color="gray"/>
+    <sharedactionref id="2">
+      <action title="(Global: Help)" icon="45" showinmenu="false" hide="preview web mobile" onlyiconinbar="true" align="right">
+        <code event="click">
+          <formula>tmp := @DbColumn ("":"NoCache";"";"$v-global-help"; 1);
+isHelp :=
+@If (@IsError (tmp);
+					@False ;
+		tmp="";
+					@False;
+									@True);
+
+tmpKey := @If ( isHelp; tmp[1];"");
+					
+@If ( isHelp ;
+			@Command( [OpenHelpDocument]; "" ; "$v-global-help"; tmpKey );
+					@Prompt ([Ok]; "No help available";"No help available for this application"))</formula>
+        </code>
+        <code event="label">
+          <formula>"Open Help"</formula>
+        </code>
+      </action>
+    </sharedactionref>
+    <action title="Close" icon="11" hide="preview web mobile">
+      <code event="click">
+        <formula>@Command([FileCloseWindow])</formula>
+      </code>
+    </action>
+    <action title="Edit" icon="5" hide="preview edit previewedit">
+      <code event="click">
+        <formula>@Command([EditDocument])</formula>
+      </code>
+    </action>
+    <action title="Save" icon="10" hide="preview read web mobile">
+      <code event="click">
+        <formula>@Command([FileSave])</formula>
+      </code>
+    </action>
+  </actionbar>
+  <body>
+    <richtext>
+      <formregionbegin type="header" height="100px"/>
+      <pardef id="1">
+        <code event="hidewhen">
+          <formula>1</formula>
+        </code>
+      </pardef>
+      <par def="1">
+        <run>
+          <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+        <run>
+          <font size="9pt" color="red"/>
+          <field type="text" kind="computedfordisplay" name="Tx_ComputedHotspot">
+            <code event="defaultvalue">
+              <formula>logotype := @GetProfileField ( "$f-dbprofile" ; "Tx_Logotypes") ;
+
+@If( logotype = "";
+        "logo_OpenNTF";
+        "logo_" + logotype)</formula>
+            </code>
+          </field>
+        </run>
+        <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="11" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+      </par>
+      <table widthtype="fitmargins" leftmargin="0.8750in" rightmargin="100%" rowspacing="0.0396in" refwidth="11.9167in">
+        <tablecolumn width="2.5500in"/>
+        <tablecolumn width="100%"/>
+        <tablecolumn width="3.3681in"/>
+        <tablerow>
+          <tablecell borderwidth="0px">
+            <pardef id="3" leftmargin="0.1000in" hide="copy web mobile" keepwithnext="true" keeptogether="true">
+              <code event="hidewhen">
+                <formula>getProf := @GetProfileField("CalendarProfile"; "CalendarHeaderDetails") ;
+@If(!@IsAvailable($Alarm) &amp; @IsAvailable($PublicAccess) &amp; BookFreeTime!="1";@Return(@True);
+getProf = "1";@True;
+@IsDocBeingEdited;@True;
+NoticeType="C";@True;@False)</formula>
+              </code>
+            </pardef>
+            <par def="3">
+              <run>
+                <font size="1pt"/>
+              </run>
+            </par>
+            <table widthtype="fitmargins" leftmargin="0.1000in" refwidth="2.4500in">
+              <tablecolumn width="100%"/>
+              <tablerow>
+                <tablecell borderwidth="0px">
+                  <pardef id="4" keepwithnext="true" keeptogether="true"/>
+                  <par def="4">
+                    <picture width="235px" height="50px">
+                      <imageref>
+                        <code event="value">
+                          <formula>Tx_ComputedHotspot</formula>
+                        </code>
+                      </imageref>
+                    </picture>
+                    <run>
+                      <font size="9pt"/>
+                    </run>
+                  </par>
+                </tablecell>
+              </tablerow>
+            </table>
+            <pardef id="5" leftmargin="0.1000in" keepwithnext="true" keeptogether="true">
+              <code event="hidewhen">
+                <formula>1</formula>
+              </code>
+            </pardef>
+            <par def="5">
+              <run>
+                <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+            </par>
+          </tablecell>
+          <tablecell borderwidth="0px">
+            <pardef id="6" keepwithnext="true" keeptogether="true"/>
+            <par def="6">
+              <run>
+                <font size="12pt" style="bold"/>Form A - Two column</run>
+            </par>
+            <table leftmargin="0" widthtype="fixedleft" refwidth="5.9986in">
+              <tablecolumn width="0.7083in"/>
+              <tablecolumn width="5.2903in"/>
+              <tablerow>
+                <tablecell borderwidth="0px">
+                  <pardef id="8" keepwithnext="true" keeptogether="true"/>
+                  <par def="8">Status:</par>
+                </tablecell>
+                <tablecell borderwidth="0px">
+                  <pardef id="9" keepwithnext="true" keeptogether="true"/>
+                  <par def="9">
+                    <run>
+                      <font size="9pt" color="#8f8f8f"/>
+                    </run>
+                    <run>
+                      <font style="bold" color="green"/>
+                      <computedtext>
+                        <code event="value">
+                          <formula>@If(
+	Public = "Yes" &amp; Tx_ReviewStatus = "1";
+	"";
+	@If(
+		Public = "Yes";
+			"Published";
+			"Draft")
+)</formula>
+                        </code>
+                      </computedtext>
+                    </run>
+                    <run>
+                      <font size="9pt" color="#8f8f8f"/>
+                    </run>
+                  </par>
+                </tablecell>
+              </tablerow>
+              <tablerow>
+                <tablecell borderwidth="0px">
+                  <pardef id="10" keepwithnext="true" keeptogether="true">
+                    <code event="hidewhen">
+                      <formula>getProf := @Environment("showHeaderDetails");
+getProf = "0" | getProf = ""</formula>
+                    </code>
+                  </pardef>
+                  <par def="10">
+                    <run>
+                      <font size="9pt" color="#929292"/>Modified:</run>
+                  </par>
+                </tablecell>
+                <tablecell borderwidth="0px">
+                  <pardef id="11" leftmargin="0" keepwithnext="true" keeptogether="true">
+                    <code event="hidewhen">
+                      <formula>getProf := @Environment("showHeaderDetails");
+getProf = "0" | getProf = ""</formula>
+                    </code>
+                  </pardef>
+                  <par def="11">
+                    <run>
+                      <font size="9pt" color="#8f8f8f"/>
+                    </run>
+                    <run>
+                      <font size="9pt" color="#8f8f8f"/>
+                      <computedtext>
+                        <code event="value">
+                          <formula>@If( @IsNewDoc;"n/a"; @Modified)</formula>
+                        </code>
+                      </computedtext>
+                    </run>
+                    <run>
+                      <font color="#8f8f8f"/>
+                    </run>
+                  </par>
+                </tablecell>
+              </tablerow>
+              <tablerow>
+                <tablecell borderwidth="0px">
+                  <pardef id="12" keepwithnext="true" keeptogether="true">
+                    <code event="hidewhen">
+                      <formula>getProf := @Environment("showHeaderDetails");
+getProf = "0" | getProf = ""</formula>
+                    </code>
+                  </pardef>
+                  <par def="12">
+                    <run>
+                      <font size="9pt" color="#929292"/>Editor:</run>
+                  </par>
+                </tablecell>
+                <tablecell borderwidth="0px">
+                  <pardef id="13" keepwithnext="true" keeptogether="true">
+                    <code event="hidewhen">
+                      <formula>getProf := @Environment("showHeaderDetails");
+getProf = "0" | getProf = ""</formula>
+                    </code>
+                  </pardef>
+                  <par def="13">
+                    <run>
+                      <font size="9pt" color="#8f8f8f"/>
+                    </run>
+                    <run>
+                      <font size="9pt" color="#8f8f8f"/>
+                      <computedtext>
+                        <code event="value">
+                          <formula>varNum := @Elements( $UpdatedBy);
+
+@If( @IsNewDoc; @Name([Abbreviate];@UserName); @Name([Abbreviate];$UpdatedBy[varNum]) )</formula>
+                        </code>
+                      </computedtext>
+                    </run>
+                    <run>
+                      <font color="#8f8f8f"/>
+                    </run>
+                  </par>
+                </tablecell>
+              </tablerow>
+            </table>
+            <pardef id="14" keepwithnext="true" keeptogether="true">
+              <code event="hidewhen">
+                <formula>1</formula>
+              </code>
+            </pardef>
+            <par def="14">
+              <run>
+                <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+            </par>
+          </tablecell>
+          <tablecell valign="bottom" borderwidth="0px">
+            <pardef id="15" align="right" hide="copy" keepwithnext="true" keeptogether="true">
+              <code event="hidewhen">
+                <formula>getProf := @Environment("showHeaderDetails");
+getProf = "1" | @IsDocBeingEdited</formula>
+              </code>
+            </pardef>
+            <par def="15">
+              <run>
+                <font size="9pt" color="green"/>
+              </run>
+              <actionhotspot hotspotstyle="none">
+                <code event="click">
+                  <formula>@If(@Version &lt; @Text(172); @Return(""); "");
+@SetEnvironment("showHeaderDetails"; "1");
+@Command([RefreshHideFormulas])</formula>
+                </code>
+                <run>
+                  <font size="9pt" style="underline" color="blue"/>Show Details</run>
+              </actionhotspot>
+              <run>
+                <font size="9pt"/>
+              </run>
+            </par>
+            <pardef id="16" align="right" hide="copy" keepwithnext="true" keeptogether="true">
+              <code event="hidewhen">
+                <formula>getProf := @Environment("showHeaderDetails");
+getProf = "" | @IsDocBeingEdited</formula>
+              </code>
+            </pardef>
+            <par def="16">
+              <run>
+                <font size="9pt"/>
+              </run>
+              <actionhotspot hotspotstyle="none">
+                <run>
+                  <font size="9pt"/>
+                </run>
+              </actionhotspot>
+              <run>
+                <font size="9pt"/>
+              </run>
+              <actionhotspot hotspotstyle="none">
+                <code event="click">
+                  <formula>@If(@Version &lt; @Text(172); @Return(""); "");
+@SetEnvironment("showHeaderDetails"; "");
+@Command([RefreshHideFormulas])</formula>
+                </code>
+                <run>
+                  <font size="9pt" style="underline" color="blue"/>Hide Details</run>
+              </actionhotspot>
+              <run>
+                <font size="9pt" color="green"/>
+              </run>
+              <actionhotspot hotspotstyle="none" regionid="1">
+                <code event="click">
+                  <formula>@If(@Version &lt; @Text(172); @Return(""); "");
+@SetEnvironment("showHeaderInstructions"; "1");
+@Command([RefreshHideFormulas])</formula>
+                </code>
+                <run>
+                  <font size="9pt" style="underline" color="blue"/>
+                </run>
+              </actionhotspot>
+            </par>
+            <pardef id="17" align="right" hide="read print preview embedded" keepwithnext="true" keeptogether="true">
+              <code event="hidewhen">
+                <formula>getProf := @Environment("showHeaderInstructions");
+getProf = "1"</formula>
+              </code>
+            </pardef>
+            <par def="17">
+              <region regionid="1" end="true">
+                <run>
+                  <font size="9pt" style="underline" color="blue"/>Show Instructions</run>
+              </region>
+              <run>
+                <font size="9pt"/>
+              </run>
+            </par>
+            <pardef id="18" align="right" hide="read print copy preview embedded" keepwithnext="true" keeptogether="true">
+              <code event="hidewhen">
+                <formula>getProf := @Environment("showHeaderInstructions");
+getProf = "0" | getProf = ""</formula>
+              </code>
+            </pardef>
+            <par def="18">
+              <run>
+                <font size="9pt"/>
+              </run>
+              <actionhotspot hotspotstyle="none">
+                <run>
+                  <font size="9pt"/>
+                </run>
+              </actionhotspot>
+              <run>
+                <font size="9pt"/>
+              </run>
+              <actionhotspot hotspotstyle="none">
+                <code event="click">
+                  <formula>@If(@Version &lt; @Text(172); @Return(""); "");
+@SetEnvironment("showHeaderInstructions"; "");
+@Command([RefreshHideFormulas])</formula>
+                </code>
+                <run>
+                  <font size="9pt" style="underline" color="blue"/>Hide Instructions</run>
+              </actionhotspot>
+              <run>
+                <font size="9pt"/>
+              </run>
+            </par>
+          </tablecell>
+        </tablerow>
+      </table>
+      <par def="1">
+        <run>
+          <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+      </par>
+      <formregionend type="header"/>
+      <formregionbegin type="body"/>
+      <pardef id="19" leftmargin="1in" tabs="L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in">
+        <code event="hidewhen">
+          <formula>1</formula>
+        </code>
+      </pardef>
+      <par def="19">
+        <run>
+          <font size="8pt" style="bold" color="green"/>Purpose</run>
+      </par>
+      <par def="19">
+        <run>
+          <font size="8pt" color="green"/>Describe HOW this form is primarily being used. What does it do?</run>
+      </par>
+      <par def="19">
+        <run>
+          <font size="8pt" color="green"/>Examples: </run>
+      </par>
+      <par def="19">
+        <run>
+          <font size="8pt" style="italic" color="green"/>- This form is available for users to create simple documents.</run>
+      </par>
+      <par def="19">
+        <run>
+          <font size="8pt" style="italic" color="green"/>- This form is being used in a dialogbox on form X to display certain data.</run>
+      </par>
+      <par def="19">
+        <run>
+          <font size="8pt" color="green"/>
+        </run>
+      </par>
+      <par def="19">
+        <run>
+          <font size="8pt" style="bold" color="green"/>Notes</run>
+      </par>
+      <par def="19">
+        <run>
+          <font size="8pt" color="green"/>Describe in more details IMPORTANT ASPECTS of the form.</run>
+      </par>
+      <par def="19">
+        <run>
+          <font size="8pt" color="green"/>Examples:</run>
+      </par>
+      <par def="19">
+        <run>
+          <font size="8pt" style="italic" color="green"/>- This form can not be saved, it is used used for displaying data.</run>
+      </par>
+      <par def="19">
+        <run>
+          <font size="8pt" style="italic" color="green"/>- To be able to use this form properly JavaScript must be enabled.</run>
+      </par>
+      <par def="19">
+        <run>
+          <font size="8pt" color="green"/>
+        </run>
+      </par>
+      <par def="19">
+        <run>
+          <font size="8pt" style="bold" color="green"/>Edit History</run>
+      </par>
+      <par def="19">
+        <run>
+          <font size="8pt" style="bold" color="green"/>WHEN		WHAT</run>
+      </par>
+      <par def="19">
+        <run>
+          <font size="8pt" color="green"/>2008-02-07	Rebuild</run>
+      </par>
+      <par def="19">
+        <run>
+          <font size="8pt" color="green"/>2008-02-01	First release</run>
+      </par>
+      <par def="1">
+        <run>
+          <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+      </par>
+      <table widthtype="fitmargins" refwidth="11.0417in">
+        <tablecolumn width="100%"/>
+        <tablerow>
+          <tablecell borderwidth="0px">
+            <pardef id="21" keepwithnext="true" keeptogether="true">
+              <code event="hidewhen">
+                <formula>1</formula>
+              </code>
+            </pardef>
+            <par def="21">
+              <run>
+                <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+            </par>
+            <table widthtype="fitmargins" rowdisplay="tabs" leftmargin="0%" colorstyle="solid" bgcolor="white" rowspacing="0.0792in" refwidth="11.0403in">
+              <tablerowstyle>
+                <font size="9pt" name="multilingual" color="black"/>
+              </tablerowstyle>
+              <tablecolumn width="100%"/>
+              <tablerow tablabel="Horizontal alignment">
+                <tablecell borderwidth="1px 0px 0px" bgcolor="white">
+                  <pardef id="23" leftmargin="0.0104in" keepwithnext="true" keeptogether="true">
+                    <code event="hidewhen">
+                      <formula>1</formula>
+                    </code>
+                  </pardef>
+                  <par def="23">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                  <table widthtype="fitmargins" leftmargin="0.0104in" refwidth="11.0299in">
+                    <tablecolumn width="4.2104in"/>
+                    <tablecolumn width="100%"/>
+                    <tablerow>
+                      <tablecell borderwidth="0px">
+                        <pardef id="24" leftmargin="2%" spacebefore="1.5" spaceafter="1.5" keepwithnext="true" keeptogether="true"/>
+                        <par def="24">
+                          <run>
+                            <font style="bold" color="#009cff"/>FIELDS GROUP 1</run>
+                        </par>
+                        <table cellbordercolor="silver" leftmargin="0" widthtype="fixedleft" rowspacing="0.0396in" refwidth="3.9368in">
+                          <border style="image" width="1px">
+                            <imageref name="table-roundborder-gray.gif"/>
+                          </border>
+                          <tablecolumn width="3.9368in"/>
+                          <tablerow>
+                            <tablecell colorstyle="vgradient" borderwidth="0px" bgcolor="white" altbgcolor="#efefef">
+                              <pardef id="26" keepwithnext="true" keeptogether="true">
+                                <code event="hidewhen">
+                                  <formula>1</formula>
+                                </code>
+                              </pardef>
+                              <par def="26">
+                                <run>
+                                  <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                              </par>
+                              <table widthtype="fitmargins" cellbordercolor="silver" leftmargin="0" rowspacing="0.0396in" columnspacing="0.0396in" refwidth="3.9368in">
+                                <tablecolumn width="1.1813in"/>
+                                <tablecolumn width="100%"/>
+                                <tablerow>
+                                  <tablecell borderwidth="0px">
+                                    <pardef id="28" leftmargin="5%" keepwithnext="true" keeptogether="true"/>
+                                    <par def="28">
+                                      <run>
+                                        <font size="9pt" style="bold" color="gray"/>Text:</run>
+                                    </par>
+                                  </tablecell>
+                                  <tablecell borderwidth="0px">
+                                    <pardef id="29" keepwithnext="true" keeptogether="true">
+                                      <code event="hidewhen">
+                                        <formula>1</formula>
+                                      </code>
+                                    </pardef>
+                                    <par def="29">
+                                      <run>
+                                        <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                                    </par>
+                                    <table cellbordercolor="gray" leftmargin="0" widthtype="fixedleft" rowspacing="0.0194in" columnspacing="0.0194in" refwidth="2.4014in">
+                                      <tablecolumn width="2.3625in"/>
+                                      <tablerow>
+                                        <tablecell bgcolor="white">
+                                          <pardef id="31" hide="read print preview embedded" keepwithnext="true" keeptogether="true"/>
+                                          <par def="31">
+                                            <field defaultfocus="true" showdelimiters="false" type="text" kind="editable" name="Tx_DocText">
+                                              <code event="inputtranslation">
+                                                <formula>@Trim(@ThisValue)</formula>
+                                              </code>
+                                            </field>
+                                            <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="8" containertype="65418" aftercontainercount="1" afterbegincount="4">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+                                          </par>
+                                        </tablecell>
+                                      </tablerow>
+                                    </table>
+                                    <pardef id="32" hide="edit copy previewedit" keepwithnext="true" keeptogether="true"/>
+                                    <par def="32">
+                                      <computedtext>
+                                        <code event="value">
+                                          <formula>Tx_DocText</formula>
+                                        </code>
+                                      </computedtext>
+                                    </par>
+                                    <pardef id="33" hide="read print preview" keepwithnext="true" keeptogether="true">
+                                      <code event="hidewhen">
+                                        <formula>getProf := @Environment("showHeaderInstructions");
+getProf = "0" | getProf = ""</formula>
+                                      </code>
+                                    </pardef>
+                                    <par def="33">
+                                      <run>
+                                        <font size="9pt" style="bold" color="green"/>Enter text here.</run>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                                <tablerow>
+                                  <tablecell borderwidth="0px 0px 1px">
+                                    <pardef id="34" keepwithnext="true" keeptogether="true"/>
+                                    <par def="34">
+                                      <run>
+                                        <font size="1pt" style="bold" color="gray"/>
+                                      </run>
+                                    </par>
+                                  </tablecell>
+                                  <tablecell borderwidth="0px 0px 1px">
+                                    <pardef id="35" keepwithnext="true" keeptogether="true"/>
+                                    <par def="35">
+                                      <run>
+                                        <font size="1pt" style="bold" color="#4f4f4f"/>
+                                      </run>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                                <tablerow>
+                                  <tablecell borderwidth="1px 0px 0px">
+                                    <par def="34">
+                                      <run>
+                                        <font size="1pt" style="bold" color="gray"/>
+                                      </run>
+                                    </par>
+                                  </tablecell>
+                                  <tablecell borderwidth="1px 0px 0px">
+                                    <par def="35">
+                                      <run>
+                                        <font size="1pt" style="bold" color="#4f4f4f"/>
+                                      </run>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                                <tablerow>
+                                  <tablecell borderwidth="0px">
+                                    <par def="28">
+                                      <run>
+                                        <font size="9pt" style="bold" color="gray"/>Date:</run>
+                                    </par>
+                                  </tablecell>
+                                  <tablecell borderwidth="0px">
+                                    <pardef id="36" hide="read print preview embedded" keepwithnext="true" keeptogether="true"/>
+                                    <par def="36">
+                                      <run>
+                                        <font size="9pt"/>
+                                      </run>
+                                      <field usenotesstyle="false" height="0.2500in" width="1in" multiline="true" borderstyle="single" type="datetime" kind="editable" name="Dt_DocDate">
+                                        <datetimeformat show="date" date="yearmonthday" fourdigityearfor21stcentury="true" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+                                      </field>
+                                    </par>
+                                    <par def="32">
+                                      <computedtext>
+                                        <code event="value">
+                                          <formula>Dt_DocDate</formula>
+                                        </code>
+                                      </computedtext>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                                <tablerow>
+                                  <tablecell borderwidth="0px 0px 1px">
+                                    <par def="34">
+                                      <run>
+                                        <font size="1pt" style="bold" color="gray"/>
+                                      </run>
+                                    </par>
+                                  </tablecell>
+                                  <tablecell borderwidth="0px 0px 1px">
+                                    <par def="35">
+                                      <run>
+                                        <font size="1pt" style="bold" color="#4f4f4f"/>
+                                      </run>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                                <tablerow>
+                                  <tablecell borderwidth="1px 0px 0px">
+                                    <par def="34">
+                                      <run>
+                                        <font size="1pt" style="bold" color="gray"/>
+                                      </run>
+                                    </par>
+                                  </tablecell>
+                                  <tablecell borderwidth="1px 0px 0px">
+                                    <par def="35">
+                                      <run>
+                                        <font size="1pt" style="bold" color="#4f4f4f"/>
+                                      </run>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                                <tablerow>
+                                  <tablecell borderwidth="0px">
+                                    <par def="28">
+                                      <run>
+                                        <font size="9pt" style="bold" color="gray"/>Number:</run>
+                                    </par>
+                                  </tablecell>
+                                  <tablecell borderwidth="0px">
+                                    <par def="29">
+                                      <run>
+                                        <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                                    </par>
+                                    <table cellbordercolor="gray" leftmargin="0" widthtype="fixedleft" rowspacing="0.0194in" columnspacing="0.0194in" refwidth="0.8264in">
+                                      <tablecolumn width="0.7875in"/>
+                                      <tablerow>
+                                        <tablecell bgcolor="white">
+                                          <pardef id="37" hide="read print preview embedded" keepwithnext="true" keeptogether="true"/>
+                                          <par def="37">
+                                            <field showdelimiters="false" type="number" kind="editable" name="Nb_DocNumber">
+                                              <numberformat format="fixed" digits="2" punctuated="false" parens="false" percent="false" bytes="false"/>
+                                            </field>
+                                          </par>
+                                        </tablecell>
+                                      </tablerow>
+                                    </table>
+                                    <par def="32">
+                                      <computedtext>
+                                        <code event="value">
+                                          <formula>Nb_DocNumber</formula>
+                                        </code>
+                                      </computedtext>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                                <tablerow>
+                                  <tablecell borderwidth="0px">
+                                    <par def="28">
+                                      <run>
+                                        <font size="9pt" style="bold" color="gray"/>Rich Text:</run>
+                                    </par>
+                                  </tablecell>
+                                  <tablecell borderwidth="0px">
+                                    <par def="29">
+                                      <run>
+                                        <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                                    </par>
+                                    <table minrowheight="1.1813in" cellbordercolor="gray" leftmargin="0" widthtype="fixedleft" rowspacing="0.0194in" columnspacing="0.0194in" refwidth="2.4014in">
+                                      <tablecolumn width="2.3625in"/>
+                                      <tablerow>
+                                        <tablecell bgcolor="white">
+                                          <pardef id="39" keepwithnext="true" keeptogether="true"/>
+                                          <par def="39">
+                                            <field showdelimiters="false" type="richtext" kind="editable" name="Rt_DocRichText"/>
+                                            <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="8" containertype="65418" aftercontainercount="1" afterbegincount="4">
+Yg4BAIQAAAAAAAEAAAA=
+</compositedata>
+                                          </par>
+                                        </tablecell>
+                                      </tablerow>
+                                    </table>
+                                    <par def="33">
+                                      <run>
+                                        <font size="9pt" style="bold" color="green"/>Free text field.</run>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                              </table>
+                              <par def="26">
+                                <run>
+                                  <font size="9pt" color="green"/>
+                                </run>
+                              </par>
+                              <par def="26">
+                                <run>
+                                  <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                              </par>
+                            </tablecell>
+                          </tablerow>
+                        </table>
+                        <pardef id="40" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>1</formula>
+                          </code>
+                        </pardef>
+                        <par def="40">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px">
+                        <pardef id="41" spacebefore="1.5" spaceafter="1.5" keepwithnext="true" keeptogether="true"/>
+                        <par def="41">
+                          <run>
+                            <font style="bold" color="#009cff"/>FIELDS GROUP 2</run>
+                        </par>
+                        <table cellbordercolor="silver" leftmargin="0" widthtype="fixedleft" rowspacing="0.0396in" refwidth="4.5611in">
+                          <border style="image" width="1px">
+                            <imageref name="table-roundborder-gray.gif"/>
+                          </border>
+                          <tablecolumn width="4.5611in"/>
+                          <tablerow>
+                            <tablecell colorstyle="vgradient" borderwidth="0px" bgcolor="white" altbgcolor="#efefef">
+                              <pardef id="43" keepwithnext="true" keeptogether="true">
+                                <code event="hidewhen">
+                                  <formula>1</formula>
+                                </code>
+                              </pardef>
+                              <par def="43">
+                                <run>
+                                  <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                              </par>
+                              <table widthtype="fitmargins" cellbordercolor="silver" leftmargin="0" rowspacing="0.0396in" columnspacing="0.0396in" refwidth="4.5611in">
+                                <tablecolumn width="1.1813in"/>
+                                <tablecolumn width="100%"/>
+                                <tablerow>
+                                  <tablecell borderwidth="0px">
+                                    <pardef id="45" leftmargin="5%" keepwithnext="true" keeptogether="true"/>
+                                    <par def="45">
+                                      <run>
+                                        <font size="9pt" style="bold" color="gray"/>Dialog list:</run>
+                                    </par>
+                                  </tablecell>
+                                  <tablecell borderwidth="0px">
+                                    <pardef id="46" keepwithnext="true" keeptogether="true"/>
+                                    <par def="46">
+                                      <run>
+                                        <font size="11pt"/>
+                                      </run>
+                                      <field type="keyword" kind="editable" name="Tx_DocDialogList">
+                                        <keywords ui="dialoglist">
+                                          <textlist>
+                                            <text>Option A</text>
+                                            <text>Option B</text>
+                                            <text>Option C</text>
+                                          </textlist>
+                                        </keywords>
+                                      </field>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                                <tablerow>
+                                  <tablecell borderwidth="0px 0px 1px">
+                                    <pardef id="47" keepwithnext="true" keeptogether="true"/>
+                                    <par def="47">
+                                      <run>
+                                        <font size="1pt" style="bold" color="gray"/>
+                                      </run>
+                                    </par>
+                                  </tablecell>
+                                  <tablecell borderwidth="0px 0px 1px">
+                                    <par def="46">
+                                      <run>
+                                        <font size="1pt" style="bold" color="#4f4f4f"/>
+                                      </run>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                                <tablerow>
+                                  <tablecell borderwidth="1px 0px 0px">
+                                    <par def="47">
+                                      <run>
+                                        <font size="1pt" style="bold" color="gray"/>
+                                      </run>
+                                    </par>
+                                  </tablecell>
+                                  <tablecell borderwidth="1px 0px 0px">
+                                    <par def="46">
+                                      <run>
+                                        <font size="1pt" style="bold" color="#4f4f4f"/>
+                                      </run>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                                <tablerow>
+                                  <tablecell borderwidth="0px">
+                                    <par def="45">
+                                      <run>
+                                        <font size="9pt" style="bold" color="gray"/>Checkbox:</run>
+                                    </par>
+                                  </tablecell>
+                                  <tablecell borderwidth="0px">
+                                    <pardef id="48" hide="read print preview embedded" keepwithnext="true" keeptogether="true"/>
+                                    <par def="48">
+                                      <field borderstyle="none" lookupeachchar="false" lookupaddressonrefresh="false" type="keyword" allowmultivalues="true" kind="editable" name="Tx_DocCheckBox" listinputseparators="comma" listdisplayseparator="comma">
+                                        <keywords helperbutton="false" recalconchange="true" columns="1" ui="checkbox">
+                                          <textlist>
+                                            <text>Option A</text>
+                                            <text>Option B</text>
+                                            <text>Option C</text>
+                                          </textlist>
+                                        </keywords>
+                                      </field>
+                                    </par>
+                                    <pardef id="49" hide="edit copy previewedit" keepwithnext="true" keeptogether="true"/>
+                                    <par def="49">
+                                      <computedtext>
+                                        <code event="value">
+                                          <formula>Tx_DocCheckBox</formula>
+                                        </code>
+                                      </computedtext>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                                <tablerow>
+                                  <tablecell borderwidth="0px">
+                                    <par def="45">
+                                      <run>
+                                        <font size="9pt" style="bold" color="gray"/>Radio button:</run>
+                                    </par>
+                                  </tablecell>
+                                  <tablecell borderwidth="0px">
+                                    <pardef id="50" hide="read print preview" keepwithnext="true" keeptogether="true"/>
+                                    <par def="50">
+                                      <run>
+                                        <font size="11pt"/>
+                                      </run>
+                                      <field borderstyle="none" lookupeachchar="false" lookupaddressonrefresh="false" type="keyword" kind="editable" name="Tx_DocRadioButton">
+                                        <keywords helperbutton="false" recalconchange="true" columns="1" ui="radiobutton">
+                                          <textlist>
+                                            <text>Option 1</text>
+                                            <text>Option 2</text>
+                                            <text>Option 3</text>
+                                          </textlist>
+                                        </keywords>
+                                      </field>
+                                    </par>
+                                    <par def="49">
+                                      <computedtext>
+                                        <code event="value">
+                                          <formula>Tx_DocRadioButton</formula>
+                                        </code>
+                                      </computedtext>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                                <tablerow>
+                                  <tablecell borderwidth="0px 0px 1px">
+                                    <par def="47">
+                                      <run>
+                                        <font size="1pt" style="bold" color="gray"/>
+                                      </run>
+                                    </par>
+                                  </tablecell>
+                                  <tablecell borderwidth="0px 0px 1px">
+                                    <par def="46">
+                                      <run>
+                                        <font size="1pt" style="bold" color="#4f4f4f"/>
+                                      </run>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                                <tablerow>
+                                  <tablecell borderwidth="1px 0px 0px">
+                                    <par def="47">
+                                      <run>
+                                        <font size="1pt" style="bold" color="gray"/>
+                                      </run>
+                                    </par>
+                                  </tablecell>
+                                  <tablecell borderwidth="1px 0px 0px">
+                                    <par def="46">
+                                      <run>
+                                        <font size="1pt" style="bold" color="#4f4f4f"/>
+                                      </run>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                                <tablerow>
+                                  <tablecell borderwidth="0px">
+                                    <par def="45">
+                                      <run>
+                                        <font size="9pt" style="bold" color="gray"/>Names:</run>
+                                    </par>
+                                  </tablecell>
+                                  <tablecell borderwidth="0px">
+                                    <pardef id="51" keepwithnext="true" keeptogether="true">
+                                      <code event="hidewhen">
+                                        <formula>1</formula>
+                                      </code>
+                                    </pardef>
+                                    <par def="51">
+                                      <run>
+                                        <font color="green"/>&lt;!-- hidden --&gt;</run>
+                                    </par>
+                                    <table cellbordercolor="gray" leftmargin="0" widthtype="fixedleft" rowspacing="0.0194in" columnspacing="0.0194in" refwidth="3.2278in">
+                                      <tablecolumn width="2.3625in"/>
+                                      <tablecolumn width="0.7875in"/>
+                                      <tablerow>
+                                        <tablecell bgcolor="white">
+                                          <pardef id="53" leftmargin="0.0104in" hide="read print preview embedded" keepwithnext="true" keeptogether="true"/>
+                                          <par def="53">
+                                            <run>
+                                              <font size="11pt"/>
+                                            </run>
+                                            <field showdelimiters="false" choicesdialog="addressbook" lookupeachchar="false" lookupaddressonrefresh="false" type="names" kind="editable" name="Na_DocNames"/>
+                                          </par>
+                                        </tablecell>
+                                        <tablecell borderwidth="0px 0px 0px 1px">
+                                          <pardef id="54" leftmargin="2%" firstlineleftmargin="3%" hide="read print preview embedded" keepwithnext="true" keeptogether="true"/>
+                                          <par def="54">
+                                            <actionhotspot hotspotstyle="none">
+                                              <code event="click">
+                                                <formula>varPerson:=@PickList([Name]:[Single]);
+@SetField("Na_DocNames";varPerson)</formula>
+                                              </code>
+                                              <run>
+                                                <font style="underline" color="blue"/>Find person</run>
+                                            </actionhotspot>
+                                            <run>
+                                              <font size="11pt"/>
+                                            </run>
+                                          </par>
+                                        </tablecell>
+                                      </tablerow>
+                                    </table>
+                                    <par def="49">
+                                      <run>
+                                        <font size="11pt"/>
+                                      </run>
+                                      <field lookupeachchar="false" lookupaddressonrefresh="false" type="names" kind="computedfordisplay" name="Na_DspDocNames">
+                                        <code event="defaultvalue">
+                                          <formula>Na_DocNames</formula>
+                                        </code>
+                                      </field>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                              </table>
+                              <par def="43">
+                                <run>
+                                  <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                              </par>
+                            </tablecell>
+                          </tablerow>
+                        </table>
+                        <pardef id="55" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>1</formula>
+                          </code>
+                        </pardef>
+                        <par def="55">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                      </tablecell>
+                    </tablerow>
+                  </table>
+                  <par def="23">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                </tablecell>
+              </tablerow>
+              <tablerow tablabel="Vertical alignment">
+                <tablecell borderwidth="1px 0px 0px" bgcolor="white">
+                  <pardef id="56" keepwithnext="true" keeptogether="true">
+                    <code event="hidewhen">
+                      <formula>1</formula>
+                    </code>
+                  </pardef>
+                  <par def="56">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                  <table widthtype="fitmargins" leftmargin="0" refwidth="11.0403in">
+                    <tablecolumn width="4.2104in"/>
+                    <tablecolumn width="100%"/>
+                    <tablerow>
+                      <tablecell borderwidth="0px">
+                        <pardef id="58" spacebefore="1.5" spaceafter="1.5" keepwithnext="true" keeptogether="true"/>
+                        <par def="58">
+                          <run>
+                            <font style="bold" color="#009cff"/>FIELDS GROUP 1</run>
+                        </par>
+                        <table cellbordercolor="silver" leftmargin="0" widthtype="fixedleft" rowspacing="0.0396in" refwidth="3.9368in">
+                          <border style="image" width="1px">
+                            <imageref name="table-roundborder-gray.gif"/>
+                          </border>
+                          <tablecolumn width="3.9368in"/>
+                          <tablerow>
+                            <tablecell colorstyle="vgradient" borderwidth="0px" bgcolor="white" altbgcolor="#efefef">
+                              <pardef id="60" keepwithnext="true" keeptogether="true">
+                                <code event="hidewhen">
+                                  <formula>1</formula>
+                                </code>
+                              </pardef>
+                              <par def="60">
+                                <run>
+                                  <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                              </par>
+                              <table widthtype="fitmargins" cellbordercolor="silver" leftmargin="0" rowspacing="0.0396in" refwidth="3.9368in">
+                                <tablecolumn width="100%"/>
+                                <tablerow>
+                                  <tablecell borderwidth="0px">
+                                    <pardef id="62" leftmargin="2%" keepwithnext="true" keeptogether="true"/>
+                                    <par def="62">
+                                      <run>
+                                        <font size="9pt" style="bold" color="gray"/>Text:</run>
+                                    </par>
+                                    <table cellbordercolor="gray" leftmargin="2%" widthtype="fixedleft" rowspacing="0.0194in" columnspacing="0.0194in" refwidth="3.1882in">
+                                      <tablecolumn width="3.1493in"/>
+                                      <tablerow>
+                                        <tablecell bgcolor="white">
+                                          <pardef id="63" hide="read print preview embedded" keepwithnext="true" keeptogether="true"/>
+                                          <par def="63">
+                                            <run>
+                                              <font size="11pt"/>
+                                            </run>
+                                            <field defaultfocus="true" showdelimiters="false" type="text" kind="editable" name="Tx_DocText_1">
+                                              <code event="inputtranslation">
+                                                <formula>@Trim(@ThisValue)</formula>
+                                              </code>
+                                            </field>
+                                            <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="8" containertype="65418" aftercontainercount="1" afterbegincount="4">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+                                          </par>
+                                        </tablecell>
+                                      </tablerow>
+                                    </table>
+                                    <pardef id="64" leftmargin="2%" hide="edit copy previewedit" keepwithnext="true" keeptogether="true"/>
+                                    <par def="64">
+                                      <computedtext>
+                                        <code event="value">
+                                          <formula>Tx_DocText_1</formula>
+                                        </code>
+                                      </computedtext>
+                                    </par>
+                                    <pardef id="65" leftmargin="2%" hide="read print preview" keepwithnext="true" keeptogether="true">
+                                      <code event="hidewhen">
+                                        <formula>getProf := @Environment("showHeaderInstructions");
+getProf = "0" | getProf = ""</formula>
+                                      </code>
+                                    </pardef>
+                                    <par def="65">
+                                      <run>
+                                        <font size="9pt" style="bold" color="green"/>Enter text here.</run>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                                <tablerow>
+                                  <tablecell borderwidth="0px">
+                                    <par def="62">
+                                      <run>
+                                        <font size="9pt" style="bold" color="gray"/>Date:</run>
+                                    </par>
+                                    <pardef id="66" leftmargin="2%" hide="read print preview embedded" keepwithnext="true" keeptogether="true"/>
+                                    <par def="66">
+                                      <run>
+                                        <font size="11pt"/>
+                                      </run>
+                                      <field usenotesstyle="false" height="0.2500in" width="1in" multiline="true" borderstyle="single" type="datetime" kind="editable" name="Dt_DocDate_1">
+                                        <datetimeformat show="date" date="yearmonthday" fourdigityearfor21stcentury="true" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+                                      </field>
+                                      <run>
+                                        <font color="#4f4f4f"/>
+                                      </run>
+                                    </par>
+                                    <par def="64">
+                                      <computedtext>
+                                        <code event="value">
+                                          <formula>Dt_DocDate_1</formula>
+                                        </code>
+                                      </computedtext>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                                <tablerow>
+                                  <tablecell borderwidth="0px">
+                                    <pardef id="67" leftmargin="2%" keepwithnext="true" keeptogether="true"/>
+                                    <par def="67">
+                                      <run>
+                                        <font size="9pt" style="bold" color="gray"/>Number:</run>
+                                    </par>
+                                    <table cellbordercolor="gray" leftmargin="2%" widthtype="fixedleft" rowspacing="0.0194in" columnspacing="0.0194in" refwidth="1.7847in">
+                                      <tablecolumn width="1.7458in"/>
+                                      <tablerow>
+                                        <tablecell bgcolor="white">
+                                          <pardef id="68" leftmargin="0%" firstlineleftmargin="3%" hide="read print preview embedded" keepwithnext="true" keeptogether="true"/>
+                                          <par def="68">
+                                            <field showdelimiters="false" type="number" kind="editable" name="Nb_DocNumber_1">
+                                              <numberformat format="fixed" digits="2" punctuated="false" parens="false" percent="false" bytes="false"/>
+                                            </field>
+                                          </par>
+                                        </tablecell>
+                                      </tablerow>
+                                    </table>
+                                    <pardef id="69" leftmargin="2%" hide="edit copy previewedit" keepwithnext="true" keeptogether="true"/>
+                                    <par def="69">
+                                      <computedtext>
+                                        <code event="value">
+                                          <formula>Nb_DocNumber_1</formula>
+                                        </code>
+                                      </computedtext>
+                                      <run>
+                                        <font color="green"/>
+                                      </run>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                              </table>
+                              <par def="60">
+                                <run>
+                                  <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                              </par>
+                            </tablecell>
+                          </tablerow>
+                        </table>
+                        <pardef id="70" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>1</formula>
+                          </code>
+                        </pardef>
+                        <par def="70">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px">
+                        <pardef id="71" spacebefore="1.5" spaceafter="1.5" keepwithnext="true" keeptogether="true"/>
+                        <par def="71">
+                          <run>
+                            <font style="bold" color="#009cff"/>FIELDS GROUP 2</run>
+                        </par>
+                        <table cellbordercolor="silver" leftmargin="0" widthtype="fixedleft" rowspacing="0.0396in" refwidth="3.9368in">
+                          <border style="image" width="1px">
+                            <imageref name="table-roundborder-gray.gif"/>
+                          </border>
+                          <tablecolumn width="3.9368in"/>
+                          <tablerow>
+                            <tablecell colorstyle="vgradient" borderwidth="0px" bgcolor="white" altbgcolor="#efefef">
+                              <pardef id="73" keepwithnext="true" keeptogether="true">
+                                <code event="hidewhen">
+                                  <formula>1</formula>
+                                </code>
+                              </pardef>
+                              <par def="73">
+                                <run>
+                                  <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                              </par>
+                              <table widthtype="fitmargins" cellbordercolor="silver" leftmargin="0" rowspacing="0.0396in" columnspacing="0.0396in" refwidth="3.9368in">
+                                <tablecolumn width="100%"/>
+                                <tablerow>
+                                  <tablecell borderwidth="0px">
+                                    <pardef id="75" leftmargin="2%" keepwithnext="true" keeptogether="true"/>
+                                    <par def="75">
+                                      <run>
+                                        <font size="9pt" style="bold" color="gray"/>Dialog list:</run>
+                                    </par>
+                                    <par def="75">
+                                      <run>
+                                        <font size="11pt"/>
+                                      </run>
+                                      <field type="keyword" kind="editable" name="Tx_DocDialogList_1">
+                                        <keywords ui="dialoglist">
+                                          <textlist>
+                                            <text>Option A</text>
+                                            <text>Option B</text>
+                                            <text>Option C</text>
+                                          </textlist>
+                                        </keywords>
+                                      </field>
+                                    </par>
+                                    <pardef id="76" leftmargin="2%" hide="read print preview" keepwithnext="true" keeptogether="true">
+                                      <code event="hidewhen">
+                                        <formula>Tx_ShowHelp !="1"</formula>
+                                      </code>
+                                    </pardef>
+                                    <par def="76">
+                                      <run>
+                                        <font size="9pt" style="bold" color="green"/>Select a value from the list.</run>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                                <tablerow>
+                                  <tablecell borderwidth="0px 0px 1px">
+                                    <pardef id="77" hide="edit copy previewedit" keepwithnext="true" keeptogether="true"/>
+                                    <par def="77">
+                                      <run>
+                                        <font size="1pt" color="green"/>
+                                      </run>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                                <tablerow>
+                                  <tablecell borderwidth="1px 0px 0px">
+                                    <pardef id="78" leftmargin="2%" hide="edit copy previewedit" keepwithnext="true" keeptogether="true"/>
+                                    <par def="78">
+                                      <run>
+                                        <font size="1pt" color="green"/>
+                                      </run>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                                <tablerow>
+                                  <tablecell borderwidth="0px">
+                                    <par def="75">
+                                      <run>
+                                        <font size="9pt" style="bold" color="gray"/>Checkbox:</run>
+                                    </par>
+                                    <pardef id="79" leftmargin="2%" hide="read print preview embedded" keepwithnext="true" keeptogether="true"/>
+                                    <par def="79">
+                                      <run>
+                                        <font size="11pt"/>
+                                      </run>
+                                      <field borderstyle="none" lookupeachchar="false" lookupaddressonrefresh="false" type="keyword" allowmultivalues="true" kind="editable" name="Tx_DocCheckBox_1" listinputseparators="comma" listdisplayseparator="comma">
+                                        <keywords helperbutton="false" recalconchange="true" columns="1" ui="checkbox">
+                                          <textlist>
+                                            <text>Option A</text>
+                                            <text>Option B</text>
+                                            <text>Option C</text>
+                                          </textlist>
+                                        </keywords>
+                                      </field>
+                                      <run>
+                                        <font color="#4f4f4f"/>
+                                      </run>
+                                    </par>
+                                    <par def="78">
+                                      <computedtext>
+                                        <code event="value">
+                                          <formula>Tx_DocCheckBox_1</formula>
+                                        </code>
+                                      </computedtext>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                              </table>
+                              <par def="73">
+                                <run>
+                                  <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                              </par>
+                            </tablecell>
+                          </tablerow>
+                        </table>
+                        <pardef id="80" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>1</formula>
+                          </code>
+                        </pardef>
+                        <par def="80">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                      </tablecell>
+                    </tablerow>
+                  </table>
+                  <pardef id="81" spacebefore="2" keepwithnext="true" keeptogether="true"/>
+                  <par def="81">
+                    <run>
+                      <font size="9pt" style="bold" color="#4f4f4f"/>Rich Text</run>
+                    <run>
+                      <font size="8pt" style="bold" color="#4f4f4f"/>:</run>
+                  </par>
+                  <pardef id="82" hide="read print copy preview previewedit" keepwithnext="true" keeptogether="true"/>
+                  <par def="82">
+                    <run>
+                      <font size="9pt"/>
+                    </run>
+                    <actionhotspot hotspotstyle="none" htmltitle="Add Attachments" name="Add Attachments">
+                      <code event="click">
+                        <formula>@Command([EditGotoField];"Rt_DocRichText_1");
+@Command([EditInsertFileAttachment])</formula>
+                      </code>
+                      <run>
+                        <font size="9pt" style="underline" color="blue"/>
+                      </run>
+                      <picture width="81px" height="19px" scaledheight="0.1979in" scaledwidth="0.8438in" alttext="Add Attachments" htmltitle="Add Attachments" name="Add Attachments">
+                        <imageref name="buttonattachment.gif"/>
+                        <caption position="center">Attach...</caption>
+                      </picture>
+                      <run>
+                        <font size="9pt" style="underline" color="blue"/>
+                      </run>
+                    </actionhotspot>
+                    <run>
+                      <font size="9pt"/>
+                    </run>
+                  </par>
+                  <pardef id="83" spacebefore="1.5" keepwithnext="true" keeptogether="true"/>
+                  <par def="83">
+                    <field type="richtext" kind="editable" name="Rt_DocRichText_1" description="Enter here your rich text, files, etcetera" fieldhint="&lt;Enter here your rich text, files etc.&gt;"/>
+                    <compositedata type="98" prevtype="65513" nexttype="222" afterparcount="8" containertype="65418" aftercontainercount="2" afterbegincount="4">
+Yg4BAIQAAAAAAAEAAAA=
+</compositedata>
+                    <run>
+                      <font size="9pt" style="bold"/>
+                    </run>
+                  </par>
+                  <pardef id="84" hide="edit copy previewedit" keepwithnext="true" keeptogether="true"/>
+                  <par def="84">
+                    <run>
+                      <font size="9pt"/>
+                    </run>
+                  </par>
+                  <table widthtype="fitmargins" leftmargin="0" refwidth="11.0403in">
+                    <tablecolumn width="4.2104in"/>
+                    <tablecolumn width="100%"/>
+                    <tablerow>
+                      <tablecell borderwidth="0px">
+                        <par def="58">
+                          <run>
+                            <font style="bold" color="#009cff"/>FIELDS GROUP 3</run>
+                        </par>
+                        <table cellbordercolor="silver" leftmargin="0" widthtype="fixedleft" rowspacing="0.0396in" refwidth="3.9576in">
+                          <border style="image" width="1px">
+                            <imageref name="table-roundborder-gray.gif"/>
+                          </border>
+                          <tablecolumn width="3.9576in"/>
+                          <tablerow>
+                            <tablecell colorstyle="vgradient" borderwidth="0px" bgcolor="white" altbgcolor="#efefef">
+                              <pardef id="86" keepwithnext="true" keeptogether="true">
+                                <code event="hidewhen">
+                                  <formula>1</formula>
+                                </code>
+                              </pardef>
+                              <par def="86">
+                                <run>
+                                  <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                              </par>
+                              <table cellbordercolor="silver" leftmargin="0" widthtype="fixedleft" rowspacing="0.0396in" refwidth="3.9368in">
+                                <tablecolumn width="3.9368in"/>
+                                <tablerow>
+                                  <tablecell colorstyle="vgradient" borderwidth="0px" bgcolor="white" altbgcolor="#efefef">
+                                    <par def="67">
+                                      <run>
+                                        <font size="9pt" style="bold" color="gray"/>Names:</run>
+                                    </par>
+                                    <table widthtype="fitmargins" cellbordercolor="gray" leftmargin="2%" refwidth="3.8688in">
+                                      <tablecolumn width="3.0708in"/>
+                                      <tablecolumn width="0.7979in" sizetofit="true"/>
+                                      <tablerow>
+                                        <tablecell bgcolor="white">
+                                          <pardef id="88" hide="read print preview embedded" keepwithnext="true" keeptogether="true"/>
+                                          <par def="88">
+                                            <field showdelimiters="false" choicesdialog="addressbook" lookupeachchar="false" lookupaddressonrefresh="false" type="names" kind="editable" name="Na_DocNames_1"/>
+                                          </par>
+                                        </tablecell>
+                                        <tablecell borderwidth="0px 0px 0px 1px">
+                                          <pardef id="89" align="right" leftmargin="2%" rightmargin="98%" firstlineleftmargin="3%" hide="read print preview embedded" keepwithnext="true" keeptogether="true"/>
+                                          <par def="89">
+                                            <run>
+                                              <font size="9pt"/>
+                                            </run>
+                                            <actionhotspot hotspotstyle="none">
+                                              <code event="click">
+                                                <formula>varPerson:=@PickList([Name]:[Single]);
+@SetField("Na_DocNames_1";varPerson)</formula>
+                                              </code>
+                                              <run>
+                                                <font style="underline" color="blue"/>Find person</run>
+                                            </actionhotspot>
+                                          </par>
+                                        </tablecell>
+                                      </tablerow>
+                                    </table>
+                                    <par def="69">
+                                      <field lookupeachchar="false" lookupaddressonrefresh="false" type="names" kind="computedfordisplay" name="Na_DspDocNames_1">
+                                        <code event="defaultvalue">
+                                          <formula>Na_DocNames_1</formula>
+                                        </code>
+                                      </field>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                                <tablerow>
+                                  <tablecell colorstyle="vgradient" borderwidth="0px" bgcolor="white" altbgcolor="#efefef">
+                                    <pardef id="90" keepwithnext="true" keeptogether="true">
+                                      <code event="hidewhen">
+                                        <formula>1</formula>
+                                      </code>
+                                    </pardef>
+                                    <par def="90">
+                                      <run>
+                                        <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                              </table>
+                              <par def="86">
+                                <run>
+                                  <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                              </par>
+                            </tablecell>
+                          </tablerow>
+                        </table>
+                        <par def="70">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px">
+                        <pardef id="91" spacebefore="1.5" spaceafter="1.5" keepwithnext="true" keeptogether="true"/>
+                        <par def="91">
+                          <run>
+                            <font style="bold" color="#009cff"/>FIELDS GROUP 4</run>
+                        </par>
+                        <table cellbordercolor="silver" leftmargin="0%" rightmargin="3.9368in" widthtype="fixedleft" rowspacing="0.0396in" refwidth="3.9993in">
+                          <border style="image" width="1px">
+                            <imageref name="table-roundborder-gray.gif"/>
+                          </border>
+                          <tablecolumn width="3.9993in"/>
+                          <tablerow>
+                            <tablecell colorstyle="vgradient" borderwidth="0px" bgcolor="white" altbgcolor="#efefef">
+                              <pardef id="93" keepwithnext="true" keeptogether="true">
+                                <code event="hidewhen">
+                                  <formula>1</formula>
+                                </code>
+                              </pardef>
+                              <par def="93">
+                                <run>
+                                  <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                              </par>
+                              <table widthtype="fitmargins" cellbordercolor="silver" leftmargin="0" rowspacing="0.0396in" columnspacing="0.0396in" refwidth="3.9993in">
+                                <tablecolumn width="100%"/>
+                                <tablerow>
+                                  <tablecell borderwidth="0px">
+                                    <pardef id="95" leftmargin="2%" rightmargin="3.9333in" keepwithnext="true" keeptogether="true"/>
+                                    <par def="95">
+                                      <run>
+                                        <font size="9pt" style="bold" color="gray"/>Radio button:</run>
+                                    </par>
+                                    <pardef id="96" leftmargin="2%" hide="read print preview" keepwithnext="true" keeptogether="true"/>
+                                    <par def="96">
+                                      <run>
+                                        <font size="11pt"/>
+                                      </run>
+                                      <field borderstyle="none" lookupeachchar="false" lookupaddressonrefresh="false" type="keyword" kind="editable" name="Tx_DocRadioButton_1">
+                                        <keywords helperbutton="false" recalconchange="true" columns="1" ui="radiobutton">
+                                          <textlist>
+                                            <text>Option 1</text>
+                                            <text>Option 2</text>
+                                            <text>Option 3</text>
+                                          </textlist>
+                                        </keywords>
+                                      </field>
+                                    </par>
+                                    <pardef id="97" leftmargin="2%" hide="edit copy previewedit" keepwithnext="true" keeptogether="true"/>
+                                    <par def="97">
+                                      <run>
+                                        <font size="11pt"/>
+                                      </run>
+                                      <computedtext>
+                                        <code event="value">
+                                          <formula>Tx_DocRadioButton_1</formula>
+                                        </code>
+                                      </computedtext>
+                                    </par>
+                                  </tablecell>
+                                </tablerow>
+                              </table>
+                              <par def="93">
+                                <run>
+                                  <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                              </par>
+                            </tablecell>
+                          </tablerow>
+                        </table>
+                        <pardef id="98" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>1</formula>
+                          </code>
+                        </pardef>
+                        <par def="98">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                      </tablecell>
+                    </tablerow>
+                  </table>
+                  <par def="56">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                </tablecell>
+              </tablerow>
+            </table>
+            <par def="21">
+              <run>
+                <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+            </par>
+          </tablecell>
+        </tablerow>
+      </table>
+      <par def="1">
+        <run>
+          <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+      </par>
+      <subformref name="(Global: Document Footer) | $sf-docfooter"/>
+      <pardef id="99" leftmargin="1in"/>
+      <par def="99"/>
+      <formregionend type="body"/>
+    </richtext>
+  </body>
+  <item name="$$Nb_NumberQuestionsPerPage" summary="false" sign="true">
+    <text>'++LotusScript Development Environment:2:5:(Options):0:66
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub Entering(Source As Field)
+Declare Sub Exiting(Source As Field)
+
+'++LotusScript Development Environment:2:5:(Declarations):0:2
+
+'++LotusScript Development Environment:2:2:BindEvents:1:129
+Private Sub BindEvents(Byval Objectname_ As String)
+	Static Source As FIELD
+	Set Source = Bind(Objectname_)
+	On Event Entering From Source Call Entering
+	On Event Exiting From Source Call Exiting
+End Sub
+
+'++LotusScript Development Environment:2:2:Entering:1:12
+Sub Entering(Source As Field)
+	Call SetHelpFocusField ("Nb_NumberQuestionsPerPage")
+End Sub
+'++LotusScript Development Environment:2:2:Exiting:1:12
+Sub Exiting(Source As Field)
+	Call SetHelpFocusField ("")
+End Sub<break/>
+    </text>
+  </item>
+  <item name="$$Tx_UseLogin" summary="false" sign="true">
+    <text>'++LotusScript Development Environment:2:5:(Options):0:66
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub Exiting(Source As Field)
+Declare Sub Entering(Source As Field)
+
+'++LotusScript Development Environment:2:5:(Declarations):0:2
+
+'++LotusScript Development Environment:2:2:BindEvents:1:129
+Private Sub BindEvents(Byval Objectname_ As String)
+	Static Source As FIELD
+	Set Source = Bind(Objectname_)
+	On Event Exiting From Source Call Exiting
+	On Event Entering From Source Call Entering
+End Sub
+
+'++LotusScript Development Environment:2:2:Exiting:1:12
+Sub Exiting(Source As Field)
+	Call SetHelpFocusField ("")
+End Sub
+'++LotusScript Development Environment:2:2:Entering:1:12
+Sub Entering(Source As Field)
+	Call SetHelpFocusField ("Tx_UseLogin")
+End Sub<break/>
+    </text>
+  </item>
+  <item name="Nb_NumberQuestionsPerPage" summary="false" sign="true">
+    <number>0</number>
+  </item>
+  <item name="$SubForm_RepIDs" sign="true">
+    <text>0000000000000000</text>
+  </item>
+  <item name="Nb_DocNumber" summary="false">
+    <number>0</number>
+  </item>
+  <item name="Nb_DocNumber_1" summary="false">
+    <number>0</number>
+  </item>
+  <item name="Td_Created" summary="false">
+    <rawitemdata type="400">
+AAAAAAAAAAA=
+</rawitemdata>
+  </item>
+  <item name="Td_LastModified" summary="false">
+    <rawitemdata type="400">
+AAAAAAAAAAA=
+</rawitemdata>
+  </item>
+</form>

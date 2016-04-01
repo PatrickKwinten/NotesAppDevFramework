@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sharedactions xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C12576E10068C1B2' hide='v3 v4strict' designerversion='8.5.3' maxid='2'>
+<noteinfo noteid='146' unid='0139D380621C6E27C12575B600462CFF' sequence='47'>
+<created><datetime dst='true'>20090514T144630,39+02</datetime></created>
+<modified><datetime dst='true'>20160401T103936,45+02</datetime></modified>
+<revised><datetime dst='true'>20160401T103936,44+02</datetime></revised>
+<lastaccessed><datetime dst='true'>20160401T103936,44+02</datetime></lastaccessed>
+<addedtofile><datetime>20100309T200413,63+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Patrick Kwinten/OU=0460/O=SANDVIK</name><name>CN=Therese Ekström/OU=0460/O=SANDVIK</name><name
+>CN=Information Systems/O=SANDVIK</name><name>CN=Patrick Kwinten/O=Quintessens</name><name
+>CN=Patrick Kwinten/OU=0180/O=SANDVIK</name><name>CN=Patrick Kwinten/O=Quintessens</name><name
+>CN=Patrick Kwinten/O=quintessens</name></updatedby>
+<wassignedby><name>CN=Patrick Kwinten/O=quintessens</name></wassignedby>
+<action title='(Global: SearchBar)' icon='148' showinmenu='false' hide='web mobile'
+ onlyiconinbar='true' align='right' id='1'><code event='click'><formula>@Command([ViewShowSearchBar])</formula></code><code
+ event='label'><formula>"Open/Close View Search"</formula></code></action>
+<action title='(Global: Help)' icon='45' showinmenu='false' hide='preview web mobile'
+ onlyiconinbar='true' align='right' id='2'><code event='click'><formula>tmp := @DbColumn ("":"NoCache";"";"$v-global-help"; 1);
+isHelp :=
+@If (@IsError (tmp);
+					@False ;
+		tmp="";
+					@False;
+									@True);
+
+tmpKey := @If ( isHelp; tmp[1];"");
+					
+@If ( isHelp ;
+			@Command( [OpenHelpDocument]; "" ; "$v-global-help"; tmpKey );
+					@Prompt ([Ok]; "No help available";"No help available for this application"))</formula></code><code
+ event='label'><formula>"Open Help"</formula></code></action>
+<item name='$$ScriptName' summary='false' sign='true'><text>$ACTIONS</text></item></sharedactions>
+

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imageresource xmlns="http://www.lotus.com/dxl" alias="actionbarbg.gif" comment="gradient background for action bars" imagename="viewGradient1.gif" language="en" name="global/img/view/actionbarbg.gif" publicaccess="true" readonly="true">
+  <item name="$MimeType" sign="true">
+    <text>image/gif</text>
+  </item>
+</imageresource>

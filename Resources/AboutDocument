@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='utf-8'?>
+<helpaboutdocument xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C12576E10068C1B2' publicaccess='false' designerversion='8' default='true'
+ renderpassthrough='true'>
+<noteinfo noteid='1ca' unid='F43981394C3D7343C1257596003BD317' sequence='12'>
+<created><datetime dst='true'>20090412T125326,63+02</datetime></created>
+<modified><datetime>20100309T200624,64+01</datetime></modified>
+<revised><datetime>20100309T200624,63+01</datetime></revised>
+<lastaccessed><datetime>20100309T200624,63+01</datetime></lastaccessed>
+<addedtofile><datetime>20100309T200413,92+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Patrick Kwinten/OU=0180/O=SANDVIK</name><name>CN=Patrick Kwinten/O=Quintessens</name></updatedby>
+<body><richtext>
+<pardef id='1' leftmargin='1in'/>
+<par def='1'><run><font size='9pt'/></run></par>
+<table widthtype='fitmargins' cellbordercolor='silver' rightmargin='100%'
+ refwidth='16.2604in'><border style='image' width='1px'><imageref name='client\frmwrk-table-roundborder-gray.gif'/></border><tablecolumn
+ width='1.6875in'/><tablecolumn width='100%'/>
+<tablerow>
+<tablecell colorstyle='vgradient' valign='center' borderwidth='2px' bgcolor='white'
+ altbgcolor='#efefef'>
+<cellbackground repeat='resize'><imageref name='DocHeader.gif'/></cellbackground>
+<pardef id='3' align='center' leftmargin='1%' keepwithnext='true' keeptogether='true'/>
+<par def='3'><run><font size='18pt' style='bold'/>Ab</run><run><font size='18pt'
+ style='bold'/>out</run></par>
+<pardef id='4' align='center' leftmargin='1%' spaceafter='1.5' keepwithnext='true'
+ keeptogether='true'/>
+<par def='4'><run><font size='9pt' style='bold'/></run><run><font size='9pt'/><computedtext
+><code event='value'><formula>@DbTitle</formula></code></computedtext></run><run
+><font size='9pt' style='bold' color='#806210'/></run></par></tablecell>
+<tablecell colorstyle='vgradient' valign='center' borderwidth='2px' bgcolor='white'
+ altbgcolor='#efefef'>
+<pardef id='5' leftmargin='1%' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen'><formula>1</formula></code></pardef>
+<par def='5'><run><font size='9pt'/></run></par>
+<table widthtype='fitmargins' leftmargin='0.1000in' refwidth='14.4729in'><tablecolumn
+ width='100%'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='7' leftmargin='1%' rightmargin='99%' spaceafter='1.5' tabs='L1.5104in L2.0104in L2.4896in L3.0104in L3.5000in L4.0104in L4.5104in'
+ keepwithnext='true' keeptogether='true'/>
+<par def='7'><run><font size='9pt' style='bold' color='#ff8100'/>Access to this application is provided for the exclusive use of authorised employees and clients.  Unauthorised use is strictly prohibited.</run></par></tablecell></tablerow></table>
+<par def='5'><run><font size='9pt'/></run></par></tablecell></tablerow></table>
+<pardef id='8' align='center' leftmargin='1in' spacebefore='2' spaceafter='1.5'
+ tabs='L1.5104in L2.0104in L2.4896in L3.0104in L3.5000in L4.0104in L4.5104in'/>
+<par def='8'><run><font size='9pt'/></run><actionhotspot hotspotstyle='none'><code
+ event='click'><formula>@Command([FileCloseWindow])</formula></code><run><font
+ size='9pt' style='underline' color='blue'/>Close This Window</run></actionhotspot><run
+><font size='9pt' style='bold'/></run></par>
+<pardef id='9' leftmargin='1in' spacebefore='1.5' spaceafter='1.5' tabs='L1.5104in L2.0104in L2.4896in L3.0104in L3.5000in L4.0104in L4.5104in'/>
+<par def='9'><run><font size='8pt' style='bold'/>Abstract:</run></par>
+<pardef id='10' spaceafter='1.5'/>
+<par def='10'><run><font size='9pt'/>Describe briefly the purpose of this application.</run></par>
+<table widthtype='fitmargins' cellbordercolor='silver' rowspacing='0.0785in'
+ columnspacing='0.0785in' refwidth='16.2813in'><border style='image' width='1px'><imageref
+ name='table-roundborder-gray.gif'/></border><tablecolumn width='100%'/>
+<tablerow>
+<tablecell colorstyle='vgradient' borderwidth='0px' bgcolor='white' altbgcolor='#f7f7f7'>
+<pardef id='12' spaceafter='1.5' keepwithnext='true' keeptogether='true'/>
+<par def='12'><run><font size='8pt' style='bold'/>Application Owner:</run></par>
+<pardef id='13' keepwithnext='true' keeptogether='true'/>
+<par def='13'><run><font size='9pt'/>This application is owned by </run><run
+><font size='9pt' style='italic' color='green'/>&lt;person name&gt;</run><run
+><font size='9pt'/>. Requests for special access or for further distribution of the application should be forwarded to:</run></par>
+<par def='13'><run><font size='9pt'/></run></par>
+<table widthtype='fitmargins' leftmargin='0%' refwidth='16.1243in'><tablecolumn
+ width='1.9688in'/><tablecolumn width='100%'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='15' tabs='L2in' keepwithnext='true' keeptogether='true'/>
+<par def='15'><run><font size='9pt'/>Application Administrator:</run></par></tablecell>
+<tablecell borderwidth='0px'>
+<pardef id='16' keepwithnext='true' keeptogether='true'/>
+<par def='16'><run><font size='9pt' style='italic' color='green'/>&lt;person name&gt;</run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='17' keepwithnext='true' keeptogether='true'/>
+<par def='17'><run><font size='9pt'/>Application Owner:</run></par></tablecell>
+<tablecell borderwidth='0px'>
+<par def='16'><run><font size='9pt' style='italic' color='green'/>&lt;person name&gt;</run></par></tablecell></tablerow></table>
+<pardef id='18' spacebefore='2' spaceafter='1.5' keepwithnext='true' keeptogether='true'/>
+<par def='18'><run><font size='8pt' style='bold'/>Application Support:</run></par>
+<par def='12'><run><font size='9pt'/>Help is provided for this application. You can select "</run><run
+><font size='9pt' style='italic'/>Help - Using </run><run><font size='9pt'
+ style='italic'/><computedtext><code event='value'><formula>@DbTitle</formula></code></computedtext></run><run
+><font size='9pt'/>" via the top Menu-bar to get a detailed description on how to use this application.  Any other remaining questions should be directed to the </run><run
+><font size='9pt' style='italic'/>application administrator</run><run><font
+ size='9pt'/> or to your local Lotus Notes support team.</run></par>
+<pardef id='19' leftmargin='0%' spaceafter='1.5' keepwithnext='true' keeptogether='true'/>
+<par def='19'><run><font size='9pt'/>Application Support Team in </run><run
+><font size='9pt' style='italic' color='green'/>&lt;location, country&gt;</run><run
+><font size='9pt'/>:</run></par>
+<table widthtype='fitmargins' leftmargin='0%' refwidth='16.1243in'><tablecolumn
+ width='1.9688in'/><tablecolumn width='100%'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<par def='17'><run><font size='9pt'/>Email:</run></par></tablecell>
+<tablecell borderwidth='0px'>
+<par def='16'><run><font size='9pt' style='italic' color='green'/>&lt;email address&gt;</run></par></tablecell></tablerow></table>
+<par def='18'><run><font size='8pt' style='bold'/>Application Distribution:</run></par>
+<par def='12'><run><font size='9pt'/>The '</run><run><font size='9pt'/><computedtext
+><code event='value'><formula>@DbTitle</formula></code></computedtext></run><run
+><font size='9pt'/>' is available at the following location(s):</run></par>
+<pardef id='21' leftmargin='0%' keepwithnext='true' keeptogether='true'/>
+<section><sectiontitle pardef='21' color='#e26200'><font size='9pt'/><text
+>Servers:</text></sectiontitle>
+<par def='21'><run><font size='9pt'/></run></par>
+<pardef id='22' leftmargin='4%' keepwithnext='true' keeptogether='true'/>
+<par def='22'><run><font size='9pt' style='italic' color='green'/>&lt;server list&gt;</run><run
+><font size='9pt'/></run></par></section>
+<pardef id='23' leftmargin='0%' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen'><formula>1</formula></code></pardef>
+<par def='23'><run><font size='9pt'/></run></par></tablecell></tablerow></table>
+<pardef id='24'><code event='hidewhen'><formula>1</formula></code></pardef>
+<par def='24'><run><font size='12pt'/></run></par>
+<table widthtype='fitmargins' cellbordercolor='silver' rowspacing='0.0785in'
+ columnspacing='0.0785in' refwidth='16.2813in'><border style='image' width='1px'><imageref
+ name='table-roundborder-gray.gif'/></border><tablecolumn width='100%'/>
+<tablerow>
+<tablecell colorstyle='vgradient' borderwidth='0px' bgcolor='white' altbgcolor='#f7f7f7'>
+<pardef id='25' spaceafter='1.5' keepwithnext='true' keeptogether='true'/>
+<par def='25'><run><font size='8pt' style='bold'/>Application Design:</run></par>
+<par def='25'><run><font size='9pt'/>This application is developed by </run><run
+><font size='9pt' style='italic' color='green'/>&lt;department&gt;</run><run
+><font size='9pt'/> in </run><run><font size='9pt' style='italic' color='green'/>&lt;location, country&gt;</run><run
+><font size='9pt'/>. Corresponding with the group can be forwarded to:</run></par>
+<table widthtype='fitmargins' leftmargin='0.0104in' refwidth='16.1139in'><tablecolumn
+ width='1.9688in'/><tablecolumn width='100%'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='27' keepwithnext='true' keeptogether='true'/>
+<par def='27'><run><font size='9pt'/>Email:</run></par></tablecell>
+<tablecell borderwidth='0px'>
+<pardef id='28' keepwithnext='true' keeptogether='true'/>
+<par def='28'><run><font size='9pt' style='italic' color='green'/>&lt;email address&gt;</run></par></tablecell></tablerow></table>
+<pardef id='29' spacebefore='2' spaceafter='1.5' tabs='L2in' keepwithnext='true'
+ keeptogether='true'/>
+<par def='29'><run><font size='8pt' style='bold'/>History:</run></par>
+<pardef id='30' spaceafter='1.5' tabs='L2in' keepwithnext='true' keeptogether='true'/>
+<par def='30'><run><font size='9pt'/>This application was last updated: </run><run
+><font size='9pt' style='italic' color='green'/>&lt;month, year&gt;</run><run
+><font size='9pt'/>.</run></par>
+<pardef id='31' leftmargin='0.0104in' tabs='L2in' keepwithnext='true' keeptogether='true'/>
+<section><sectiontitle pardef='31' color='#e26200'><font size='9pt'/><text
+>Log:</text></sectiontitle>
+<pardef id='32' tabs='L2in' keepwithnext='true' keeptogether='true'/>
+<par def='32'><run><font size='9pt'/></run></par>
+<pardef id='33' leftmargin='0.2604in' keepwithnext='true' keeptogether='true'/>
+<par def='33'><run><font size='9pt' style='italic' color='green'/>&lt;log history&gt;</run><run
+><font size='9pt' style='bold'/></run></par></section>
+<pardef id='34' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+>1</formula></code></pardef>
+<par def='34'><run><font size='9pt' style='bold'/></run></par></tablecell></tablerow></table>
+<pardef id='35' firstlineleftmargin='1in'><code event='hidewhen'><formula
+>1</formula></code></pardef>
+<par def='35'/></richtext></body></helpaboutdocument>
+

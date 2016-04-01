@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C12576E10068C1B2'>
+<noteinfo noteid='116' unid='20BE6AC2202E3D1DC12575950036B30C' sequence='36'>
+<created><datetime dst='true'>20090411T115727,80+02</datetime></created>
+<modified><datetime>20100309T200620,21+01</datetime></modified>
+<revised><datetime>20100309T200620,20+01</datetime></revised>
+<lastaccessed><datetime>20100309T200620,20+01</datetime></lastaccessed>
+<addedtofile><datetime>20100309T200413,61+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Patrick Kwinten/OU=0460/O=SANDVIK</name><name>CN=Information Systems/O=SANDVIK</name><name
+>CN=Patrick Kwinten/OU=0180/O=SANDVIK</name><name>CN=Information Systems/O=SANDVIK</name><name
+>CN=Patrick Kwinten/OU=0180/O=SANDVIK</name><name>CN=Patrick Kwinten/O=Quintessens</name></updatedby>
+<item name='IconBitmap' summary='true'>
+<rawitemdata type='6'>
+AiAgAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAB3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3cRERER
+EREREREREREREXd3ERERERERERERERERERF3dxF3d3d3d3d3d3d3d3cRd3cRd3d3d3d3d3d3d3d3
+EXd3EXd3d3d3d3d3d3d3dxF3dxF3d3d3d3d3d3d3d3cRd3cREREREREREREREREREXd3ERERERER
+ERERERERERF3dxEREREREXd3ERERERERd3cRERERERF3dxEREREREXd3ERERERERd3cRERERERF3
+dxEREREREXd3ERERERERd3cRERERERF3dxEREREREXd3ERERERERd3cRERERERF3dxEREREREXd3
+ERERERERd3cRERERERF3dxEREREREXd3ERERERERd3cRERERERF3dxEREREREXd3ERERERERd3cR
+ERERERF3dxEREREREXd3ERERERERd3cRERERERF3dxERF3d3d3d3d3d3cRERd3cRERd3d3d3d3d3
+d3EREXd3EREXd3d3d3d3d3dxERF3dxERF3d3d3d3d3d3cRERd3cREREREREREREREREREXd3ERER
+ERERERERERERERF3dxERERERERERERERERERd3cREREREREREREREREREXd3d3d3d3d3d3d3d3d3
+d3d3d3d3d3d3d3d3d3d3d3d3dw==
+</rawitemdata></item>
+<item name='$DefaultFrameset'><text>$fs-notes-default</text></item>
+<item name='$FlagsNoRefresh'><text/></item>
+<item name='$Daos'><text>0</text></item>
+<item name='$TITLE'><text>Appl. Dev. Template OpenNTF</text></item>
+<item name='$Flags'><text>7JFz2ZNqR</text></item></note>
+

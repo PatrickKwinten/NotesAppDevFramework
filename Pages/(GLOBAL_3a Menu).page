@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns="http://www.lotus.com/dxl" name="(GLOBAL: Menu)" alias="$p-global-menu-main" hide="web mobile" publicaccess="false" bgcolor="#d2dfef" renderpassthrough="true">
+  <code event="windowtitle">
+    <formula>"Navigation - Warning: This Page should not be opened as a standalone Page."</formula>
+  </code>
+  <code event="queryopen">
+    <formula>@SetEnvironment( "SNDVIK-AppNavigator" ; "1")</formula>
+  </code>
+  <code event="postopen">
+    <formula>@Command([RefreshHideFormulas])</formula>
+  </code>
+  <body>
+    <richtext>
+      <pardef id="1">
+        <code event="hidewhen">
+          <formula>1</formula>
+        </code>
+      </pardef>
+      <par def="1">
+        <run>
+          <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+      </par>
+      <table widthtype="fitwindow" minrowheight="6in" leftmargin="0.7500in" columnspacing="0.0785in" refwidth="11.0104in">
+        <tablecolumn width="100%"/>
+        <tablerow>
+          <tablecell colorstyle="vgradient" borderwidth="0px" bgcolor="white" altbgcolor="#d2dfef">
+            <pardef id="3" keepwithnext="true" keeptogether="true"/>
+            <par def="3">
+              <run>
+                <font size="4pt"/>
+              </run>
+            </par>
+            <pardef id="4" leftmargin="1%" keepwithnext="true" keeptogether="true"/>
+            <par def="4">
+              <run>
+                <font size="1pt"/>
+              </run>
+            </par>
+            <table widthtype="fitmargins" cellbordercolor="#b0c8e0" leftmargin="0" columnspacing="0.0396in" refwidth="10.8326in">
+              <border style="image" width="1px">
+                <imageref name="table-roundborder-purple.gif"/>
+              </border>
+              <tablecolumn width="100%"/>
+              <tablerow>
+                <tablecell borderwidth="0px" bgcolor="#d2dfef">
+                  <pardef id="6" leftmargin="0.0104in" hide="notes web mobile" keepwithnext="true" keeptogether="true"/>
+                  <par def="6">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                  <table widthtype="fitmargins" leftmargin="0.0104in" rowspacing="0.0194in" refwidth="10.7431in">
+                    <tablecolumn width="0.1819in"/>
+                    <tablecolumn width="100%"/>
+                    <tablecolumn width="0.1819in"/>
+                    <tablerow>
+                      <tablecell valign="center" borderwidth="0px">
+                        <pardef id="7" leftmargin="1%" keepwithnext="true" keeptogether="true"/>
+                        <par def="7">
+                          <run>
+                            <font style="bold" color="#3f621f"/>
+                          </run>
+                          <picture width="16px" height="16px">
+                            <imageref name="boxiconviews.gif"/>
+                          </picture>
+                          <run>
+                            <font style="bold" color="#3f621f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell valign="center" borderwidth="0px">
+                        <pardef id="8" leftmargin="1%" keepwithnext="true" keeptogether="true"/>
+                        <par def="8">
+                          <run>
+                            <font style="bold" color="#004080"/>
+                          </run>
+                          <actionhotspot hotspotstyle="none">
+                            <code event="click">
+                              <formula>varActiveBox:=@Environment("SNDVIK-AppNavigator");
+
+varActiveBoxList:=@Explode(varActiveBox;",");
+
+varCurrentBox:="1";
+
+
+@If(
+	@IsMember( varCurrentBox; varActiveBoxList);
+		@SetEnvironment( "SNDVIK-AppNavigator" ; @Implode(@Sort(@Unique(@Trim(@Replace(varActiveBoxList;varCurrentBox;""))));","));
+		@SetEnvironment( "SNDVIK-AppNavigator" ; @Implode(@Sort(@Unique(varActiveBoxList : varCurrentBox));","))
+);
+
+@Command( [ViewRefreshFields] ) ;
+@Command( [RefreshHideFormulas] )</formula>
+                            </code>
+                            <run>
+                              <font style="bold" color="#004080"/>First Box</run>
+                          </actionhotspot>
+                          <run>
+                            <font style="bold" color="#004080"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell valign="center" borderwidth="0px">
+                        <pardef id="9" align="center" leftmargin="1%" keepwithnext="true" keeptogether="true"/>
+                        <par def="9">
+                          <run>
+                            <font style="bold" color="#3f621f"/>
+                          </run>
+                          <actionhotspot hotspotstyle="none">
+                            <code event="click">
+                              <formula>varActiveBox:=@Environment("SNDVIK-AppNavigator");
+
+varActiveBoxList:=@Explode(varActiveBox;",");
+
+varCurrentBox:="1";
+
+
+@If(
+	@IsMember( varCurrentBox; varActiveBoxList);
+		@SetEnvironment( "SNDVIK-AppNavigator" ; @Implode(@Sort(@Unique(@Trim(@Replace(varActiveBoxList;varCurrentBox;""))));","));
+		@SetEnvironment( "SNDVIK-AppNavigator" ; @Implode(@Sort(@Unique(varActiveBoxList : varCurrentBox));","))
+);
+
+@Command( [ViewRefreshFields] ) ;
+@Command( [RefreshHideFormulas] )</formula>
+                            </code>
+                            <picture width="12px" height="12px" scaledheight="11.5938in" scaledwidth="15.1146in">
+                              <imageref>
+                                <code event="value">
+                                  <formula>varActiveBox:=@Environment("SNDVIK-AppNavigator");
+varActiveBoxList:=@Explode(varActiveBox;",");
+varCurrentBox:="1";
+
+@If( @IsMember( varCurrentBox; varActiveBoxList);
+
+"boxwindowclose.gif";
+"boxwindowopen.gif"
+)</formula>
+                                </code>
+                              </imageref>
+                            </picture>
+                            <run>
+                              <font style="bold" color="#3f621f"/>
+                            </run>
+                          </actionhotspot>
+                          <run>
+                            <font style="bold" color="#3f621f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                    </tablerow>
+                  </table>
+                  <par def="6">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                </tablecell>
+              </tablerow>
+              <tablerow>
+                <tablecell borderwidth="0px">
+                  <pardef id="10" keepwithnext="true" keeptogether="true">
+                    <code event="hidewhen">
+                      <formula>varActiveBox:=@Environment("SNDVIK-AppNavigator");
+varActiveBoxList:=@Explode(varActiveBox;",");
+varCurrentBox:="1";
+
+@IsNotMember( varCurrentBox; varActiveBoxList)</formula>
+                    </code>
+                  </pardef>
+                  <par def="10">
+                    <embeddedoutline outline="$ol-box-flat" showtwistie="true" osstyletwistie="true" scrollbars="false" type="flat" widthtype="fitwindow" heighttype="fitcontent" height="0.3958in" expand="none">
+                      <title>
+                        <layout labelalign="topleft" labelhoffset="0" labelvoffset="0"/>
+                      </title>
+                      <toplevel normalcolor="gray" selectedcolor="#4f4f4f">
+                        <font size="9pt" style="bold"/>
+                        <eoutlinebackground selectedcolor="#d9e6fd" mouseovercolor="#e8edf2"/>
+                        <layout labelalign="topleft" entryvoffset="0.0396in" imagealign="topleft" labelhoffset="0.1965in" labelvoffset="0"/>
+                      </toplevel>
+                      <sublevel normalcolor="gray" selectedcolor="#4f4f4f">
+                        <font size="8pt" style="bold"/>
+                        <eoutlinebackground selectedcolor="#d9e6fd" mouseovercolor="#e8edf2"/>
+                        <layout labelalign="topleft" entryhoffset="0.1965in" entryvoffset="0.0792in" imagealign="topleft" labelhoffset="0" labelvoffset="0"/>
+                      </sublevel>
+                    </embeddedoutline>
+                    <run>
+                      <font size="3pt"/>
+                    </run>
+                  </par>
+                  <par def="10">
+                    <run>
+                      <font size="3pt"/>
+                    </run>
+                  </par>
+                </tablecell>
+              </tablerow>
+            </table>
+            <par def="3">
+              <run>
+                <font size="4pt"/>
+              </run>
+            </par>
+            <table widthtype="fitmargins" cellbordercolor="#b0c8e0" leftmargin="0" columnspacing="0.0396in" refwidth="10.8326in">
+              <border style="image" width="1px">
+                <imageref name="table-roundborder-purple.gif"/>
+              </border>
+              <tablecolumn width="100%"/>
+              <tablerow>
+                <tablecell borderwidth="0px" bgcolor="#d2dfef">
+                  <par def="6">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                  <table widthtype="fitmargins" leftmargin="0.0104in" rowspacing="0.0194in" refwidth="10.7431in">
+                    <tablecolumn width="0.1819in"/>
+                    <tablecolumn width="100%"/>
+                    <tablecolumn width="0.1819in"/>
+                    <tablerow>
+                      <tablecell valign="center" borderwidth="0px">
+                        <par def="7">
+                          <run>
+                            <font style="bold" color="#3f621f"/>
+                          </run>
+                          <picture width="16px" height="16px" scaledheight="0.1667in" scaledwidth="0.1667in">
+                            <imageref name="boxiconviews.gif"/>
+                          </picture>
+                          <run>
+                            <font style="bold" color="#3f621f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell valign="center" borderwidth="0px">
+                        <par def="8">
+                          <run>
+                            <font style="bold" color="#004080"/>
+                          </run>
+                          <actionhotspot hotspotstyle="none">
+                            <code event="click">
+                              <formula>varActiveBox:=@Environment("SNDVIK-AppNavigator");
+
+varActiveBoxList:=@Explode(varActiveBox;",");
+
+varCurrentBox:="2";
+
+
+@If(
+	@IsMember( varCurrentBox; varActiveBoxList);
+		@SetEnvironment( "SNDVIK-AppNavigator" ; @Implode(@Sort(@Unique(@Trim(@Replace(varActiveBoxList;varCurrentBox;""))));","));
+		@SetEnvironment( "SNDVIK-AppNavigator" ; @Implode(@Sort(@Unique(varActiveBoxList : varCurrentBox));","))
+);
+
+@Command( [ViewRefreshFields] ) ;
+@Command( [RefreshHideFormulas] )</formula>
+                            </code>
+                            <run>
+                              <font style="bold" color="#004080"/>Second Box</run>
+                          </actionhotspot>
+                          <run>
+                            <font style="bold" color="#004080"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell valign="center" borderwidth="0px">
+                        <par def="9">
+                          <run>
+                            <font style="bold" color="#3f621f"/>
+                          </run>
+                          <actionhotspot hotspotstyle="none">
+                            <code event="click">
+                              <formula>varActiveBox:=@Environment("SNDVIK-AppNavigator");
+
+varActiveBoxList:=@Explode(varActiveBox;",");
+
+varCurrentBox:="2";
+
+
+@If(
+	@IsMember( varCurrentBox; varActiveBoxList);
+		@SetEnvironment( "SNDVIK-AppNavigator" ; @Implode(@Sort(@Unique(@Trim(@Replace(varActiveBoxList;varCurrentBox;""))));","));
+		@SetEnvironment( "SNDVIK-AppNavigator" ; @Implode(@Sort(@Unique(varActiveBoxList : varCurrentBox));","))
+);
+
+@Command( [ViewRefreshFields] ) ;
+@Command( [RefreshHideFormulas] )</formula>
+                            </code>
+                            <picture width="12px" height="12px" scaledheight="11.5938in" scaledwidth="15.1146in">
+                              <imageref>
+                                <code event="value">
+                                  <formula>varActiveBox:=@Environment("SNDVIK-AppNavigator");
+varActiveBoxList:=@Explode(varActiveBox;",");
+varCurrentBox:="2";
+
+@If( @IsMember( varCurrentBox; varActiveBoxList);
+
+"boxwindowclose.gif";
+"boxwindowopen.gif"
+)</formula>
+                                </code>
+                              </imageref>
+                            </picture>
+                            <run>
+                              <font style="bold" color="#3f621f"/>
+                            </run>
+                          </actionhotspot>
+                          <run>
+                            <font style="bold" color="#3f621f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                    </tablerow>
+                  </table>
+                  <par def="6">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                </tablecell>
+              </tablerow>
+              <tablerow>
+                <tablecell borderwidth="0px">
+                  <pardef id="12" keepwithnext="true" keeptogether="true">
+                    <code event="hidewhen">
+                      <formula>varActiveBox := @Environment( "SNDVIK-AppNavigator" );
+varActiveBox != "2"</formula>
+                    </code>
+                  </pardef>
+                  <par def="12">
+                    <run>
+                      <font size="2pt"/>
+                    </run>
+                  </par>
+                  <pardef id="13" keepwithnext="true" keeptogether="true">
+                    <code event="hidewhen">
+                      <formula>varActiveBox:=@Environment("SNDVIK-AppNavigator");
+varActiveBoxList:=@Explode(varActiveBox;",");
+varCurrentBox:="2";
+
+@IsNotMember( varCurrentBox; varActiveBoxList)</formula>
+                    </code>
+                  </pardef>
+                  <par def="13">
+                    <embeddedoutline outline="$ol-box-tree" showtwistie="true" osstyletwistie="true" scrollbars="false" widthtype="fitwindow" heighttype="fitcontent" height="0.4375in" expand="first">
+                      <title>
+                        <layout labelalign="topleft" labelhoffset="0" labelvoffset="0"/>
+                      </title>
+                      <toplevel normalcolor="gray" selectedcolor="#4f4f4f">
+                        <font size="9pt" style="bold"/>
+                        <eoutlinebackground selectedcolor="#d9e6fd" mouseovercolor="#e8edf2"/>
+                        <layout labelalign="topleft" entryvoffset="0.0396in" imagealign="topleft" labelhoffset="0" labelvoffset="0"/>
+                      </toplevel>
+                      <sublevel normalcolor="gray" selectedcolor="#4f4f4f">
+                        <font size="8pt" style="bold"/>
+                        <eoutlinebackground selectedcolor="#d9e6fd" mouseovercolor="#e8edf2"/>
+                        <layout labelalign="topleft" entryvoffset="0.0792in" imagealign="topleft" labelhoffset="0" labelvoffset="0"/>
+                      </sublevel>
+                    </embeddedoutline>
+                    <run>
+                      <font size="3pt"/>
+                    </run>
+                  </par>
+                  <par def="13">
+                    <run>
+                      <font size="3pt"/>
+                    </run>
+                  </par>
+                </tablecell>
+              </tablerow>
+            </table>
+            <par def="3">
+              <run>
+                <font size="4pt"/>
+              </run>
+            </par>
+            <table widthtype="fitmargins" cellbordercolor="silver" leftmargin="0" columnspacing="0.0396in" refwidth="10.8326in">
+              <border style="image" width="1px">
+                <imageref name="table-roundborder-gray.gif"/>
+              </border>
+              <tablecolumn width="100%"/>
+              <tablerow>
+                <tablecell borderwidth="0px" bgcolor="#efefef">
+                  <par def="6">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                  <table widthtype="fitmargins" leftmargin="0.0104in" rowspacing="0.0194in" refwidth="10.7431in">
+                    <tablecolumn width="0.1819in"/>
+                    <tablecolumn width="100%"/>
+                    <tablecolumn width="0.1819in"/>
+                    <tablerow>
+                      <tablecell valign="center" borderwidth="0px">
+                        <par def="7">
+                          <run>
+                            <font style="bold" color="#3f621f"/>
+                          </run>
+                          <picture width="16px" height="16px">
+                            <gif>
+R0lGODlhEAAQAOZKAObm5sDAwL+/v+Hh4fT09OLi4sPDw9vb2/Pz87i4uNbW1rOzs+rq6uDg4Ovr
+68LCwvv7+/7+/vb29vX19cnJyZWVlc3Nzf39/ejo6Lu7u/z8/OXl5bCwsN3d3e3t7e/v7/Dw8Kur
+q+Pj49jY2NXV1efn59DQ0L29vcTExNLS0vr6+rq6ure3t7W1taenp6ysrK6urtTU1KioqKmpqdzc
+3Pj4+JiYmM/Pz8XFxdHR0fLy8ry8vKampvf398vLy+7u7tnZ2aOjo87OzpmZmcfHx6GhoaWlpZ+f
+n97e3v///////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5
+BAEAAEoALAAAAAAQABAAAAe+gEqCg4SFhBcYJgYJCQYWDBGFBEQmGAgXGh4NDwEShD4DEUmjpBA3
+FIQCNaKkoxAMMIQnPSUfEhAqIEgGAC+EGRIOSAokOQY7ARshhCsTPwAFAAMWDw8iMoQJBAwDHSJI
+FCcCBTyELAglHUANBygJGQNBhC06BSMkNCMBCywNR4QLdMVIcUCBAA4LkAwhxAEJggMEFQSgAABF
+BUIbZgjxQGACgQ8FVlQAUAgBDiNFQrioYEPABEODVDhwoMFQIAA7
+</gif>
+                          </picture>
+                          <run>
+                            <font style="bold" color="#3f621f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell valign="center" borderwidth="0px">
+                        <par def="8">
+                          <run>
+                            <font style="bold" color="gray"/>
+                          </run>
+                          <actionhotspot hotspotstyle="none">
+                            <code event="click">
+                              <formula>varActiveBox:=@Environment("SNDVIK-AppNavigator");
+
+varActiveBoxList:=@Explode(varActiveBox;",");
+
+varCurrentBox:="999";
+
+
+@If(
+	@IsMember( varCurrentBox; varActiveBoxList);
+		@SetEnvironment( "SNDVIK-AppNavigator" ; @Implode(@Sort(@Unique(@Trim(@Replace(varActiveBoxList;varCurrentBox;""))));","));
+		@SetEnvironment( "SNDVIK-AppNavigator" ; @Implode(@Sort(@Unique(varActiveBoxList : varCurrentBox));","))
+);
+
+@Command( [ViewRefreshFields] ) ;
+@Command( [RefreshHideFormulas] )</formula>
+                            </code>
+                            <run>
+                              <font style="bold" color="gray"/>System Information</run>
+                          </actionhotspot>
+                          <run>
+                            <font style="bold" color="gray"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell valign="center" borderwidth="0px">
+                        <par def="9">
+                          <run>
+                            <font style="bold" color="#3f621f"/>
+                          </run>
+                          <actionhotspot hotspotstyle="none">
+                            <code event="click">
+                              <formula>varActiveBox:=@Environment("SNDVIK-AppNavigator");
+
+varActiveBoxList:=@Explode(varActiveBox;",");
+
+varCurrentBox:="999";
+
+
+@If(
+	@IsMember( varCurrentBox; varActiveBoxList);
+		@SetEnvironment( "SNDVIK-AppNavigator" ; @Implode(@Sort(@Unique(@Trim(@Replace(varActiveBoxList;varCurrentBox;""))));","));
+		@SetEnvironment( "SNDVIK-AppNavigator" ; @Implode(@Sort(@Unique(varActiveBoxList : varCurrentBox));","))
+);
+
+@Command( [ViewRefreshFields] ) ;
+@Command( [RefreshHideFormulas] )</formula>
+                            </code>
+                            <picture width="12px" height="12px" scaledheight="11.5938in" scaledwidth="15.1146in">
+                              <imageref>
+                                <code event="value">
+                                  <formula>varActiveBox:=@Environment("SNDVIK-AppNavigator");
+varActiveBoxList:=@Explode(varActiveBox;",");
+varCurrentBox:="999";
+
+@If( @IsMember( varCurrentBox; varActiveBoxList);
+
+"boxwindowclose.gif";
+"boxwindowopen.gif"
+)</formula>
+                                </code>
+                              </imageref>
+                            </picture>
+                            <run>
+                              <font style="bold" color="#3f621f"/>
+                            </run>
+                          </actionhotspot>
+                          <run>
+                            <font style="bold" color="#3f621f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                    </tablerow>
+                  </table>
+                  <par def="6">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                </tablecell>
+              </tablerow>
+              <tablerow>
+                <tablecell borderwidth="0px" bgcolor="#f7f7f7">
+                  <pardef id="15" leftmargin="0.0104in" spacebefore="1.5" spaceafter="1.5" keepwithnext="true" keeptogether="true">
+                    <code event="hidewhen">
+                      <formula>varActiveBox:=@Environment("SNDVIK-AppNavigator");
+varActiveBoxList:=@Explode(varActiveBox;",");
+varCurrentBox:="999";
+
+@IsNotMember( varCurrentBox; varActiveBoxList)</formula>
+                    </code>
+                  </pardef>
+                  <par def="15">
+                    <run>
+                      <font size="8pt" color="gray"/>Application:<break/>
+                    </run>
+                    <run>
+                      <font size="8pt"/>
+                      <computedtext>
+                        <code event="value">
+                          <formula>@DbTitle</formula>
+                        </code>
+                      </computedtext>
+                    </run>
+                    <run>
+                      <font size="8pt" color="red"/>
+                    </run>
+                  </par>
+                  <pardef id="16" leftmargin="0.0104in" spaceafter="1.5" keepwithnext="true" keeptogether="true">
+                    <code event="hidewhen">
+                      <formula>varActiveBox:=@Environment("SNDVIK-AppNavigator");
+varActiveBoxList:=@Explode(varActiveBox;",");
+varCurrentBox:="999";
+
+@IsNotMember( varCurrentBox; varActiveBoxList)</formula>
+                    </code>
+                  </pardef>
+                  <par def="16">
+                    <run>
+                      <font size="8pt" color="gray"/>Server:<break/>
+                    </run>
+                    <run>
+                      <font size="8pt"/>
+                      <computedtext>
+                        <code event="value">
+                          <formula>varServer:=@Name([Abbreviate]; @Subset(@DbName; 1));
+
+@If( varServer =""; "local"; varServer)</formula>
+                        </code>
+                      </computedtext>
+                    </run>
+                    <run>
+                      <font size="8pt" color="#0082bf"/>
+                    </run>
+                  </par>
+                  <pardef id="17" leftmargin="0.0104in" keepwithnext="true" keeptogether="true">
+                    <code event="hidewhen">
+                      <formula>varActiveBox:=@Environment("SNDVIK-AppNavigator");
+varActiveBoxList:=@Explode(varActiveBox;",");
+varCurrentBox:="999";
+
+@IsNotMember( varCurrentBox; varActiveBoxList)</formula>
+                    </code>
+                  </pardef>
+                  <par def="17">
+                    <run>
+                      <font size="8pt" color="gray"/>User Name:</run>
+                  </par>
+                  <par def="16">
+                    <run>
+                      <font size="8pt"/>
+                    </run>
+                    <run>
+                      <font size="8pt"/>
+                      <computedtext>
+                        <code event="value">
+                          <formula>@Name([CN]; @UserName)</formula>
+                        </code>
+                      </computedtext>
+                    </run>
+                    <run>
+                      <font size="8pt" color="#0082bf"/>
+                    </run>
+                  </par>
+                  <par def="17">
+                    <run>
+                      <font size="8pt" color="gray"/>Active Roles:</run>
+                  </par>
+                  <par def="16">
+                    <run>
+                      <font size="8pt"/>
+                    </run>
+                    <run>
+                      <font size="8pt"/>
+                      <computedtext>
+                        <code event="value">
+                          <formula>Roles:=@Implode(@ReplaceSubstring(@ReplaceSubstring(@UserRoles; "["; "- "); "]"; ""); @NewLine);
+@If(@Elements(Roles)=0; "&lt;NO ROLES ACTIVATED&gt;"; Roles)</formula>
+                        </code>
+                      </computedtext>
+                    </run>
+                    <run>
+                      <font size="8pt" color="#0082bf"/>
+                    </run>
+                  </par>
+                  <par def="17">
+                    <run>
+                      <font size="8pt" color="gray"/>Date:</run>
+                  </par>
+                  <par def="16">
+                    <run>
+                      <font size="8pt"/>
+                    </run>
+                    <run>
+                      <font size="8pt"/>
+                      <computedtext>
+                        <code event="value">
+                          <formula>@Date(@Now)</formula>
+                        </code>
+                      </computedtext>
+                    </run>
+                    <run>
+                      <font size="8pt"/>
+                    </run>
+                  </par>
+                  <pardef id="18" keepwithnext="true" keeptogether="true">
+                    <code event="hidewhen">
+                      <formula>varActiveBox:=@Environment("SNDVIK-AppNavigator");
+varActiveBoxList:=@Explode(varActiveBox;",");
+varCurrentBox:="999";
+
+@IsNotMember( varCurrentBox; varActiveBoxList)</formula>
+                    </code>
+                  </pardef>
+                  <par def="18">
+                    <run>
+                      <font size="3pt"/>
+                    </run>
+                  </par>
+                </tablecell>
+              </tablerow>
+            </table>
+            <pardef id="19" hide="notes web mobile" keepwithnext="true" keeptogether="true"/>
+            <par def="19">
+              <run>
+                <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+            </par>
+          </tablecell>
+        </tablerow>
+      </table>
+      <pardef id="2" leftmargin="0.7500in"/>
+      <par def="2"/>
+    </richtext>
+  </body>
+</page>

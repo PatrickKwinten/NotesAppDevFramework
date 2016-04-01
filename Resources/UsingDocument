@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<helpusingdocument xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C12576E10068C1B2' publicaccess='false' designerversion='8' default='true'
+ renderpassthrough='true'>
+<noteinfo noteid='132' unid='DA8298EE728CC52FC125759600455C33' sequence='18'>
+<created><datetime dst='true'>20090412T143735,87+02</datetime></created>
+<modified><datetime>20100309T200622,48+01</datetime></modified>
+<revised><datetime>20100309T200622,47+01</datetime></revised>
+<lastaccessed><datetime>20100309T200622,47+01</datetime></lastaccessed>
+<addedtofile><datetime>20100309T200413,61+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Patrick Kwinten/OU=0460/O=SANDVIK</name><name>CN=Information Systems/O=SANDVIK</name><name
+>CN=Patrick Kwinten/O=Quintessens</name></updatedby>
+<body><richtext>
+<pardef id='1' leftmargin='1in'/>
+<par def='1'><run><font size='9pt' name='multilingual'/></run></par>
+<table widthtype='fitmargins' cellbordercolor='silver' rightmargin='100%'
+ refwidth='16.0729in'><border style='image' width='1px'><imageref name='client\frmwrk-table-roundborder-gray.gif'/></border><tablecolumn
+ width='1.6875in'/><tablecolumn width='100%'/>
+<tablerow>
+<tablecell colorstyle='vgradient' valign='center' borderwidth='2px' bgcolor='white'
+ altbgcolor='#efefef'>
+<cellbackground repeat='resize'><imageref name='DocHeader.gif'/></cellbackground>
+<pardef id='3' align='center' leftmargin='1%' keepwithnext='true' keeptogether='true'/>
+<par def='3'><run><font size='18pt' style='bold'/>Using</run></par>
+<pardef id='4' align='center' leftmargin='1%' spaceafter='1.5' keepwithnext='true'
+ keeptogether='true'/>
+<par def='4'><run><font size='9pt' style='bold' name='multilingual'/></run><run
+><font size='9pt' name='multilingual'/><computedtext><code event='value'><formula
+>@DbTitle</formula></code></computedtext></run><run><font size='9pt' style='bold'
+ name='multilingual' color='#806210'/></run></par></tablecell>
+<tablecell colorstyle='vgradient' valign='center' borderwidth='2px' bgcolor='white'
+ altbgcolor='#efefef'>
+<pardef id='5' leftmargin='1%' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen' enabled='false'><formula>1</formula></code></pardef>
+<par def='5'><run><font size='9pt' name='multilingual'/></run></par>
+<table widthtype='fitmargins' leftmargin='0.1000in' refwidth='14.2854in'><tablecolumn
+ width='100%'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='7' leftmargin='1%' rightmargin='99%' spaceafter='1.5' tabs='L1.5104in L2.0104in L2.4896in L3.0104in L3.5000in L4.0104in L4.5104in'
+ keepwithnext='true' keeptogether='true'/>
+<par def='7'><run><font size='9pt' style='bold' color='#ff8100'/>Access to this application is provided for the exclusive use of authorised employees and clients.  Unauthorised use is strictly prohibited.</run></par></tablecell></tablerow></table>
+<par def='5'><run><font size='9pt' name='multilingual'/></run></par></tablecell></tablerow></table>
+<pardef id='8' align='center' leftmargin='1in' spacebefore='2' spaceafter='1.5'
+ tabs='L1.5104in L2.0104in L2.4896in L3.0104in L3.5000in L4.0104in L4.5104in'/>
+<par def='8'><run><font size='9pt' name='multilingual'/></run><actionhotspot
+ hotspotstyle='none'><code event='click'><formula>@Command([FileCloseWindow])</formula></code><run
+><font size='9pt' style='underline' name='multilingual' color='blue'/>Close This Window</run></actionhotspot><run
+><font size='9pt' name='multilingual'/></run></par>
+<table widthtype='fitmargins' cellbordercolor='silver' rowspacing='0.0785in'
+ columnspacing='0.0785in' refwidth='16.0938in'><border style='image' width='1px'><imageref
+ name='table-roundborder-gray.gif'/></border><tablecolumn width='100%'/>
+<tablerow>
+<tablecell colorstyle='vgradient' borderwidth='0px' bgcolor='white' altbgcolor='#f7f7f7'>
+<pardef id='10' spaceafter='2' keepwithnext='true' keeptogether='true'/>
+<par def='10'><run><font size='8pt' style='bold' name='multilingual'/>Instructions:</run></par>
+<pardef id='11' spaceafter='1.5' keepwithnext='true' keeptogether='true'/>
+<par def='11'><run><font size='9pt' name='multilingual'/>Information how to use this application can be found in the Application Help:</run></par>
+<pardef id='12' keepwithnext='true' keeptogether='true'/>
+<par def='12'><button width='2in' widthtype='maximum' maxlines='1' wraptext='true'
+ edge='rounded' bgcolor='#efefef'><code event='click'><formula>tmp := @DbColumn ("":"NoCache";"";"$v-global-help"; 1);
+isHelp :=
+@If (@IsError (tmp);
+					@False ;
+		tmp="";
+					@False;
+									@True);
+
+tmpKey := @If ( isHelp; tmp[1];"");
+					
+@If ( isHelp ;
+			@Command( [OpenHelpDocument]; "" ; "$v-global-help"; tmpKey );
+					@Prompt ([Ok]; "No help available";"No help available for this application"))</formula></code>Open Help</button><run
+><font size='9pt' name='multilingual'/></run></par></tablecell></tablerow></table>
+<pardef id='9' firstlineleftmargin='1in'/>
+<par def='9'/></richtext></body></helpusingdocument>
+

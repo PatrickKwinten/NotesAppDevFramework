@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imageresource xmlns="http://www.lotus.com/dxl" alias="logo_Websphere" name="logo_websphere.gif" noreplace="true" publicaccess="false" readonly="true">
+  <item name="$MimeType" sign="true">
+    <text>image/gif</text>
+  </item>
+</imageresource>

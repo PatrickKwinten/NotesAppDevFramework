@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imageresource xmlns="http://www.lotus.com/dxl" across="2" alias="twisties.gif" browsercompatible="true" comment="alternative for view twisties" imagename="PlusMinus.gif" name="global/img/view/twistie-plusminus.gif" publicaccess="false" readonly="true">
+  <item name="$MimeType" sign="true">
+    <text>image/gif</text>
+  </item>
+</imageresource>

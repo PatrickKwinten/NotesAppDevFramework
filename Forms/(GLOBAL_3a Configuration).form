@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.lotus.com/dxl" name="(GLOBAL: Configuration)" alias="$f-dbprofile" hide="web mobile" nocompose="true" noquery="true" publicaccess="false" comment="used as profile document, to configure application settings" renderpassthrough="true">
+  <code event="windowtitle">
+    <formula>"Configuration"</formula>
+  </code>
+  <actionbar useappletinbrowser="true" bgcolor="#9f9fe0" bordercolor="black">
+    <actionbarstyle height="4.7500ex" repeat="hrepeat">
+      <font size="9pt" name="multilingual"/>
+      <imageref name="actionbarbg.gif"/>
+    </actionbarstyle>
+    <actionbuttonstyle margintype="fixed" margin="5" bgcolor="none">
+      <imageref name="client\frmwrk-view-actionbarmouseover.jpg"/>
+    </actionbuttonstyle>
+    <font size="9pt" name="multilingual" color="#004080"/>
+    <border style="solid" width="0px 0px 1px" color="gray"/>
+    <action title="Close" icon="11" hide="web mobile">
+      <code event="click">
+        <formula>@Command([FileCloseWindow])</formula>
+      </code>
+    </action>
+    <action title="Save" icon="10" hide="preview read web mobile">
+      <code event="click">
+        <formula>@Command([FileSave])</formula>
+      </code>
+    </action>
+  </actionbar>
+  <background allowoverride="false"/>
+  <body>
+    <richtext>
+      <formregionbegin type="header" height="100px" border3d="false"/>
+      <pardef id="1">
+        <code event="hidewhen">
+          <formula>1</formula>
+        </code>
+      </pardef>
+      <par def="1">
+        <run>
+          <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+      </par>
+      <table widthtype="fitmargins" leftmargin="0.8750in" rightmargin="100%" rowspacing="0.0396in" refwidth="6.2396in">
+        <tablecolumn width="100%"/>
+        <tablecolumn width="3.1493in"/>
+        <tablerow>
+          <tablecell borderwidth="0px">
+            <pardef id="3" keepwithnext="true" keeptogether="true"/>
+            <par def="3">
+              <run>
+                <font size="12pt" style="bold"/>Configuration</run>
+            </par>
+          </tablecell>
+          <tablecell valign="bottom" borderwidth="0px">
+            <pardef id="4" align="right" hide="copy" keepwithnext="true" keeptogether="true">
+              <code event="hidewhen">
+                <formula>getProf := @Environment("showHeaderDetails");
+getProf = "1" | @IsDocBeingEdited</formula>
+              </code>
+            </pardef>
+            <par def="4">
+              <run>
+                <font size="9pt" color="green"/>
+              </run>
+              <actionhotspot hotspotstyle="none">
+                <code event="click">
+                  <formula>@If(@Version &lt; @Text(172); @Return(""); "");
+@SetEnvironment("showHeaderDetails"; "1");
+@Command([RefreshHideFormulas])</formula>
+                </code>
+                <run>
+                  <font size="9pt" style="underline" color="blue"/>Show Details</run>
+              </actionhotspot>
+              <run>
+                <font size="9pt"/>
+              </run>
+            </par>
+            <pardef id="5" align="right" hide="copy" keepwithnext="true" keeptogether="true">
+              <code event="hidewhen">
+                <formula>getProf := @Environment("showHeaderDetails");
+getProf = "" | @IsDocBeingEdited</formula>
+              </code>
+            </pardef>
+            <par def="5">
+              <run>
+                <font size="9pt"/>
+              </run>
+              <actionhotspot hotspotstyle="none">
+                <run>
+                  <font size="9pt"/>
+                </run>
+              </actionhotspot>
+              <run>
+                <font size="9pt"/>
+              </run>
+              <actionhotspot hotspotstyle="none">
+                <code event="click">
+                  <formula>@If(@Version &lt; @Text(172); @Return(""); "");
+@SetEnvironment("showHeaderDetails"; "");
+@Command([RefreshHideFormulas])</formula>
+                </code>
+                <run>
+                  <font size="9pt" style="underline" color="blue"/>Hide Details</run>
+              </actionhotspot>
+              <run>
+                <font size="9pt" color="green"/>
+              </run>
+              <actionhotspot hotspotstyle="none" regionid="1">
+                <code event="click">
+                  <formula>@If(@Version &lt; @Text(172); @Return(""); "");
+@SetEnvironment("showHeaderInstructions"; "1");
+@Command([RefreshHideFormulas])</formula>
+                </code>
+                <run>
+                  <font size="9pt" style="underline" color="blue"/>
+                </run>
+              </actionhotspot>
+            </par>
+            <pardef id="6" align="right" hide="read print preview embedded" keepwithnext="true" keeptogether="true">
+              <code event="hidewhen">
+                <formula>getProf := @Environment("showHeaderInstructions");
+getProf = "1"</formula>
+              </code>
+            </pardef>
+            <par def="6">
+              <region regionid="1" end="true">
+                <run>
+                  <font size="9pt" style="underline" color="blue"/>Show Instructions</run>
+              </region>
+              <run>
+                <font size="9pt"/>
+              </run>
+            </par>
+            <pardef id="7" align="right" hide="read print copy preview embedded" keepwithnext="true" keeptogether="true">
+              <code event="hidewhen">
+                <formula>getProf := @Environment("showHeaderInstructions");
+getProf = "0" | getProf = ""</formula>
+              </code>
+            </pardef>
+            <par def="7">
+              <run>
+                <font size="9pt"/>
+              </run>
+              <actionhotspot hotspotstyle="none">
+                <run>
+                  <font size="9pt"/>
+                </run>
+              </actionhotspot>
+              <run>
+                <font size="9pt"/>
+              </run>
+              <actionhotspot hotspotstyle="none">
+                <code event="click">
+                  <formula>@If(@Version &lt; @Text(172); @Return(""); "");
+@SetEnvironment("showHeaderInstructions"; "");
+@Command([RefreshHideFormulas])</formula>
+                </code>
+                <run>
+                  <font size="9pt" style="underline" color="blue"/>Hide Instructions</run>
+              </actionhotspot>
+              <run>
+                <font size="9pt" color="green"/>
+              </run>
+            </par>
+          </tablecell>
+        </tablerow>
+      </table>
+      <par def="1">
+        <run>
+          <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+      </par>
+      <formregionend type="header"/>
+      <formregionbegin type="body"/>
+      <par def="1">
+        <run>
+          <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+        <actionhotspot hotspotstyle="none">
+          <run>
+            <font size="9pt" style="underline"/>
+          </run>
+        </actionhotspot>
+        <run>
+          <font size="9pt"/>
+        </run>
+      </par>
+      <table widthtype="fitmargins" minrowheight="3.9375in" rowdisplay="tabs" colorstyle="solid" bgcolor="white" rowspacing="0.0792in" columnspacing="0.0396in" refwidth="6.9847in">
+        <tablerowstyle>
+          <font size="9pt" name="multilingual" color="black"/>
+        </tablerowstyle>
+        <tablecolumn width="100%"/>
+        <tablerow tablabel="General">
+          <tablecell borderwidth="1px 0px 0px" bgcolor="white">
+            <pardef id="9" leftmargin="0.0104in" keepwithnext="true" keeptogether="true">
+              <code event="hidewhen">
+                <formula>1</formula>
+              </code>
+            </pardef>
+            <par def="9">
+              <run>
+                <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+            </par>
+            <table widthtype="fitmargins" cellbordercolor="silver" leftmargin="0.0104in" rowspacing="0.0396in" columnspacing="0.0785in" refwidth="6.8743in">
+              <border style="image" width="1px">
+                <imageref name="table-roundborder-gray.gif"/>
+              </border>
+              <tablecolumn width="100%"/>
+              <tablerow>
+                <tablecell colorstyle="vgradient" borderwidth="0px" bgcolor="white" altbgcolor="#f7f7f7">
+                  <pardef id="11" keepwithnext="true" keeptogether="true">
+                    <code event="hidewhen">
+                      <formula>1</formula>
+                    </code>
+                  </pardef>
+                  <par def="11">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                  <table widthtype="fitmargins" leftmargin="0.0104in" rowspacing="0.0396in" refwidth="6.7069in">
+                    <tablecolumn width="25.0139%"/>
+                    <tablecolumn width="25.0139%"/>
+                    <tablecolumn width="25.0139%"/>
+                    <tablecolumn width="24.9583%"/>
+                    <tablerow>
+                      <tablecell columnspan="4" borderwidth="0px">
+                        <pardef id="16" hide="web" keepwithnext="true" keeptogether="true"/>
+                        <par def="16">
+                          <run>
+                            <font size="9pt" style="bold"/>Logo:</run>
+                        </par>
+                        <pardef id="17" keepwithnext="true" keeptogether="true"/>
+                        <par def="17">
+                          <field usenotesstyle="false" height="0.7875in" width="1.8896in" multiline="true" borderstyle="single" lookupeachchar="false" lookupaddressonrefresh="false" type="keyword" kind="editable" name="Tx_Logotypes">
+                            <keywords helperbutton="false" recalconchange="true" columns="1" ui="listbox">
+                              <textlist>
+                                <text>OpenNTF</text>
+                                <text>Lotus</text>
+                                <text>Rational</text>
+                                <text>Websphere</text>
+                              </textlist>
+                            </keywords>
+                            <code event="defaultvalue">
+                              <formula>"OpenNTF"</formula>
+                            </code>
+                          </field>
+                        </par>
+                        <pardef id="18" hide="notes web" keepwithnext="true" keeptogether="true"/>
+                        <par def="18">
+                          <run>
+                            <font color="red"/>
+                            <field type="text" kind="computedfordisplay" name="Tx_LogoSelected">
+                              <code event="defaultvalue">
+                                <formula>Tx_Logotypes</formula>
+                              </code>
+                            </field>
+                          </run>
+                          <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="7" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+                        </par>
+                        <par def="17">
+                          <run>
+                            <font size="9pt" style="bold"/>Example:</run>
+                        </par>
+                        <par def="17">
+                          <picture width="170px" height="22px">
+                            <imageref>
+                              <code event="value">
+                                <formula>"logo_" + Tx_LogoSelected</formula>
+                              </code>
+                            </imageref>
+                          </picture>
+                        </par>
+                        <pardef id="19" spaceafter="1.5" hide="web" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>getProf := @Environment("showHeaderInstructions");
+getProf = "0" | getProf = ""</formula>
+                          </code>
+                        </pardef>
+                        <par def="19">
+                          <run>
+                            <font size="9pt" style="bold" color="green"/>This logo will be displayed in the Header section of each form. It might be possible that you have to close this application and re-open it in order to see the selected logo.</run>
+                        </par>
+                      </tablecell>
+                    </tablerow>
+                    <tablerow>
+                      <tablecell columnspan="4" borderwidth="0px">
+                        <par def="17">
+                          <run>
+                            <font size="9pt" style="bold"/>Startpage:</run>
+                        </par>
+                        <par def="17">
+                          <run>
+                            <font size="9pt" style="bold"/>
+                          </run>
+                          <run>
+                            <font size="9pt"/>
+                            <field borderstyle="none" lookupeachchar="false" lookupaddressonrefresh="false" type="keyword" kind="editable" name="Tx_StartOption">
+                              <keywords helperbutton="false" columns="2" ui="radiobutton">
+                                <textlist>
+                                  <text>Static|$p-global-start</text>
+                                  <text>Spotlight|$f-global-start</text>
+                                </textlist>
+                              </keywords>
+                              <code event="defaultvalue">
+                                <formula>"Spotlight"</formula>
+                              </code>
+                            </field>
+                          </run>
+                          <run>
+                            <font size="9pt" style="bold"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                    </tablerow>
+                  </table>
+                  <par def="11">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                </tablecell>
+              </tablerow>
+              <tablerow>
+                <tablecell colorstyle="vgradient" borderwidth="0px" bgcolor="white" altbgcolor="#f7f7f7">
+                  <pardef id="23" keepwithnext="true" keeptogether="true">
+                    <code event="hidewhen">
+                      <formula>1</formula>
+                    </code>
+                  </pardef>
+                  <par def="23">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                </tablecell>
+              </tablerow>
+            </table>
+            <pardef id="10" leftmargin="0.0104in" keepwithnext="true" keeptogether="true"/>
+            <par def="10">
+              <run>
+                <font size="9pt"/>
+              </run>
+            </par>
+            <subformref name="(Global: Document Footer) | $sf-docfooter"/>
+            <par def="9">
+              <run>
+                <font size="9pt" color="green"/>
+              </run>
+            </par>
+          </tablecell>
+        </tablerow>
+      </table>
+      <pardef id="24"/>
+      <par def="24"/>
+      <formregionend type="body"/>
+    </richtext>
+  </body>
+  <item name="$SubForm_RepIDs" sign="true">
+    <text>0000000000000000</text>
+  </item>
+  <item name="$KeepPrivate" sign="true">
+    <text>1</text>
+  </item>
+  <item name="$HFFlags">
+    <text>1</text>
+  </item>
+  <item name="Td_Created" summary="false">
+    <rawitemdata type="400">
+AAAAAAAAAAA=
+</rawitemdata>
+  </item>
+  <item name="Td_LastModified" summary="false">
+    <rawitemdata type="400">
+AAAAAAAAAAA=
+</rawitemdata>
+  </item>
+</form>

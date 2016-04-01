@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<outline xmlns="http://www.lotus.com/dxl" name="Global Box Tree" alias="$ol-box-tree" hide="web v3 v4strict" publicaccess="false" comment="sample outline - with sublevels">
+  <outlineentry label="View 1" type="namedelementlink" displayimage="false">
+    <namedelementlink type="view" name="$v-docs-flat"/>
+  </outlineentry>
+  <outlineentry label="View 2" level="1" type="namedelementlink" displayimage="false">
+    <namedelementlink type="view" name="$v-docs-categorized"/>
+  </outlineentry>
+</outline>

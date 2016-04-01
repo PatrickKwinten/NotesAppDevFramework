@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imageresource xmlns="http://www.lotus.com/dxl" alias="boxwindowopen.gif" comment="used in outline box to indicate the box is opened - clickable" imagename="ng-open.gif" language="en" name="global/img/boxwindowopen.gif" publicaccess="false" readonly="true">
+  <item name="$MimeType" sign="true">
+    <text>image/gif</text>
+  </item>
+</imageresource>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frameset xmlns="http://www.lotus.com/dxl" name="GLOBAL-DocumentsHR" alias="$fs-notes-documents-hr" hide="web" publicaccess="false" language="en" comment="document preview section on the right" columns="220px 75" spacing="0px" borderwidth="1px" bordercolor="silver">
+  <frame name="NotesMenu" targetframe="NotesView" border3d="false" scrolling="never" initialfocus="true">
+    <bordercaption show="arrows" align="right" justify="center" open="280px" bgcolor="#d2dfef">
+      <code event="value">
+        <formula>"Menu"</formula>
+      </code>
+      <font size="8pt" name="multilingual"/>
+    </bordercaption>
+    <namedelementlink type="page" name="$p-global-menu-main"/>
+  </frame>
+  <frameset columns="1 0%" spacing="0px">
+    <frame name="NotesView" targetframe="NotesPreview" border3d="false">
+      <namedelementlink type="page">
+        <code event="value">
+          <formula>start := @GetProfileField ( "$f-dbprofile" ; "Tx_StartOption") ;
+start</formula>
+        </code>
+        <code event="namedelementkind">
+          <formula>start := @GetProfileField ( "$f-dbprofile" ; "Tx_StartOption") ;
+@If(@Contains(@Left(start;"-");"p");"Page";"Form")</formula>
+        </code>
+      </namedelementlink>
+    </frame>
+    <frame name="NotesPreview" border3d="false">
+      <bordercaption show="arrows" align="left" justify="center" open="40%" bgcolor="#d2dfef">
+        <code event="value">
+          <formula>"Preview"</formula>
+        </code>
+        <font size="8pt" name="multilingual"/>
+      </bordercaption>
+    </frame>
+  </frameset>
+</frameset>

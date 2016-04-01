@@ -1,0 +1,88 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Class DateHelper
+Declare Sub Initialize
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+Class DateHelper
+	Private dt_then As NotesDateTime
+	Private dt_now As NotesDateTime
+	Private diff_in_seconds As Long
+	Private diff_in_minutes As Long
+	
+	Sub New()
+		Set dt_now = New NotesDateTime(Now)
+	End Sub
+	
+	Function TimeSince(datetime As Variant, includeseconds As Boolean)
+		Set dt_then = New NotesDateTime(Cstr(datetime))
+		Dim future As Boolean
+		Dim since As String
+		Dim whichway As String
+		
+		diff_in_seconds = dt_now.TimeDifference(dt_then)
+		
+		If Sgn(diff_in_seconds) = -1 Then 'future
+			future = True	
+			diff_in_seconds = Abs(diff_in_seconds)
+			whichway = " away"
+		Else 'past
+			future = False
+			whichway = " ago"
+		End If
+		
+		diff_in_minutes = Round(diff_in_seconds/60,0)
+		
+		If diff_in_minutes >= 0 And diff_in_minutes <= 1 Then
+			If Not includeseconds Then
+				If diff_in_minutes = 0 Then
+					since = "less than a minute" 
+				Else
+					since = "1 minute"
+				End If
+			Else 
+				If diff_in_seconds >= 0 And diff_in_seconds <= 4 Then
+					Since = "less than 5 seconds"
+				Elseif diff_in_seconds >= 5 And diff_in_seconds <= 9  Then
+					Since = "less than 10 seconds"
+				Elseif diff_in_seconds >= 10 And diff_in_seconds <= 19 Then
+					Since = "less than 20 seconds"
+				Elseif diff_in_seconds >= 20 And diff_in_seconds <= 39 Then
+					Since = "half a minute"
+				Elseif diff_in_seconds >= 40 And diff_in_seconds <= 59 Then
+					Since = "less than a minute"
+				Else 
+					Since = "1 minute"
+				End If
+			End If 
+		Elseif diff_in_minutes >= 2 And diff_in_minutes <= 44 Then
+			since =  Cstr(diff_in_minutes) + " minutes"
+		Elseif diff_in_minutes >= 45 And diff_in_minutes <= 89 Then
+			since = "about 1 hour"
+		Elseif diff_in_minutes >= 90 And diff_in_minutes <= 1439 Then
+			since = "about " + Cstr(Round(diff_in_minutes / 60, 0)) + " hours"
+		Elseif diff_in_minutes >= 1440 And diff_in_minutes <= 2879 Then
+			since = "1 day"
+		Elseif diff_in_minutes >= 2880 And diff_in_minutes <= 43199 Then
+			since = "about " + Cstr(Round(diff_in_minutes / 1440, 0)) + " days"
+		Elseif diff_in_minutes >= 43200 And diff_in_minutes <= 86399 Then
+			since = "about 1 month"
+		Elseif diff_in_minutes >= 86400 And diff_in_minutes <= 525599 Then
+			Since = Cstr(Round(diff_in_minutes / 43200, 0)) +" months"
+		Elseif diff_in_minutes >= 525600 And diff_in_minutes <= 1051199 Then
+			Since = "about 1 year"
+		Else 
+			since = "over " + Cstr(Round(diff_in_minutes / 525600, 0)) + " years"
+		End If	
+		
+		TimeSince = since + whichway
+	End Function
+End Class
+'++LotusScript Development Environment:2:2:Initialize:1:10
+Sub Initialize
+End Sub
+

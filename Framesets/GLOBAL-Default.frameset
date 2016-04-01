@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frameset xmlns="http://www.lotus.com/dxl" name="GLOBAL-Default" alias="$fs-notes-default" hide="web" publicaccess="true" comment="selected in DB launch properties" rows="60px 22px 93" spacing="0px" borderwidth="1px" bordercolor="#8f8f8f">
+  <code event="windowtitle">
+    <formula>@DbTitle</formula>
+  </code>
+  <frame name="NotesTop" targetframe="NotesTop" border3d="false" scrolling="never" noresize="true">
+    <bordercaption>
+      <font size="9pt" color="white"/>
+    </bordercaption>
+    <namedelementlink type="form" name="$f-global-header"/>
+  </frame>
+  <frame border3d="false" scrolling="never" noresize="true" showheader="false" basicappearance="true">
+    <namedelementlink type="view" name="$v-global-menu-alternative"/>
+  </frame>
+  <frame name="Main" border3d="false" noresize="true">
+    <bordercaption>
+      <font size="9pt" color="white"/>
+    </bordercaption>
+    <namedelementlink type="frameset">
+      <code event="value">
+        <formula>varFrmSetDefault:=@Environment( "SNDVIK-AppPreview" );
+@If ( varFrmSetDefault = "" ; "$fs-notes-documents-vr" ; varFrmSetDefault)</formula>
+      </code>
+      <code event="namedelementkind">
+        <formula>"Frameset"</formula>
+      </code>
+    </namedelementlink>
+  </frame>
+</frameset>

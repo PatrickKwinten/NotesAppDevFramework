@@ -1,0 +1,2429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.lotus.com/dxl" name="(GLOBAL: Start)" alias="$f-global-start" publicaccess="false" nofieldexchange="true" renderpassthrough="true">
+  <code event="options">
+    <lotusscript>Use "StartPageFunctions"
+
+</lotusscript>
+  </code>
+  <code event="postopen">
+    <lotusscript>Sub Postopen(Source As Notesuidocument)
+	Call StartPageInit(Source)
+End Sub</lotusscript>
+  </code>
+  <body>
+    <richtext>
+      <pardef id="1" hide="notes web mobile"/>
+      <par def="1">
+        <field type="text" kind="computed" name="SaveOptions">
+          <code event="defaultvalue">
+            <formula>"0"</formula>
+          </code>
+        </field>
+        <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="7" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+      </par>
+      <par def="1"/>
+      <table widthtype="fitmargins" refwidth="5.2083in">
+        <tablecolumn width="25%"/>
+        <tablecolumn width="25%"/>
+        <tablecolumn width="25%"/>
+        <tablecolumn width="25%"/>
+        <tablerow>
+          <tablecell>
+            <pardef id="3" hide="notes web mobile" keepwithnext="true" keeptogether="true"/>
+            <par def="3">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_TitleSpotDoc1"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="7" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <pardef id="4" hide="notes web mobile" keepwithnext="true" keeptogether="true"/>
+            <par def="4">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_TitleSpotDoc2"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="7" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <pardef id="5" hide="notes web mobile" keepwithnext="true" keeptogether="true"/>
+            <par def="5">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_TitleSpotDoc3"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="7" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <pardef id="6" hide="notes web mobile" keepwithnext="true" keeptogether="true"/>
+            <par def="6">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_TitleSpotDoc4"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="7" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell>
+            <par def="3">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="names" kind="editable" name="Na_AuthorSpotDoc1"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="4">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="names" kind="editable" name="Na_AuthorSpotDoc2"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="5">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="names" kind="editable" name="Na_AuthorSpotDoc3"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="6">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="names" kind="editable" name="Na_AuthorSpotDoc4"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell>
+            <par def="3">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="datetime" kind="editable" name="Td_ModifiedSpotDoc1">
+                  <datetimeformat show="datetime" date="yearmonthday" fourdigityearfor21stcentury="true" time="hourminute" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+                </field>
+              </run>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="4">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="datetime" kind="editable" name="Td_ModifiedSpotDoc2">
+                  <datetimeformat show="datetime" date="yearmonthday" fourdigityearfor21stcentury="true" time="hourminute" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+                </field>
+              </run>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="5">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="datetime" kind="editable" name="Td_ModifiedSpotDoc3">
+                  <datetimeformat show="datetime" date="yearmonthday" fourdigityearfor21stcentury="true" time="hourminute" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+                </field>
+              </run>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="6">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="datetime" kind="editable" name="Td_ModifiedSpotDoc4">
+                  <datetimeformat show="datetime" date="yearmonthday" fourdigityearfor21stcentury="true" time="hourminute" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+                </field>
+              </run>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell>
+            <par def="3">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_ReadableDateSpotDoc1"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="4">
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_ReadableDateSpotDoc2"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="5">
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_ReadableDateSpotDoc3"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="6">
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_ReadableDateSpotDoc4"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell>
+            <par def="3">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_FileTypeSpotDoc1"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="4">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_FileTypeSpotDoc2"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="5">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_FileTypeSpotDoc3"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="6">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_FileTypeSpotDoc4"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell>
+            <par def="3">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="computed" name="Tx_FileTypeIconSpotDoc1">
+                  <code event="defaultvalue">
+                    <formula>varFileType := Tx_FileTypeSpotDoc1;
+@If(
+varFileType = "xls"; "Excel.jpg";
+varFileType = "pdf"; "Pdf.jpg";
+varFileType = "doc"; "Word.jpg";
+varFileType = "ppt"; "PowerPoint.jpg";
+varFileType = "rar"; "WinRar.jpg";
+varFileType = "zip"; "Zip.jpg";
+varFileType = "avi"; "Movie.jpg";
+varFileType = "mp4"; "Movie.jpg";
+varFileType = "mpeg"; "Movie.jpg";
+varFileType = "mpeg4"; "Movie.jpg";
+varFileType = "wm"; "Movie.jpg";
+varFileType = "wmv"; "Movie.jpg";
+varFileType = "odp"; "SymphonyPresentation.jpg";
+varFileType = "otp"; "SymphonyPresentation.jpg";
+varFileType = "odt"; "SymphonyDocuments.jpg";
+varFileType = "ott"; "SymphonyDocuments.jpg";
+varFileType = "ods"; "SymphonySpreadsheet.jpg";
+varFileType = "ots"; "SymphonySpreadsheet.jpg";
+varFileType = "LotusNotes"; "LotusNotes.jpg";
+"MiscDocument.jpg")</formula>
+                  </code>
+                </field>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="4">
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="computed" name="Tx_FileTypeIconSpotDoc2">
+                  <code event="defaultvalue">
+                    <formula>varFileType := Tx_FileTypeSpotDoc2;
+@If(
+varFileType = "xls"; "Excel.jpg";
+varFileType = "pdf"; "Pdf.jpg";
+varFileType = "doc"; "Word.jpg";
+varFileType = "ppt"; "PowerPoint.jpg";
+varFileType = "rar"; "WinRar.jpg";
+varFileType = "zip"; "Zip.jpg";
+varFileType = "avi"; "Movie.jpg";
+varFileType = "mp4"; "Movie.jpg";
+varFileType = "mpeg"; "Movie.jpg";
+varFileType = "mpeg4"; "Movie.jpg";
+varFileType = "wm"; "Movie.jpg";
+varFileType = "wmv"; "Movie.jpg";
+varFileType = "odp"; "SymphonyPresentation.jpg";
+varFileType = "otp"; "SymphonyPresentation.jpg";
+varFileType = "odt"; "SymphonyDocuments.jpg";
+varFileType = "ott"; "SymphonyDocuments.jpg";
+varFileType = "ods"; "SymphonySpreadsheet.jpg";
+varFileType = "ots"; "SymphonySpreadsheet.jpg";
+varFileType = "LotusNotes"; "LotusNotes.jpg";
+"MiscDocument.jpg")</formula>
+                  </code>
+                </field>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="5">
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="computed" name="Tx_FileTypeIconSpotDoc3">
+                  <code event="defaultvalue">
+                    <formula>varFileType := Tx_FileTypeSpotDoc3;
+@If(
+varFileType = "xls"; "Excel.jpg";
+varFileType = "pdf"; "Pdf.jpg";
+varFileType = "doc"; "Word.jpg";
+varFileType = "ppt"; "PowerPoint.jpg";
+varFileType = "rar"; "WinRar.jpg";
+varFileType = "zip"; "Zip.jpg";
+varFileType = "avi"; "Movie.jpg";
+varFileType = "mp4"; "Movie.jpg";
+varFileType = "mpeg"; "Movie.jpg";
+varFileType = "mpeg4"; "Movie.jpg";
+varFileType = "wm"; "Movie.jpg";
+varFileType = "wmv"; "Movie.jpg";
+varFileType = "odp"; "SymphonyPresentation.jpg";
+varFileType = "otp"; "SymphonyPresentation.jpg";
+varFileType = "odt"; "SymphonyDocuments.jpg";
+varFileType = "ott"; "SymphonyDocuments.jpg";
+varFileType = "ods"; "SymphonySpreadsheet.jpg";
+varFileType = "ots"; "SymphonySpreadsheet.jpg";
+varFileType = "LotusNotes"; "LotusNotes.jpg";
+"MiscDocument.jpg")</formula>
+                  </code>
+                </field>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="6">
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="computed" name="Tx_FileTypeIconSpotDoc4">
+                  <code event="defaultvalue">
+                    <formula>varFileType := Tx_FileTypeSpotDoc4;
+@If(
+varFileType = "xls"; "Excel.jpg";
+varFileType = "pdf"; "Pdf.jpg";
+varFileType = "doc"; "Word.jpg";
+varFileType = "ppt"; "PowerPoint.jpg";
+varFileType = "rar"; "WinRar.jpg";
+varFileType = "zip"; "Zip.jpg";
+varFileType = "avi"; "Movie.jpg";
+varFileType = "mp4"; "Movie.jpg";
+varFileType = "mpeg"; "Movie.jpg";
+varFileType = "mpeg4"; "Movie.jpg";
+varFileType = "wm"; "Movie.jpg";
+varFileType = "wmv"; "Movie.jpg";
+varFileType = "odp"; "SymphonyPresentation.jpg";
+varFileType = "otp"; "SymphonyPresentation.jpg";
+varFileType = "odt"; "SymphonyDocuments.jpg";
+varFileType = "ott"; "SymphonyDocuments.jpg";
+varFileType = "ods"; "SymphonySpreadsheet.jpg";
+varFileType = "ots"; "SymphonySpreadsheet.jpg";
+varFileType = "LotusNotes"; "LotusNotes.jpg";
+"MiscDocument.jpg")</formula>
+                  </code>
+                </field>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell>
+            <par def="3">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_UNIDSpotDoc1"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="4">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_UNIDSpotDoc2"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="5">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_UNIDSpotDoc3"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="6">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_UNIDSpotDoc4"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell>
+            <par def="3">
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="4">
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="5">
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="6">
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell>
+            <par def="3">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_TitleMySpotDoc1"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="4">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_TitleMySpotDoc2"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="5">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_TitleMySpotDoc3"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="6">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_TitleMySpotDoc4"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell>
+            <par def="3">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="names" kind="editable" name="Na_AuthorMySpotDoc1"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="4">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="names" kind="editable" name="Na_AuthorMySpotDoc2"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="5">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="names" kind="editable" name="Na_AuthorMySpotDoc3"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="6">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="names" kind="editable" name="Na_AuthorMySpotDoc4"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell>
+            <par def="3">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="datetime" kind="editable" name="Td_ModifiedMySpotDoc1">
+                  <datetimeformat show="datetime" date="yearmonthday" fourdigityearfor21stcentury="true" time="hourminute" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+                </field>
+              </run>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="4">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="datetime" kind="editable" name="Td_ModifiedMySpotDoc2">
+                  <datetimeformat show="datetime" date="yearmonthday" fourdigityearfor21stcentury="true" time="hourminute" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+                </field>
+              </run>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="5">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="datetime" kind="editable" name="Td_ModifiedMySpotDoc3">
+                  <datetimeformat show="datetime" date="yearmonthday" fourdigityearfor21stcentury="true" time="hourminute" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+                </field>
+              </run>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="6">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="datetime" kind="editable" name="Td_ModifiedMySpotDoc4">
+                  <datetimeformat show="datetime" date="yearmonthday" fourdigityearfor21stcentury="true" time="hourminute" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+                </field>
+              </run>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell>
+            <par def="3">
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_ReadableDateMySpotDoc1"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="4">
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_ReadableDateMySpotDoc2"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="5">
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_ReadableDateMySpotDoc3"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="6">
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_ReadableDateMySpotDoc4"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell>
+            <par def="3">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_FileTypeMySpotDoc1"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="4">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_FileTypeMySpotDoc2"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="5">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_FileTypeMySpotDoc3"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="6">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_FileTypeMySpotDoc4"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell>
+            <par def="3">
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="computed" name="Tx_FileTypeIconMySpotDoc1">
+                  <code event="defaultvalue">
+                    <formula>varFileType := Tx_FileTypeMySpotDoc1;
+@If(
+varFileType = "xls"; "Excel.jpg";
+varFileType = "pdf"; "Pdf.jpg";
+varFileType = "doc"; "Word.jpg";
+varFileType = "ppt"; "PowerPoint.jpg";
+varFileType = "rar"; "WinRar.jpg";
+varFileType = "zip"; "Zip.jpg";
+varFileType = "avi"; "Movie.jpg";
+varFileType = "mp4"; "Movie.jpg";
+varFileType = "mpeg"; "Movie.jpg";
+varFileType = "mpeg4"; "Movie.jpg";
+varFileType = "wm"; "Movie.jpg";
+varFileType = "wmv"; "Movie.jpg";
+varFileType = "odp"; "SymphonyPresentation.jpg";
+varFileType = "otp"; "SymphonyPresentation.jpg";
+varFileType = "odt"; "SymphonyDocuments.jpg";
+varFileType = "ott"; "SymphonyDocuments.jpg";
+varFileType = "ods"; "SymphonySpreadsheet.jpg";
+varFileType = "ots"; "SymphonySpreadsheet.jpg";
+varFileType = "LotusNotes"; "LotusNotes.jpg";
+"MiscDocument.jpg")</formula>
+                  </code>
+                </field>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="4">
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="computed" name="Tx_FileTypeIconMySpotDoc2">
+                  <code event="defaultvalue">
+                    <formula>varFileType := Tx_FileTypeMySpotDoc2;
+@If(
+varFileType = "xls"; "Excel.jpg";
+varFileType = "pdf"; "Pdf.jpg";
+varFileType = "doc"; "Word.jpg";
+varFileType = "ppt"; "PowerPoint.jpg";
+varFileType = "rar"; "WinRar.jpg";
+varFileType = "zip"; "Zip.jpg";
+varFileType = "avi"; "Movie.jpg";
+varFileType = "mp4"; "Movie.jpg";
+varFileType = "mpeg"; "Movie.jpg";
+varFileType = "mpeg4"; "Movie.jpg";
+varFileType = "wm"; "Movie.jpg";
+varFileType = "wmv"; "Movie.jpg";
+varFileType = "odp"; "SymphonyPresentation.jpg";
+varFileType = "otp"; "SymphonyPresentation.jpg";
+varFileType = "odt"; "SymphonyDocuments.jpg";
+varFileType = "ott"; "SymphonyDocuments.jpg";
+varFileType = "ods"; "SymphonySpreadsheet.jpg";
+varFileType = "ots"; "SymphonySpreadsheet.jpg";
+varFileType = "LotusNotes"; "LotusNotes.jpg";
+"MiscDocument.jpg")</formula>
+                  </code>
+                </field>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="5">
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="computed" name="Tx_FileTypeIconMySpotDoc3">
+                  <code event="defaultvalue">
+                    <formula>varFileType := Tx_FileTypeMySpotDoc3;
+@If(
+varFileType = "xls"; "Excel.jpg";
+varFileType = "pdf"; "Pdf.jpg";
+varFileType = "doc"; "Word.jpg";
+varFileType = "ppt"; "PowerPoint.jpg";
+varFileType = "rar"; "WinRar.jpg";
+varFileType = "zip"; "Zip.jpg";
+varFileType = "avi"; "Movie.jpg";
+varFileType = "mp4"; "Movie.jpg";
+varFileType = "mpeg"; "Movie.jpg";
+varFileType = "mpeg4"; "Movie.jpg";
+varFileType = "wm"; "Movie.jpg";
+varFileType = "wmv"; "Movie.jpg";
+varFileType = "odp"; "SymphonyPresentation.jpg";
+varFileType = "otp"; "SymphonyPresentation.jpg";
+varFileType = "odt"; "SymphonyDocuments.jpg";
+varFileType = "ott"; "SymphonyDocuments.jpg";
+varFileType = "ods"; "SymphonySpreadsheet.jpg";
+varFileType = "ots"; "SymphonySpreadsheet.jpg";
+varFileType = "LotusNotes"; "LotusNotes.jpg";
+"MiscDocument.jpg")</formula>
+                  </code>
+                </field>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="6">
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="computed" name="Tx_FileTypeIconMySpotDoc4">
+                  <code event="defaultvalue">
+                    <formula>varFileType := Tx_FileTypeMySpotDoc4;
+@If(
+varFileType = "xls"; "Excel.jpg";
+varFileType = "pdf"; "Pdf.jpg";
+varFileType = "doc"; "Word.jpg";
+varFileType = "ppt"; "PowerPoint.jpg";
+varFileType = "rar"; "WinRar.jpg";
+varFileType = "zip"; "Zip.jpg";
+varFileType = "avi"; "Movie.jpg";
+varFileType = "mp4"; "Movie.jpg";
+varFileType = "mpeg"; "Movie.jpg";
+varFileType = "mpeg4"; "Movie.jpg";
+varFileType = "wm"; "Movie.jpg";
+varFileType = "wmv"; "Movie.jpg";
+varFileType = "odp"; "SymphonyPresentation.jpg";
+varFileType = "otp"; "SymphonyPresentation.jpg";
+varFileType = "odt"; "SymphonyDocuments.jpg";
+varFileType = "ott"; "SymphonyDocuments.jpg";
+varFileType = "ods"; "SymphonySpreadsheet.jpg";
+varFileType = "ots"; "SymphonySpreadsheet.jpg";
+varFileType = "LotusNotes"; "LotusNotes.jpg";
+"MiscDocument.jpg")</formula>
+                  </code>
+                </field>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell>
+            <par def="3">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_UNIDMySpotDoc1"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="4">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_UNIDMySpotDoc2"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="5">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_UNIDMySpotDoc3"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+          <tablecell>
+            <par def="6">
+              <run>
+                <font size="8pt"/>
+              </run>
+              <run>
+                <font size="8pt"/>
+                <field type="text" kind="editable" name="Tx_UNIDMySpotDoc4"/>
+              </run>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+              <run>
+                <font size="8pt"/>
+              </run>
+            </par>
+          </tablecell>
+        </tablerow>
+      </table>
+      <pardef id="7" hide="notes web mobile">
+        <code event="hidewhen">
+          <formula>1</formula>
+        </code>
+      </pardef>
+      <par def="7">
+        <run>
+          <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+      </par>
+      <table cellbordercolor="silver" widthtype="fixedleft" rowspacing="0.1500in" columnspacing="0.2000in" refwidth="7in">
+        <border style="image" width="1px">
+          <imageref name="table-roundborder-gray.gif"/>
+        </border>
+        <tablecolumn width="6.6000in"/>
+        <tablerow>
+          <tablecell colorstyle="vgradient" borderwidth="0px 0px 1px" bgcolor="white" altbgcolor="#d2dfef">
+            <pardef id="9" keepwithnext="true" keeptogether="true"/>
+            <par def="9">
+              <run>
+                <font style="bold" name="multilingual" color="silver"/>
+              </run>
+              <actionhotspot hotspotstyle="none">
+                <run>
+                  <font style="bold" name="multilingual" color="silver"/>WELCOME TO</run>
+              </actionhotspot>
+              <run>
+                <font style="bold" name="multilingual" color="silver"/>
+              </run>
+            </par>
+            <pardef id="10" spaceafter="1.5" keepwithnext="true" keeptogether="true"/>
+            <par def="10">
+              <run>
+                <font size="12pt" style="bold" name="multilingual" color="#009cff"/>
+              </run>
+              <run>
+                <font size="18pt" style="bold" color="#004080"/>
+                <computedtext>
+                  <code event="value">
+                    <formula>@DbTitle</formula>
+                  </code>
+                </computedtext>
+              </run>
+              <run>
+                <font size="9pt" name="multilingual" color="green"/>
+              </run>
+            </par>
+            <par def="9">
+              <run>
+                <font size="12pt" style="bold" name="multilingual" color="#009cff"/>LATEST CONTRIBUTIONS</run>
+            </par>
+            <table widthtype="fitmargins" cellbordercolor="gray" leftmargin="0" rowspacing="0.0792in" refwidth="6.5792in">
+              <border style="image" width="1px">
+                <imageref name="table-roundborder-gray.gif"/>
+              </border>
+              <tablecolumn width="100%"/>
+              <tablerow>
+                <tablecell borderwidth="0px" bgcolor="white">
+                  <pardef id="12" hide="notes web mobile" keepwithnext="true" keeptogether="true">
+                    <code event="hidewhen">
+                      <formula>1</formula>
+                    </code>
+                  </pardef>
+                  <par def="12">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                  <table widthtype="fitmargins" cellbordercolor="#efefef" leftmargin="0" rowspacing="0.0201in" columnspacing="0.0792in" refwidth="6.5806in">
+                    <tablecolumn width="25%"/>
+                    <tablecolumn width="25%"/>
+                    <tablecolumn width="25%"/>
+                    <tablecolumn width="25%"/>
+                    <tablerow>
+                      <tablecell borderwidth="0px 2px 0px 0px">
+                        <pardef id="14" hide="notes web mobile" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>1</formula>
+                          </code>
+                        </pardef>
+                        <par def="14">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                        <table widthtype="fitmargins" cellbordercolor="gray" leftmargin="0" refwidth="1.4868in">
+                          <tablecolumn width="100%"/>
+                          <tablerow>
+                            <tablecell valign="center" borderwidth="0px">
+                              <pardef id="16" align="center" spaceafter="1.5" keepwithnext="true" keeptogether="true">
+                                <code event="hidewhen">
+                                  <formula>Tx_TitleSpotDoc1 = ""</formula>
+                                </code>
+                              </pardef>
+                              <par def="16">
+                                <actionhotspot hotspotstyle="none">
+                                  <picture width="64px" height="64px">
+                                    <imageref>
+                                      <code event="value">
+                                        <formula>@Text(Tx_FileTypeIconSpotDoc1)</formula>
+                                      </code>
+                                    </imageref>
+                                  </picture>
+                                  <code event="options">
+                                    <lotusscript>Use "StartPageFunctions"
+</lotusscript>
+                                  </code>
+                                  <code event="click">
+                                    <lotusscript>Sub Click(Source As Button)
+	Dim ws As New NotesUIWorkspace	
+	Call OpenDocumentByUNID(ws.CurrentDocument.Document.Tx_UNIDSpotDoc1(0))
+End Sub</lotusscript>
+                                  </code>
+                                </actionhotspot>
+                              </par>
+                            </tablecell>
+                          </tablerow>
+                        </table>
+                        <par def="14">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 2px">
+                        <pardef id="17" hide="notes web mobile" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>1</formula>
+                          </code>
+                        </pardef>
+                        <par def="17">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                        <table widthtype="fitmargins" leftmargin="0.0208in" refwidth="1.4660in">
+                          <tablecolumn width="100%"/>
+                          <tablerow>
+                            <tablecell valign="center" borderwidth="0px">
+                              <pardef id="19" align="center" spaceafter="1.5" keepwithnext="true" keeptogether="true">
+                                <code event="hidewhen">
+                                  <formula>Tx_TitleSpotDoc2 = ""</formula>
+                                </code>
+                              </pardef>
+                              <par def="19">
+                                <actionhotspot hotspotstyle="none">
+                                  <picture width="64px" height="64px">
+                                    <imageref>
+                                      <code event="value">
+                                        <formula>@Text(Tx_FileTypeIconSpotDoc2)</formula>
+                                      </code>
+                                    </imageref>
+                                  </picture>
+                                  <code event="options">
+                                    <lotusscript>Use "StartPageFunctions"
+</lotusscript>
+                                  </code>
+                                  <code event="click">
+                                    <lotusscript>Sub Click(Source As Button)
+	Dim ws As New NotesUIWorkspace	
+	Call OpenDocumentByUNID(ws.CurrentDocument.Document.Tx_UNIDSpotDoc2(0))
+End Sub</lotusscript>
+                                  </code>
+                                </actionhotspot>
+                              </par>
+                            </tablecell>
+                          </tablerow>
+                        </table>
+                        <par def="17">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 2px">
+                        <pardef id="20" hide="notes web mobile" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>1</formula>
+                          </code>
+                        </pardef>
+                        <par def="20">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                        <table widthtype="fitmargins" leftmargin="0.0208in" refwidth="1.4660in">
+                          <tablecolumn width="100%"/>
+                          <tablerow>
+                            <tablecell valign="center" borderwidth="0px">
+                              <pardef id="22" align="center" spaceafter="1.5" keepwithnext="true" keeptogether="true">
+                                <code event="hidewhen">
+                                  <formula>Tx_TitleSpotDoc3 = ""</formula>
+                                </code>
+                              </pardef>
+                              <par def="22">
+                                <actionhotspot hotspotstyle="none">
+                                  <picture width="64px" height="64px">
+                                    <imageref>
+                                      <code event="value">
+                                        <formula>@Text(Tx_FileTypeIconSpotDoc3)</formula>
+                                      </code>
+                                    </imageref>
+                                  </picture>
+                                  <code event="options">
+                                    <lotusscript>Use "StartPageFunctions"
+</lotusscript>
+                                  </code>
+                                  <code event="click">
+                                    <lotusscript>Sub Click(Source As Button)
+	Dim ws As New NotesUIWorkspace	
+	Call OpenDocumentByUNID(ws.CurrentDocument.Document.Tx_UNIDSpotDoc3(0)) 
+End Sub</lotusscript>
+                                  </code>
+                                </actionhotspot>
+                              </par>
+                            </tablecell>
+                          </tablerow>
+                        </table>
+                        <par def="20">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 0px 0px 2px">
+                        <pardef id="23" hide="notes web mobile" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>1</formula>
+                          </code>
+                        </pardef>
+                        <par def="23">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                        <table widthtype="fitmargins" leftmargin="0.0208in" refwidth="1.4660in">
+                          <tablecolumn width="100%"/>
+                          <tablerow>
+                            <tablecell valign="center" borderwidth="0px">
+                              <pardef id="25" align="center" spaceafter="1.5" keepwithnext="true" keeptogether="true">
+                                <code event="hidewhen">
+                                  <formula>Tx_TitleSpotDoc4 = ""</formula>
+                                </code>
+                              </pardef>
+                              <par def="25">
+                                <actionhotspot hotspotstyle="none">
+                                  <picture width="64px" height="64px">
+                                    <imageref>
+                                      <code event="value">
+                                        <formula>@Text(Tx_FileTypeIconSpotDoc4)</formula>
+                                      </code>
+                                    </imageref>
+                                  </picture>
+                                  <code event="options">
+                                    <lotusscript>Use "StartPageFunctions"
+</lotusscript>
+                                  </code>
+                                  <code event="click">
+                                    <lotusscript>Sub Click(Source As Button)
+	Dim ws As New NotesUIWorkspace	
+	Call OpenDocumentByUNID(ws.CurrentDocument.Document.Tx_UNIDSpotDoc4(0)) 
+End Sub</lotusscript>
+                                  </code>
+                                </actionhotspot>
+                              </par>
+                            </tablecell>
+                          </tablerow>
+                        </table>
+                        <par def="23">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                      </tablecell>
+                    </tablerow>
+                    <tablerow>
+                      <tablecell borderwidth="0px 2px 0px 0px">
+                        <pardef id="26" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>Tx_TitleSpotDoc1 = ""</formula>
+                          </code>
+                        </pardef>
+                        <par def="26">
+                          <run>
+                            <font size="8pt" name="Arabic Transparent" pitch="variable" truetype="true" familyid="0" color="#4f4f4f"/>
+                          </run>
+                          <actionhotspot hotspotstyle="none">
+                            <run>
+                              <font color="#004080" style="bold underline"/>
+                              <field type="text" kind="computedfordisplay" name="Tx_TitleSpotDoc1Disp">
+                                <code event="defaultvalue">
+                                  <formula>Tx_TitleSpotDoc1</formula>
+                                </code>
+                              </field>
+                            </run>
+                            <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="15" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+                            <run>
+                              <font size="8pt" name="Arabic Transparent" pitch="variable" truetype="true" familyid="0" color="#4f4f4f"/>
+                            </run>
+                            <code event="options">
+                              <lotusscript>Use "StartPageFunctions"
+
+</lotusscript>
+                            </code>
+                            <code event="click">
+                              <lotusscript>Sub Click(Source As Button)
+	Dim ws As New NotesUIWorkspace	
+	Call OpenDocumentByUNID(ws.CurrentDocument.Document.Tx_UNIDSpotDoc1(0))
+End Sub</lotusscript>
+                            </code>
+                          </actionhotspot>
+                          <run>
+                            <font size="8pt" name="Arabic Transparent" pitch="variable" truetype="true" familyid="0" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 2px">
+                        <pardef id="27" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>Tx_TitleSpotDoc2 = ""</formula>
+                          </code>
+                        </pardef>
+                        <par def="27">
+                          <actionhotspot hotspotstyle="none">
+                            <run>
+                              <font color="#004080" style="bold underline"/>
+                              <field type="text" kind="computedfordisplay" name="Tx_TitleSpotDoc2Disp">
+                                <code event="defaultvalue">
+                                  <formula>Tx_TitleSpotDoc2</formula>
+                                </code>
+                              </field>
+                            </run>
+                            <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="12" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+                            <code event="options">
+                              <lotusscript>Use "StartPageFunctions"
+
+</lotusscript>
+                            </code>
+                            <code event="click">
+                              <lotusscript>Sub Click(Source As Button)
+	Dim ws As New NotesUIWorkspace	
+	Call OpenDocumentByUNID(ws.CurrentDocument.Document.Tx_UNIDSpotDoc2(0))
+End Sub</lotusscript>
+                            </code>
+                          </actionhotspot>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 2px">
+                        <pardef id="28" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>Tx_TitleSpotDoc3 = ""</formula>
+                          </code>
+                        </pardef>
+                        <par def="28">
+                          <actionhotspot hotspotstyle="none">
+                            <run>
+                              <font color="#004080" style="bold underline"/>
+                              <field type="text" kind="computedfordisplay" name="Tx_TitleSpotDoc3Disp">
+                                <code event="defaultvalue">
+                                  <formula>Tx_TitleSpotDoc3</formula>
+                                </code>
+                              </field>
+                            </run>
+                            <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="12" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+                            <code event="options">
+                              <lotusscript>Use "StartPageFunctions"
+
+</lotusscript>
+                            </code>
+                            <code event="click">
+                              <lotusscript>Sub Click(Source As Button)
+	Dim ws As New NotesUIWorkspace	
+	Call OpenDocumentByUNID(ws.CurrentDocument.Document.Tx_UNIDSpotDoc3(0))
+End Sub</lotusscript>
+                            </code>
+                          </actionhotspot>
+                          <run>
+                            <font size="8pt" name="multilingual" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 0px 0px 2px">
+                        <pardef id="29" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>Tx_TitleSpotDoc4 = ""</formula>
+                          </code>
+                        </pardef>
+                        <par def="29">
+                          <actionhotspot hotspotstyle="none">
+                            <run>
+                              <font color="#004080" style="bold underline"/>
+                              <field type="text" kind="computedfordisplay" name="Tx_TitleSpotDoc4Disp">
+                                <code event="defaultvalue">
+                                  <formula>Tx_TitleSpotDoc4</formula>
+                                </code>
+                              </field>
+                            </run>
+                            <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="12" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+                            <code event="options">
+                              <lotusscript>Use "StartPageFunctions"
+
+</lotusscript>
+                            </code>
+                            <code event="click">
+                              <lotusscript>Sub Click(Source As Button)
+	Dim ws As New NotesUIWorkspace	
+	Call OpenDocumentByUNID(ws.CurrentDocument.Document.Tx_UNIDSpotDoc4(0))
+End Sub</lotusscript>
+                            </code>
+                          </actionhotspot>
+                          <run>
+                            <font size="8pt" name="multilingual" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                    </tablerow>
+                    <tablerow>
+                      <tablecell borderwidth="0px 2px 0px 0px">
+                        <par def="26">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>By: </run>
+                          <run>
+                            <font size="8pt"/>
+                            <field lookupeachchar="false" lookupaddressonrefresh="false" type="names" kind="computedfordisplay" name="Na_AuthorSpotDoc1Disp">
+                              <code event="defaultvalue">
+                                <formula>@Name([CN]; Na_AuthorSpotDoc1)</formula>
+                              </code>
+                            </field>
+                          </run>
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 2px">
+                        <par def="27">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>By: </run>
+                          <run>
+                            <font size="8pt"/>
+                            <field lookupeachchar="false" lookupaddressonrefresh="false" type="names" kind="computedfordisplay" name="Na_AuthorSpotDoc2Disp">
+                              <code event="defaultvalue">
+                                <formula>@Name([CN]; Na_AuthorSpotDoc2)</formula>
+                              </code>
+                            </field>
+                          </run>
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 2px">
+                        <par def="28">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>By: </run>
+                          <run>
+                            <font size="8pt"/>
+                            <field lookupeachchar="false" lookupaddressonrefresh="false" type="names" kind="computedfordisplay" name="Na_AuthorSpotDoc3Disp">
+                              <code event="defaultvalue">
+                                <formula>@Name([CN]; Na_AuthorSpotDoc3)</formula>
+                              </code>
+                            </field>
+                          </run>
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 0px 0px 2px">
+                        <par def="29">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>By: </run>
+                          <run>
+                            <font size="8pt"/>
+                            <field lookupeachchar="false" lookupaddressonrefresh="false" type="names" kind="computedfordisplay" name="Na_AuthorSpotDoc4Disp">
+                              <code event="defaultvalue">
+                                <formula>@Name([CN]; Na_AuthorSpotDoc4)</formula>
+                              </code>
+                            </field>
+                          </run>
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                    </tablerow>
+                    <tablerow>
+                      <tablecell borderwidth="0px 2px 0px 0px">
+                        <pardef id="30" hide="notes" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>Tx_TitleSpotDoc1 = ""</formula>
+                          </code>
+                        </pardef>
+                        <par def="30">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>Modified:</run>
+                        </par>
+                        <par def="30">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>
+                          </run>
+                          <run>
+                            <font size="8pt" color="#4f4f4f"/>
+                            <field type="datetime" kind="computedfordisplay" name="Td_ModifiedSpotDoc1Disp">
+                              <datetimeformat show="date" date="yearmonthday" fourdigityearfor21stcentury="true" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+                              <code event="defaultvalue">
+                                <formula>Td_ModifiedSpotDoc2</formula>
+                              </code>
+                            </field>
+                          </run>
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                        <par def="26">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>Added: </run>
+                          <run>
+                            <font size="8pt"/>
+                            <computedtext>
+                              <code event="value">
+                                <formula>Tx_ReadableDateSpotDoc1</formula>
+                              </code>
+                            </computedtext>
+                          </run>
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 2px">
+                        <pardef id="31" hide="notes" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>Tx_TitleSpotDoc2 = ""</formula>
+                          </code>
+                        </pardef>
+                        <par def="31">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>Modified: </run>
+                          <run>
+                            <font size="8pt" color="#4f4f4f"/>
+                            <field type="datetime" kind="computedfordisplay" name="Td_ModifiedSpotDoc2Disp">
+                              <datetimeformat show="date" date="yearmonthday" fourdigityearfor21stcentury="true" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+                              <code event="defaultvalue">
+                                <formula>Td_ModifiedSpotDoc2</formula>
+                              </code>
+                            </field>
+                          </run>
+                          <run>
+                            <font size="8pt" name="Arabic Transparent" pitch="variable" truetype="true" familyid="0" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                        <par def="27">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>Added: </run>
+                          <run>
+                            <font size="8pt"/>
+                            <computedtext>
+                              <code event="value">
+                                <formula>Tx_ReadableDateSpotDoc2</formula>
+                              </code>
+                            </computedtext>
+                          </run>
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 2px">
+                        <pardef id="32" hide="notes" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>Tx_TitleSpotDoc3 = ""</formula>
+                          </code>
+                        </pardef>
+                        <par def="32">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>Modified: </run>
+                          <run>
+                            <font size="8pt" color="#4f4f4f"/>
+                            <field type="datetime" kind="computedfordisplay" name="Td_ModifiedSpotDoc3Disp">
+                              <datetimeformat show="date" date="yearmonthday" fourdigityearfor21stcentury="true" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+                              <code event="defaultvalue">
+                                <formula>Td_ModifiedSpotDoc3</formula>
+                              </code>
+                            </field>
+                          </run>
+                          <run>
+                            <font size="8pt" name="Arabic Transparent" pitch="variable" truetype="true" familyid="0" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                        <par def="28">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>Added: </run>
+                          <run>
+                            <font size="8pt"/>
+                            <computedtext>
+                              <code event="value">
+                                <formula>Tx_ReadableDateSpotDoc3</formula>
+                              </code>
+                            </computedtext>
+                          </run>
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 0px 0px 2px">
+                        <pardef id="33" hide="notes" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>Tx_TitleSpotDoc4 = ""</formula>
+                          </code>
+                        </pardef>
+                        <par def="33">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>Modified: </run>
+                          <run>
+                            <font size="8pt" color="#4f4f4f"/>
+                            <field type="datetime" kind="computedfordisplay" name="Td_ModifiedSpotDoc4Disp">
+                              <datetimeformat show="date" date="yearmonthday" fourdigityearfor21stcentury="true" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+                              <code event="defaultvalue">
+                                <formula>Td_ModifiedSpotDoc4</formula>
+                              </code>
+                            </field>
+                          </run>
+                          <run>
+                            <font size="8pt" name="Arabic Transparent" pitch="variable" truetype="true" familyid="0" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                        <par def="29">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>Added: </run>
+                          <run>
+                            <font size="8pt"/>
+                            <computedtext>
+                              <code event="value">
+                                <formula>Tx_ReadableDateSpotDoc4</formula>
+                              </code>
+                            </computedtext>
+                          </run>
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                    </tablerow>
+                  </table>
+                  <par def="12">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                </tablecell>
+              </tablerow>
+            </table>
+            <pardef id="34" spacebefore="1.5" keepwithnext="true" keeptogether="true"/>
+            <par def="34">
+              <run>
+                <font size="12pt" style="bold" name="multilingual" color="#009cff"/>MY LATEST DOCUMENTS</run>
+            </par>
+            <table widthtype="fitmargins" cellbordercolor="gray" leftmargin="0" rowspacing="0.0792in" refwidth="6.5792in">
+              <border style="image" width="1px">
+                <imageref name="table-roundborder-gray.gif"/>
+              </border>
+              <tablecolumn width="100%"/>
+              <tablerow>
+                <tablecell borderwidth="0px" bgcolor="white">
+                  <par def="12">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                  <table widthtype="fitmargins" cellbordercolor="#efefef" leftmargin="0" rowspacing="0.0201in" columnspacing="0.0792in" refwidth="6.5806in">
+                    <tablecolumn width="25%"/>
+                    <tablecolumn width="25%"/>
+                    <tablecolumn width="25%"/>
+                    <tablecolumn width="25%"/>
+                    <tablerow>
+                      <tablecell borderwidth="0px 2px 0px 0px">
+                        <par def="14">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                        <table widthtype="fitmargins" cellbordercolor="gray" leftmargin="0" refwidth="1.4868in">
+                          <tablecolumn width="100%"/>
+                          <tablerow>
+                            <tablecell valign="center" borderwidth="0px">
+                              <pardef id="35" align="center" spaceafter="1.5" keepwithnext="true" keeptogether="true">
+                                <code event="hidewhen">
+                                  <formula>Tx_TitleMySpotDoc1 = ""</formula>
+                                </code>
+                              </pardef>
+                              <par def="35">
+                                <actionhotspot hotspotstyle="none">
+                                  <picture width="64px" height="64px">
+                                    <imageref>
+                                      <code event="value">
+                                        <formula>@Text(Tx_FileTypeIconMySpotDoc1)</formula>
+                                      </code>
+                                    </imageref>
+                                  </picture>
+                                  <code event="options">
+                                    <lotusscript>Use "StartPageFunctions"
+</lotusscript>
+                                  </code>
+                                  <code event="click">
+                                    <lotusscript>Sub Click(Source As Button)
+	Dim ws As New NotesUIWorkspace	
+	Call OpenDocumentByUNID(ws.CurrentDocument.Document.Tx_UNIDMySpotDoc1(0))
+End Sub</lotusscript>
+                                  </code>
+                                </actionhotspot>
+                              </par>
+                            </tablecell>
+                          </tablerow>
+                        </table>
+                        <par def="14">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 2px">
+                        <par def="17">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                        <table widthtype="fitmargins" leftmargin="0.0208in" refwidth="1.4660in">
+                          <tablecolumn width="100%"/>
+                          <tablerow>
+                            <tablecell valign="center" borderwidth="0px">
+                              <pardef id="36" align="center" spaceafter="1.5" keepwithnext="true" keeptogether="true">
+                                <code event="hidewhen">
+                                  <formula>Tx_TitleMySpotDoc2 = ""</formula>
+                                </code>
+                              </pardef>
+                              <par def="36">
+                                <actionhotspot hotspotstyle="none">
+                                  <picture width="64px" height="64px">
+                                    <imageref>
+                                      <code event="value">
+                                        <formula>@Text(Tx_FileTypeIconMySpotDoc2)</formula>
+                                      </code>
+                                    </imageref>
+                                  </picture>
+                                  <code event="options">
+                                    <lotusscript>Use "StartPageFunctions"
+</lotusscript>
+                                  </code>
+                                  <code event="click">
+                                    <lotusscript>Sub Click(Source As Button)
+	Dim ws As New NotesUIWorkspace	
+	Call OpenDocumentByUNID(ws.CurrentDocument.Document.Tx_UNIDMySpotDoc2(0))
+End Sub</lotusscript>
+                                  </code>
+                                </actionhotspot>
+                              </par>
+                            </tablecell>
+                          </tablerow>
+                        </table>
+                        <par def="17">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 2px">
+                        <par def="20">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                        <table widthtype="fitmargins" leftmargin="0.0208in" refwidth="1.4660in">
+                          <tablecolumn width="100%"/>
+                          <tablerow>
+                            <tablecell valign="center" borderwidth="0px">
+                              <pardef id="37" align="center" spaceafter="1.5" keepwithnext="true" keeptogether="true">
+                                <code event="hidewhen">
+                                  <formula>Tx_TitleMySpotDoc3 = ""</formula>
+                                </code>
+                              </pardef>
+                              <par def="37">
+                                <actionhotspot hotspotstyle="none">
+                                  <picture width="64px" height="64px">
+                                    <imageref>
+                                      <code event="value">
+                                        <formula>@Text(Tx_FileTypeIconMySpotDoc3)</formula>
+                                      </code>
+                                    </imageref>
+                                  </picture>
+                                  <code event="options">
+                                    <lotusscript>Use "StartPageFunctions"
+</lotusscript>
+                                  </code>
+                                  <code event="click">
+                                    <lotusscript>Sub Click(Source As Button)
+	Dim ws As New NotesUIWorkspace	
+	Call OpenDocumentByUNID(ws.CurrentDocument.Document.Tx_UNIDMySpotDoc3(0))
+End Sub</lotusscript>
+                                  </code>
+                                </actionhotspot>
+                              </par>
+                            </tablecell>
+                          </tablerow>
+                        </table>
+                        <par def="20">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 0px 0px 2px">
+                        <par def="23">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                        <table widthtype="fitmargins" leftmargin="0.0208in" refwidth="1.4660in">
+                          <tablecolumn width="100%"/>
+                          <tablerow>
+                            <tablecell valign="center" borderwidth="0px">
+                              <pardef id="38" align="center" spaceafter="1.5" keepwithnext="true" keeptogether="true">
+                                <code event="hidewhen">
+                                  <formula>Tx_TitleMySpotDoc4 = ""</formula>
+                                </code>
+                              </pardef>
+                              <par def="38">
+                                <actionhotspot hotspotstyle="none">
+                                  <picture width="64px" height="64px">
+                                    <imageref>
+                                      <code event="value">
+                                        <formula>@Text(Tx_FileTypeIconMySpotDoc4)</formula>
+                                      </code>
+                                    </imageref>
+                                  </picture>
+                                  <code event="options">
+                                    <lotusscript>Use "StartPageFunctions"
+</lotusscript>
+                                  </code>
+                                  <code event="click">
+                                    <lotusscript>Sub Click(Source As Button)
+	Dim ws As New NotesUIWorkspace	
+	Call OpenDocumentByUNID(ws.CurrentDocument.Document.Tx_UNIDMySpotDoc4(0))
+End Sub</lotusscript>
+                                  </code>
+                                </actionhotspot>
+                              </par>
+                            </tablecell>
+                          </tablerow>
+                        </table>
+                        <par def="23">
+                          <run>
+                            <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                        </par>
+                      </tablecell>
+                    </tablerow>
+                    <tablerow>
+                      <tablecell borderwidth="0px 2px 0px 0px">
+                        <pardef id="39" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>Tx_TitleMySpotDoc1 = ""</formula>
+                          </code>
+                        </pardef>
+                        <par def="39">
+                          <run>
+                            <font size="8pt" name="Arabic Transparent" pitch="variable" truetype="true" familyid="0" color="#4f4f4f"/>
+                          </run>
+                          <actionhotspot hotspotstyle="none">
+                            <run>
+                              <font color="#004080" style="bold underline"/>
+                              <field type="text" kind="computedfordisplay" name="Tx_TitleMySpotDoc1Disp">
+                                <code event="defaultvalue">
+                                  <formula>Tx_TitleMySpotDoc1</formula>
+                                </code>
+                              </field>
+                            </run>
+                            <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="15" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+                            <run>
+                              <font size="8pt" name="Arabic Transparent" pitch="variable" truetype="true" familyid="0" color="#4f4f4f"/>
+                            </run>
+                            <code event="options">
+                              <lotusscript>Use "StartPageFunctions"
+
+</lotusscript>
+                            </code>
+                            <code event="click">
+                              <lotusscript>Sub Click(Source As Button)
+	Dim ws As New NotesUIWorkspace	
+	Call OpenDocumentByUNID(ws.CurrentDocument.Document.Tx_UNIDMySpotDoc1(0))
+End Sub</lotusscript>
+                            </code>
+                          </actionhotspot>
+                          <run>
+                            <font size="8pt" name="Arabic Transparent" pitch="variable" truetype="true" familyid="0" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 2px">
+                        <pardef id="40" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>Tx_TitleMySpotDoc2 = ""</formula>
+                          </code>
+                        </pardef>
+                        <par def="40">
+                          <actionhotspot hotspotstyle="none">
+                            <run>
+                              <font color="#004080" style="bold underline"/>
+                              <field type="text" kind="computedfordisplay" name="Tx_TitleMySpotDoc2Disp">
+                                <code event="defaultvalue">
+                                  <formula>Tx_TitleMySpotDoc2</formula>
+                                </code>
+                              </field>
+                            </run>
+                            <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="12" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+                            <code event="options">
+                              <lotusscript>Use "StartPageFunctions"
+
+</lotusscript>
+                            </code>
+                            <code event="click">
+                              <lotusscript>Sub Click(Source As Button)
+	Dim ws As New NotesUIWorkspace	
+	Call OpenDocumentByUNID(ws.CurrentDocument.Document.Tx_UNIDMySpotDoc2(0))
+End Sub</lotusscript>
+                            </code>
+                          </actionhotspot>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 2px">
+                        <pardef id="41" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>Tx_TitleMySpotDoc3 = ""</formula>
+                          </code>
+                        </pardef>
+                        <par def="41">
+                          <actionhotspot hotspotstyle="none">
+                            <run>
+                              <font color="#004080" style="bold underline"/>
+                              <field type="text" kind="computedfordisplay" name="Tx_TitleMySpotDoc3Disp">
+                                <code event="defaultvalue">
+                                  <formula>Tx_TitleMySpotDoc3</formula>
+                                </code>
+                              </field>
+                            </run>
+                            <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="12" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+                            <code event="options">
+                              <lotusscript>Use "StartPageFunctions"
+
+</lotusscript>
+                            </code>
+                            <code event="click">
+                              <lotusscript>Sub Click(Source As Button)
+	Dim ws As New NotesUIWorkspace	
+	Call OpenDocumentByUNID(ws.CurrentDocument.Document.Tx_UNIDMySpotDoc3(0))
+End Sub</lotusscript>
+                            </code>
+                          </actionhotspot>
+                          <run>
+                            <font size="8pt" name="multilingual" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 0px 0px 2px">
+                        <pardef id="42" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>Tx_TitleMySpotDoc4 = ""</formula>
+                          </code>
+                        </pardef>
+                        <par def="42">
+                          <actionhotspot hotspotstyle="none">
+                            <run>
+                              <font color="#004080" style="bold underline"/>
+                              <field type="text" kind="computedfordisplay" name="Tx_TitleMySpotDoc4Disp">
+                                <code event="defaultvalue">
+                                  <formula>Tx_TitleMySpotDoc4</formula>
+                                </code>
+                              </field>
+                            </run>
+                            <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="12" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+                            <code event="options">
+                              <lotusscript>Use "StartPageFunctions"
+
+</lotusscript>
+                            </code>
+                            <code event="click">
+                              <lotusscript>Sub Click(Source As Button)
+	Dim ws As New NotesUIWorkspace	
+	Call OpenDocumentByUNID(ws.CurrentDocument.Document.Tx_UNIDMySpotDoc4(0))
+End Sub</lotusscript>
+                            </code>
+                          </actionhotspot>
+                          <run>
+                            <font size="8pt" name="multilingual" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                    </tablerow>
+                    <tablerow>
+                      <tablecell borderwidth="0px 2px 0px 0px">
+                        <pardef id="43" hide="notes" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>Tx_TitleMySpotDoc1 = ""</formula>
+                          </code>
+                        </pardef>
+                        <par def="43">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>From:</run>
+                          <run>
+                            <font size="8pt"/>
+                          </run>
+                          <run>
+                            <font size="8pt"/>
+                            <field lookupeachchar="false" lookupaddressonrefresh="false" type="names" kind="computedfordisplay" name="Na_AuthorMySpotDoc1Disp">
+                              <code event="defaultvalue">
+                                <formula>@Name([CN]; Na_AuthorMySpotDoc1)</formula>
+                              </code>
+                            </field>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 2px">
+                        <pardef id="44" hide="notes" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>Tx_TitleMySpotDoc2 = ""</formula>
+                          </code>
+                        </pardef>
+                        <par def="44">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>From:</run>
+                          <run>
+                            <font size="8pt" name="Arabic Transparent" pitch="variable" truetype="true" familyid="0" color="#4f4f4f"/>
+                          </run>
+                          <run>
+                            <font size="8pt"/>
+                            <field lookupeachchar="false" lookupaddressonrefresh="false" type="names" kind="computedfordisplay" name="Na_AuthorMySpotDoc2Disp">
+                              <code event="defaultvalue">
+                                <formula>@Name([CN]; Na_AuthorMySpotDoc2)</formula>
+                              </code>
+                            </field>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 2px">
+                        <pardef id="45" hide="notes" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>Tx_TitleMySpotDoc3 = ""</formula>
+                          </code>
+                        </pardef>
+                        <par def="45">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>From: </run>
+                          <run>
+                            <font size="8pt"/>
+                            <field lookupeachchar="false" lookupaddressonrefresh="false" type="names" kind="computedfordisplay" name="Na_AuthorMySpotDoc3Disp">
+                              <code event="defaultvalue">
+                                <formula>@Name([CN]; Na_AuthorMySpotDoc3)</formula>
+                              </code>
+                            </field>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 0px 0px 2px">
+                        <pardef id="46" hide="notes" keepwithnext="true" keeptogether="true">
+                          <code event="hidewhen">
+                            <formula>Tx_TitleMySpotDoc4 = ""</formula>
+                          </code>
+                        </pardef>
+                        <par def="46">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>From: </run>
+                          <run>
+                            <font size="8pt"/>
+                            <field lookupeachchar="false" lookupaddressonrefresh="false" type="names" kind="computedfordisplay" name="Na_AuthorMySpotDoc4Disp">
+                              <code event="defaultvalue">
+                                <formula>@Name([CN]; Na_AuthorMySpotDoc4)</formula>
+                              </code>
+                            </field>
+                          </run>
+                        </par>
+                      </tablecell>
+                    </tablerow>
+                    <tablerow>
+                      <tablecell borderwidth="0px 2px 0px 0px">
+                        <par def="43">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>Modified: </run>
+                          <run>
+                            <font size="8pt"/>
+                            <field type="datetime" kind="computedfordisplay" name="Td_ModifiedMySpotDoc1Disp">
+                              <datetimeformat show="date" date="yearmonthday" fourdigityearfor21stcentury="true" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+                              <code event="defaultvalue">
+                                <formula>Td_ModifiedMySpotDoc1</formula>
+                              </code>
+                            </field>
+                          </run>
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                        <par def="39">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>Added: </run>
+                          <run>
+                            <font size="8pt"/>
+                            <computedtext>
+                              <code event="value">
+                                <formula>Tx_ReadableDateMySpotDoc1</formula>
+                              </code>
+                            </computedtext>
+                          </run>
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 2px">
+                        <par def="44">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>Modified: </run>
+                          <run>
+                            <font size="8pt"/>
+                            <field type="datetime" kind="computedfordisplay" name="Td_ModifiedMySpotDoc2Disp">
+                              <datetimeformat show="date" date="yearmonthday" fourdigityearfor21stcentury="true" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+                              <code event="defaultvalue">
+                                <formula>Td_ModifiedMySpotDoc2</formula>
+                              </code>
+                            </field>
+                          </run>
+                          <run>
+                            <font size="8pt" name="Arabic Transparent" pitch="variable" truetype="true" familyid="0" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                        <par def="40">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>Added: </run>
+                          <run>
+                            <font size="8pt"/>
+                            <computedtext>
+                              <code event="value">
+                                <formula>Tx_ReadableDateMySpotDoc2</formula>
+                              </code>
+                            </computedtext>
+                          </run>
+                          <run>
+                            <font size="8pt" name="Arabic Transparent" pitch="variable" truetype="true" familyid="0" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 2px">
+                        <par def="45">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>Modified: </run>
+                          <run>
+                            <font size="8pt"/>
+                            <field type="datetime" kind="computedfordisplay" name="Td_ModifiedMySpotDoc3Disp">
+                              <datetimeformat show="date" date="yearmonthday" fourdigityearfor21stcentury="true" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+                              <code event="defaultvalue">
+                                <formula>Td_ModifiedMySpotDoc3</formula>
+                              </code>
+                            </field>
+                          </run>
+                          <run>
+                            <font size="8pt" name="Arabic Transparent" pitch="variable" truetype="true" familyid="0" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                        <par def="41">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>Added: </run>
+                          <run>
+                            <font size="8pt"/>
+                            <computedtext>
+                              <code event="value">
+                                <formula>Tx_ReadableDateMySpotDoc3</formula>
+                              </code>
+                            </computedtext>
+                          </run>
+                          <run>
+                            <font size="8pt" name="Arabic Transparent" pitch="variable" truetype="true" familyid="0" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                      <tablecell borderwidth="0px 0px 0px 2px">
+                        <par def="46">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>Modified: </run>
+                          <run>
+                            <font size="8pt"/>
+                            <field type="datetime" kind="computedfordisplay" name="Td_ModifiedMySpotDoc4Disp">
+                              <datetimeformat show="date" date="yearmonthday" fourdigityearfor21stcentury="true" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+                              <code event="defaultvalue">
+                                <formula>Td_ModifiedMySpotDoc4</formula>
+                              </code>
+                            </field>
+                          </run>
+                          <run>
+                            <font size="8pt" name="Arabic Transparent" pitch="variable" truetype="true" familyid="0" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                        <par def="42">
+                          <run>
+                            <font size="8pt" style="bold" color="#4f4f4f"/>Added: </run>
+                          <run>
+                            <font size="8pt"/>
+                            <computedtext>
+                              <code event="value">
+                                <formula>Tx_ReadableDateMySpotDoc4</formula>
+                              </code>
+                            </computedtext>
+                          </run>
+                          <run>
+                            <font size="8pt" name="Arabic Transparent" pitch="variable" truetype="true" familyid="0" color="#4f4f4f"/>
+                          </run>
+                        </par>
+                      </tablecell>
+                    </tablerow>
+                  </table>
+                  <par def="12">
+                    <run>
+                      <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+                  </par>
+                </tablecell>
+              </tablerow>
+            </table>
+            <pardef id="47" hide="notes web mobile" keepwithnext="true" keeptogether="true">
+              <code event="hidewhen">
+                <formula>1</formula>
+              </code>
+            </pardef>
+            <par def="47">
+              <run>
+                <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell borderwidth="1px 0px 0px" bgcolor="white">
+            <par def="47">
+              <run>
+                <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+            </par>
+            <table widthtype="fitmargins" leftmargin="0" refwidth="6.6000in">
+              <tablecolumn width="4.2000in"/>
+              <tablecolumn width="100%"/>
+              <tablerow>
+                <tablecell valign="center" borderwidth="0px">
+                  <pardef id="49" tabs="L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in" keepwithnext="true" keeptogether="true"/>
+                  <par def="49">
+                    <run>
+                      <font size="11pt"/>Share your Documents, Presentations, Media Files etcetera.</run>
+                  </par>
+                </tablecell>
+                <tablecell valign="center" borderwidth="0px">
+                  <pardef id="50" keepwithnext="true" keeptogether="true"/>
+                  <par def="50">
+                    <run>
+                      <font size="9pt"/>
+                    </run>
+                    <button width="2in" widthtype="maximum" maxlines="1" wraptext="true" edge="rounded" bgcolor="#0080ff">
+                      <code event="click">
+                        <formula>@Command([Compose]; "Document")</formula>
+                      </code>
+                      <font size="9pt" style="bold" color="white"/>Upload Documents</button>
+                    <run>
+                      <font size="9pt"/>
+                    </run>
+                  </par>
+                </tablecell>
+              </tablerow>
+            </table>
+            <par def="47">
+              <run>
+                <font size="9pt" color="green"/>&lt;!-- hidden --&gt;</run>
+            </par>
+          </tablecell>
+        </tablerow>
+      </table>
+      <pardef id="51" leftmargin="1in" hide="notes web"/>
+      <par def="51"/>
+    </richtext>
+  </body>
+  <item name="Td_ModifiedSpotDoc1_1" summary="false" sign="true">
+    <rawitemdata type="400">
+AAAAAAAAAAA=
+</rawitemdata>
+  </item>
+  <item name="Td_ModifiedSpotDoc2_1" summary="false" sign="true">
+    <rawitemdata type="400">
+AAAAAAAAAAA=
+</rawitemdata>
+  </item>
+  <item name="Td_ModifiedSpotDoc3_1" summary="false" sign="true">
+    <rawitemdata type="400">
+AAAAAAAAAAA=
+</rawitemdata>
+  </item>
+  <item name="Td_ModifiedSpotDoc4_1" summary="false" sign="true">
+    <rawitemdata type="400">
+AAAAAAAAAAA=
+</rawitemdata>
+  </item>
+</form>

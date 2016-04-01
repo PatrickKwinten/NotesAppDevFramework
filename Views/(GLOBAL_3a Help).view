@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view xmlns="http://www.lotus.com/dxl" name="(GLOBAL: Help)" alias="$v-global-help" hide="web mobile" showinmenu="true" publicaccess="false" comment="help documents, embedded on 'help' form" unreadmarks="none" onopengoto="lastopened" onrefresh="refreshtop" headers="flat" opencollapsed="false" showresponsehierarchy="false" showmargin="true" shrinkrows="true" extendlastcolumn="false" showhierarchies="false" unreadcolor="black" rowlinecount="9" headerlinecount="1" rowspacing="1.25" bgcolor="white" totalscolor="blue" headerbgcolor="#efefef" boldunreadrows="true" evaluateactions="false" allownewdocuments="false" allowcustomizations="false" hidemarginborder="false" marginwidth="0px 0px 1px" marginbgcolor="white" gridstyle="solid" gridcolor="#efefef" uniquekeys="false">
+  <globals>
+    <code event="options">
+      <lotusscript>Option Public
+Option Declare
+
+</lotusscript>
+    </code>
+  </globals>
+  <code event="selection">
+    <formula>SELECT (Form="$f-global-help")</formula>
+  </code>
+  <actionbar useappletinbrowser="true" bgcolor="#b1b1d2" bordercolor="gray">
+    <actionbarstyle height="4.7500ex" repeat="hrepeat">
+      <font size="9pt" name="multilingual"/>
+      <imageref name="actionbarbg.gif"/>
+    </actionbarstyle>
+    <actionbuttonstyle margintype="fixed" margin="5" showdropdown="true" bgcolor="none">
+      <imageref name="actionbarmouseover.gif"/>
+    </actionbuttonstyle>
+    <font size="9pt" name="multilingual" color="#004080"/>
+    <border style="solid" width="0px 0px 2px" color="gray"/>
+    <action title="New Help document" icon="30" hide="web mobile">
+      <code event="click">
+        <formula>@Command([Compose]; "$f-global-help")</formula>
+      </code>
+      <code event="hidewhen">
+        <formula>@IsNotMember("[DBAdmin]";@UserRoles)</formula>
+      </code>
+    </action>
+  </actionbar>
+  <column sort="ascending" hidedetailrows="false" listseparator="newline" itemname="Tx_ApplicationHelpCategory" width="1" resizable="false" separatemultiplevalues="true" sortnoaccent="true" sortnocase="true" showaslinks="false" categorized="true" twisties="true">
+    <font color="#004080" style="bold" name="multilingual"/>
+    <columnheader>
+      <font size="9pt" name="multilingual"/>
+    </columnheader>
+    <twistieimage>
+      <imageref database="0000000000000000" name="twisties.gif"/>
+    </twistieimage>
+  </column>
+  <column sort="ascending" hidedetailrows="false" itemname="$26" width="45.7500" resizable="true" separatemultiplevalues="false" sortnoaccent="false" sortnocase="true" showaslinks="false">
+    <font size="9pt" color="blue" name="multilingual"/>
+    <columnheader title="Subject">
+      <font name="multilingual"/>
+    </columnheader>
+    <datetimeformat show="datetime" date="yearmonthday" fourdigityearfor21stcentury="true" time="hourminute" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+    <numberformat format="general" punctuated="false" parens="false" percent="false" bytes="false"/>
+    <code event="value">
+      <formula>"   " + Tx_ApplicationHelpSubject</formula>
+    </code>
+  </column>
+</view>

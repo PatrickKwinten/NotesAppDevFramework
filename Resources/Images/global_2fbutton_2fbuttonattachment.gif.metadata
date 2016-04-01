@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imageresource xmlns="http://www.lotus.com/dxl" across="2" alias="buttonattachment.gif" browsercompatible="true" comment="image with mouse-over effect for uploading files, alternative for a button" imagename="attachments_button3.gif" language="en" name="global/button/buttonattachment.gif" publicaccess="true" readonly="true">
+  <item name="$MimeType" sign="true">
+    <text>image/gif</text>
+  </item>
+</imageresource>

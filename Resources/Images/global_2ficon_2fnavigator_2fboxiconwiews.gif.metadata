@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imageresource xmlns="http://www.lotus.com/dxl" alias="boxiconviews.gif" comment="used in outline box header to indicate the box contains references to views" imagename="icViews16.gif" name="global/icon/navigator/boxiconwiews.gif" publicaccess="false" readonly="true">
+  <item name="$MimeType" sign="true">
+    <text>image/gif</text>
+  </item>
+</imageresource>

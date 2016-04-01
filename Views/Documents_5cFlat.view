@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view xmlns="http://www.lotus.com/dxl" name="Documents\Flat" alias="$v-docs-flat" hide="web mobile" showinmenu="false" defaultdesign="true" publicaccess="false" default="true" comment="sample view" unreadmarks="none" onopengoto="top" onrefresh="refreshtop" headers="flat" opencollapsed="true" showresponsehierarchy="false" showmargin="true" shrinkrows="true" extendlastcolumn="false" showhierarchies="false" unreadcolor="black" rowlinecount="9" headerlinecount="1" rowspacing="1.25" bgcolor="white" totalscolor="blue" headerbgcolor="#efefef" boldunreadrows="true" evaluateactions="false" allownewdocuments="false" allowcustomizations="true" hidemarginborder="false" marginwidth="0px 0px 1px" marginbgcolor="white" gridstyle="solid" gridcolor="#efefef" uniquekeys="false">
+  <globals>
+    <code event="options">
+      <lotusscript>Option Public
+Option Declare
+
+</lotusscript>
+    </code>
+  </globals>
+  <code event="selection">
+    <formula>SELECT ((Form = "$f-doca") |  (Form = "$f-docb"))</formula>
+  </code>
+  <actionbar useappletinbrowser="true" bgcolor="#b1b1d2" bordercolor="gray">
+    <actionbarstyle height="4.7500ex" repeat="hrepeat">
+      <font size="9pt" name="multilingual"/>
+      <imageref name="actionbarbg.gif"/>
+    </actionbarstyle>
+    <actionbuttonstyle margintype="fixed" margin="5" showdropdown="true" bgcolor="none">
+      <imageref name="actionbarmouseover.gif"/>
+    </actionbuttonstyle>
+    <font size="9pt" name="multilingual" color="#004080"/>
+    <border style="solid" width="0px 0px 2px" color="gray"/>
+    <action title="Categori_ze" showinbar="false" systemcommand="categorize"/>
+    <action title="_Edit Document" showinbar="false" systemcommand="edit"/>
+    <action title="Send Docu_ment" showinbar="false" systemcommand="send"/>
+    <action title="_Forward" showinbar="false" systemcommand="forward"/>
+    <action title="_Move To Folder..." showinbar="false" systemcommand="movetofolder"/>
+    <action title="_Remove From Folder" showinbar="false" systemcommand="removefromfolder"/>
+    <action title="Create\Single-column document" icon="30">
+      <code event="click">
+        <formula>@Command([Compose];"$f-doca")</formula>
+      </code>
+    </action>
+    <action title="Create\Double-column document" icon="30">
+      <code event="click">
+        <formula>@Command([Compose];"$f-docb")</formula>
+      </code>
+    </action>
+    <sharedactionref id="2">
+      <action title="(Global: Help)" icon="45" showinmenu="false" hide="preview web mobile" onlyiconinbar="true" align="right">
+        <code event="click">
+          <formula>tmp := @DbColumn ("":"NoCache";"";"$v-global-help"; 1);
+isHelp :=
+@If (@IsError (tmp);
+					@False ;
+		tmp="";
+					@False;
+									@True);
+
+tmpKey := @If ( isHelp; tmp[1];"");
+					
+@If ( isHelp ;
+			@Command( [OpenHelpDocument]; "" ; "$v-global-help"; tmpKey );
+					@Prompt ([Ok]; "No help available";"No help available for this application"))</formula>
+        </code>
+        <code event="label">
+          <formula>"Open Help"</formula>
+        </code>
+      </action>
+    </sharedactionref>
+    <sharedactionref id="1">
+      <action title="(Global: SearchBar)" icon="148" showinmenu="false" hide="web mobile" onlyiconinbar="true" align="right">
+        <code event="click">
+          <formula>@Command([ViewShowSearchBar])</formula>
+        </code>
+        <code event="label">
+          <formula>"Open/Close View Search"</formula>
+        </code>
+      </action>
+    </sharedactionref>
+  </actionbar>
+  <column hidedetailrows="false" listseparator="newline" itemname="Tx_DocText" width="26" resizable="true" separatemultiplevalues="false" sortnoaccent="true" sortnocase="true" showaslinks="false">
+    <font size="9pt"/>
+    <columnheader title="Title">
+      <font size="9pt" name="multilingual"/>
+    </columnheader>
+    <columnnamesformat showonline="true" columncontainsname="false" verticalorientation="top"/>
+  </column>
+  <column hidedetailrows="false" listseparator="newline" itemname="Tx_DocDialogList" width="13.2500" resizable="false" separatemultiplevalues="false" sortnoaccent="true" sortnocase="true" showaslinks="false">
+    <font size="9pt" color="#4f4f4f"/>
+    <columnheader title="Category">
+      <font size="9pt" name="multilingual"/>
+    </columnheader>
+  </column>
+  <column hidedetailrows="false" listseparator="newline" itemname="Tx_DocCheckBox" width="10.2500" resizable="false" separatemultiplevalues="false" sortnoaccent="true" sortnocase="true" showaslinks="false">
+    <font size="9pt" color="#4f4f4f"/>
+    <columnheader title="Status">
+      <font size="9pt" name="multilingual"/>
+    </columnheader>
+  </column>
+  <column hidedetailrows="false" listseparator="newline" itemname="$24" width="27" resizable="true" separatemultiplevalues="false" sortnoaccent="true" sortnocase="true" showaslinks="false">
+    <font size="9pt" color="#ff8100"/>
+    <columnheader title="Author">
+      <font size="9pt" name="multilingual"/>
+    </columnheader>
+    <columnnamesformat showonline="true" columncontainsname="false" verticalorientation="top"/>
+    <code event="value">
+      <formula>@Sort(@Unique(@Author))</formula>
+    </code>
+  </column>
+  <column hidedetailrows="false" itemname="$23" width="11" resizable="true" separatemultiplevalues="false" sortnoaccent="true" sortnocase="true" showaslinks="false">
+    <font size="9pt" color="#4f4f4f"/>
+    <columnheader title="Modified">
+      <font size="9pt" name="multilingual"/>
+    </columnheader>
+    <datetimeformat show="datetime" date="yearmonthday" fourdigityearfor21stcentury="true" time="hourminute" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+    <numberformat format="general" punctuated="false" parens="false" percent="false" bytes="false"/>
+    <code event="value">
+      <formula>@Modified</formula>
+    </code>
+  </column>
+  <column align="right" hidedetailrows="false" itemname="$17" width="4" resizable="false" separatemultiplevalues="false" sortnoaccent="true" sortnocase="true" showaslinks="false">
+    <font size="9pt" color="green"/>
+    <columnheader title="Size">
+      <font size="9pt" name="multilingual"/>
+    </columnheader>
+    <numberformat format="fixed" digits="2" punctuated="true" parens="false" percent="false" bytes="true" decimalsym="," thousandssep="&#160;" currencysymtype="custom" currencysym="kr" usecustomsym="false"/>
+    <code event="value">
+      <formula>@If(
+   @IsDocTruncated;
+	@If(@TextToNumber(@Version) &lt; 172; @DocLength;
+	   @DocOmittedLength + @DocLength);
+	   @DocLength)</formula>
+    </code>
+  </column>
+  <item name="TmpViewDesignCollation" sign="true">
+    <text>sv</text>
+  </item>
+</view>

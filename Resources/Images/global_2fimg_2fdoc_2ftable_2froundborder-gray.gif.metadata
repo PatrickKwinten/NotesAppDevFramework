@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imageresource xmlns="http://www.lotus.com/dxl" alias="table-roundborder-gray.gif" comment="used in tables as border image to create a rounded effect" imagename="topcellbg.gif" name="global/img/doc/table/roundborder-gray.gif" publicaccess="false" readonly="true">
+  <item name="$MimeType" sign="true">
+    <text>image/gif</text>
+  </item>
+</imageresource>
