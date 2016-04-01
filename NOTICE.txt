@@ -1,1 +1,1 @@
-The product IBM NOtes Application Development Framework does not include proprietary software.
+The product IBM Notes Application Development Framework does not include proprietary software.
